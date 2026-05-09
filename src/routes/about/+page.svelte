@@ -22,11 +22,11 @@
 	<meta property="og:url" content="https://joshisadesigner.com/about" />
 	<meta property="og:title" content="About Josh De La Cruz — UI/UX Designer" />
 	<meta property="og:description" content="UI/UX designer with experience across websites, mobile apps, design systems, and production interfaces for telecom, SaaS, and consumer services." />
-	<meta property="og:image" content="https://joshisadesigner.com/images/josh.jpg" />
+	<meta property="og:image" content="https://joshisadesigner.com/images/og-image.jpg" />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content="About Josh De La Cruz — UI/UX Designer" />
 	<meta name="twitter:description" content="UI/UX designer with experience across websites, mobile apps, design systems, and production interfaces for telecom, SaaS, and consumer services." />
-	<meta name="twitter:image" content="https://joshisadesigner.com/images/josh.jpg" />
+	<meta name="twitter:image" content="https://joshisadesigner.com/images/og-image.jpg" />
 	<link rel="canonical" href="https://joshisadesigner.com/about" />
 </svelte:head>
 

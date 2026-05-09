@@ -20,11 +20,11 @@
 	<meta property="og:url" content="https://joshisadesigner.com/work" />
 	<meta property="og:title" content="Work — Josh De La Cruz" />
 	<meta property="og:description" content="Selected UI/UX design projects by Josh De La Cruz — mobile apps, web platforms, and design systems across fintech, telecom, and consumer services." />
-	<meta property="og:image" content="https://joshisadesigner.com/images/josh.jpg" />
+	<meta property="og:image" content="https://joshisadesigner.com/images/og-image.jpg" />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content="Work — Josh De La Cruz" />
 	<meta name="twitter:description" content="Selected UI/UX design projects by Josh De La Cruz — mobile apps, web platforms, and design systems across fintech, telecom, and consumer services." />
-	<meta name="twitter:image" content="https://joshisadesigner.com/images/josh.jpg" />
+	<meta name="twitter:image" content="https://joshisadesigner.com/images/og-image.jpg" />
 	<link rel="canonical" href="https://joshisadesigner.com/work" />
 </svelte:head>
 

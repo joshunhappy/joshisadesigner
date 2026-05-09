@@ -21,11 +21,11 @@
 	<meta property="og:url" content="https://joshisadesigner.com/" />
 	<meta property="og:title" content="Josh De La Cruz — UI/UX Designer" />
 	<meta property="og:description" content="Josh De La Cruz is a UI/UX designer crafting clear, scalable digital products — websites, mobile apps, and design systems." />
-	<meta property="og:image" content="https://joshisadesigner.com/images/josh.jpg" />
+	<meta property="og:image" content="https://joshisadesigner.com/images/og-image.jpg" />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content="Josh De La Cruz — UI/UX Designer" />
 	<meta name="twitter:description" content="Josh De La Cruz is a UI/UX designer crafting clear, scalable digital products — websites, mobile apps, and design systems." />
-	<meta name="twitter:image" content="https://joshisadesigner.com/images/josh.jpg" />
+	<meta name="twitter:image" content="https://joshisadesigner.com/images/og-image.jpg" />
 	<link rel="canonical" href="https://joshisadesigner.com/" />
 	{@html `<script type="application/ld+json">${JSON.stringify({
 		"@context": "https://schema.org",
@@ -35,7 +35,7 @@
 		"url": "https://joshisadesigner.com",
 		"email": "joshisadesigner@me.com",
 		"telephone": "+502-5052-8589",
-		"image": "https://joshisadesigner.com/images/josh.jpg",
+		"image": "https://joshisadesigner.com/images/og-image.jpg",
 		"sameAs": ["https://linkedin.com/in/joshisadesigner"]
 	})}</script>`}
 </svelte:head>
