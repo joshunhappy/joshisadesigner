@@ -6,11 +6,23 @@
 	import Nav from '$lib/components/Nav.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import { leave, enter } from '$lib/animations/transitions';
+  import { env } from '$env/dynamic/public';
 
 	let { children } = $props();
 
 	let navOpen = $state(false);
 	let pageEl: HTMLElement;
+
+  onMount(() => {
+    const id = env.PUBLIC_CLARITY_ID;
+
+    if (!id) return;
+    if (!import.meta.env.PROD) return;
+
+    import('@microsoft/clarity').then(({ default: Clarity }) => {
+      Clarity.init(id);
+    });
+  });
 </script>
 
 
