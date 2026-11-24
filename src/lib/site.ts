@@ -11,7 +11,7 @@ export const site = {
 	phone: { display: '+502 5052-8589', href: 'tel:+50250528589' },
 	linkedin: { display: '@joshisadesigner', href: 'https://linkedin.com/in/joshisadesigner' },
 	/** Set to the PDF path (e.g. '/josh-de-la-cruz-resume.pdf') once it exists in /static. */
-	resumeUrl: null as string | null
+	resumeUrl: '/josh-de-la-cruz-resume.pdf' as string | null
 };
 
 export const copy = {
