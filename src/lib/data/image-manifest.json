@@ -1404,5 +1404,257 @@
 				"src": "/images/work/pronto-topup/sign-up-1440.jpg"
 			}
 		]
+	},
+	"/images/work/swiftly-push/00.landing.jpg": {
+		"width": 1440,
+		"height": 3373,
+		"srcs": [
+			{
+				"w": 640,
+				"src": "/images/work/swiftly-push/00.landing-640.jpg"
+			},
+			{
+				"w": 1280,
+				"src": "/images/work/swiftly-push/00.landing-1280.jpg"
+			},
+			{
+				"w": 1440,
+				"src": "/images/work/swiftly-push/00.landing-1440.jpg"
+			}
+		]
+	},
+	"/images/work/swiftly-push/01.pricing.jpg": {
+		"width": 1440,
+		"height": 2857,
+		"srcs": [
+			{
+				"w": 640,
+				"src": "/images/work/swiftly-push/01.pricing-640.jpg"
+			},
+			{
+				"w": 1280,
+				"src": "/images/work/swiftly-push/01.pricing-1280.jpg"
+			},
+			{
+				"w": 1440,
+				"src": "/images/work/swiftly-push/01.pricing-1440.jpg"
+			}
+		]
+	},
+	"/images/work/swiftly-push/02.sign-up-company.jpg": {
+		"width": 1440,
+		"height": 1447,
+		"srcs": [
+			{
+				"w": 640,
+				"src": "/images/work/swiftly-push/02.sign-up-company-640.jpg"
+			},
+			{
+				"w": 1280,
+				"src": "/images/work/swiftly-push/02.sign-up-company-1280.jpg"
+			},
+			{
+				"w": 1440,
+				"src": "/images/work/swiftly-push/02.sign-up-company-1440.jpg"
+			}
+		]
+	},
+	"/images/work/swiftly-push/03.log-in.jpg": {
+		"width": 1440,
+		"height": 1024,
+		"srcs": [
+			{
+				"w": 640,
+				"src": "/images/work/swiftly-push/03.log-in-640.jpg"
+			},
+			{
+				"w": 1280,
+				"src": "/images/work/swiftly-push/03.log-in-1280.jpg"
+			},
+			{
+				"w": 1440,
+				"src": "/images/work/swiftly-push/03.log-in-1440.jpg"
+			}
+		]
+	},
+	"/images/work/swiftly-push/04.dashboard-admin.jpg": {
+		"width": 1543,
+		"height": 1000,
+		"srcs": [
+			{
+				"w": 640,
+				"src": "/images/work/swiftly-push/04.dashboard-admin-640.jpg"
+			},
+			{
+				"w": 1280,
+				"src": "/images/work/swiftly-push/04.dashboard-admin-1280.jpg"
+			},
+			{
+				"w": 1543,
+				"src": "/images/work/swiftly-push/04.dashboard-admin-1543.jpg"
+			}
+		]
+	},
+	"/images/work/swiftly-push/05.apps-list.jpg": {
+		"width": 1440,
+		"height": 1000,
+		"srcs": [
+			{
+				"w": 640,
+				"src": "/images/work/swiftly-push/05.apps-list-640.jpg"
+			},
+			{
+				"w": 1280,
+				"src": "/images/work/swiftly-push/05.apps-list-1280.jpg"
+			},
+			{
+				"w": 1440,
+				"src": "/images/work/swiftly-push/05.apps-list-1440.jpg"
+			}
+		]
+	},
+	"/images/work/swiftly-push/06.create-app-details.jpg": {
+		"width": 1440,
+		"height": 1000,
+		"srcs": [
+			{
+				"w": 640,
+				"src": "/images/work/swiftly-push/06.create-app-details-640.jpg"
+			},
+			{
+				"w": 1280,
+				"src": "/images/work/swiftly-push/06.create-app-details-1280.jpg"
+			},
+			{
+				"w": 1440,
+				"src": "/images/work/swiftly-push/06.create-app-details-1440.jpg"
+			}
+		]
+	},
+	"/images/work/swiftly-push/07.create-app-configuration.jpg": {
+		"width": 1440,
+		"height": 1062,
+		"srcs": [
+			{
+				"w": 640,
+				"src": "/images/work/swiftly-push/07.create-app-configuration-640.jpg"
+			},
+			{
+				"w": 1280,
+				"src": "/images/work/swiftly-push/07.create-app-configuration-1280.jpg"
+			},
+			{
+				"w": 1440,
+				"src": "/images/work/swiftly-push/07.create-app-configuration-1440.jpg"
+			}
+		]
+	},
+	"/images/work/swiftly-push/08.create-app-target.jpg": {
+		"width": 1440,
+		"height": 1000,
+		"srcs": [
+			{
+				"w": 640,
+				"src": "/images/work/swiftly-push/08.create-app-target-640.jpg"
+			},
+			{
+				"w": 1280,
+				"src": "/images/work/swiftly-push/08.create-app-target-1280.jpg"
+			},
+			{
+				"w": 1440,
+				"src": "/images/work/swiftly-push/08.create-app-target-1440.jpg"
+			}
+		]
+	},
+	"/images/work/swiftly-push/09.create-app-completed.jpg": {
+		"width": 1440,
+		"height": 1000,
+		"srcs": [
+			{
+				"w": 640,
+				"src": "/images/work/swiftly-push/09.create-app-completed-640.jpg"
+			},
+			{
+				"w": 1280,
+				"src": "/images/work/swiftly-push/09.create-app-completed-1280.jpg"
+			},
+			{
+				"w": 1440,
+				"src": "/images/work/swiftly-push/09.create-app-completed-1440.jpg"
+			}
+		]
+	},
+	"/images/work/swiftly-push/10.users-list.jpg": {
+		"width": 1440,
+		"height": 1000,
+		"srcs": [
+			{
+				"w": 640,
+				"src": "/images/work/swiftly-push/10.users-list-640.jpg"
+			},
+			{
+				"w": 1280,
+				"src": "/images/work/swiftly-push/10.users-list-1280.jpg"
+			},
+			{
+				"w": 1440,
+				"src": "/images/work/swiftly-push/10.users-list-1440.jpg"
+			}
+		]
+	},
+	"/images/work/swiftly-push/11.add-user.jpg": {
+		"width": 1440,
+		"height": 1000,
+		"srcs": [
+			{
+				"w": 640,
+				"src": "/images/work/swiftly-push/11.add-user-640.jpg"
+			},
+			{
+				"w": 1280,
+				"src": "/images/work/swiftly-push/11.add-user-1280.jpg"
+			},
+			{
+				"w": 1440,
+				"src": "/images/work/swiftly-push/11.add-user-1440.jpg"
+			}
+		]
+	},
+	"/images/work/swiftly-push/12.topics-list.jpg": {
+		"width": 1440,
+		"height": 1080,
+		"srcs": [
+			{
+				"w": 640,
+				"src": "/images/work/swiftly-push/12.topics-list-640.jpg"
+			},
+			{
+				"w": 1280,
+				"src": "/images/work/swiftly-push/12.topics-list-1280.jpg"
+			},
+			{
+				"w": 1440,
+				"src": "/images/work/swiftly-push/12.topics-list-1440.jpg"
+			}
+		]
+	},
+	"/images/work/swiftly-push/13.app-customers.jpg": {
+		"width": 1440,
+		"height": 962,
+		"srcs": [
+			{
+				"w": 640,
+				"src": "/images/work/swiftly-push/13.app-customers-640.jpg"
+			},
+			{
+				"w": 1280,
+				"src": "/images/work/swiftly-push/13.app-customers-1280.jpg"
+			},
+			{
+				"w": 1440,
+				"src": "/images/work/swiftly-push/13.app-customers-1440.jpg"
+			}
+		]
 	}
 }

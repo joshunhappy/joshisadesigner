@@ -111,11 +111,18 @@ const workMeta: WorkMeta[] = [
 		category: 'Web App Design',
 		year: 2025,
 		bgColor: '#0f3b36',
-		description: 'Web app design for Swiftly Push. The full write-up and screens are on their way.',
+		description:
+			'I led the UX/UI design for Swiftly Push, a web console where companies send push notifications to the people who use their apps, from the public site and sign-up to app setup and audience management.',
+		problem: [
+			'Companies with a mobile app need to reach their users with timely notifications without asking developers for every message.',
+			'The screens follow a company from the public site and pricing to sign-up, then through creating an app in four steps (details, Firebase configuration, target, done) and managing its users, topics and customers.'
+		],
 		draft: true,
 		role: 'Lead UX/UI Designer',
 		timeline: '2025',
-		summary: 'Web app design for Swiftly Push. Screens and write-up coming soon.'
+		summary: 'Web console for push notifications: public site, onboarding, app setup and audience management.',
+		responsibilities: ['UX Flows', 'UI Design', 'Design System', 'Dev Handoff'],
+		tools: ['Figma']
 	},
 	{
 		slug: 'america-voice-app',
