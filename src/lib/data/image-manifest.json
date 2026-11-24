@@ -127,73 +127,129 @@
 			}
 		]
 	},
-	"/images/work/america-voice-app/00.b.jpg": {
-		"width": 375,
-		"height": 812,
+	"/images/work/america-voice-app/01-welcome.png": {
+		"width": 750,
+		"height": 1624,
 		"srcs": [
 			{
-				"w": 375,
-				"src": "/images/work/america-voice-app/00.b-375.jpg"
+				"w": 640,
+				"src": "/images/work/america-voice-app/01-welcome-640.jpg"
+			},
+			{
+				"w": 750,
+				"src": "/images/work/america-voice-app/01-welcome-750.jpg"
 			}
 		]
 	},
-	"/images/work/america-voice-app/01.jpg": {
-		"width": 375,
-		"height": 812,
+	"/images/work/america-voice-app/02-home.png": {
+		"width": 750,
+		"height": 1624,
 		"srcs": [
 			{
-				"w": 375,
-				"src": "/images/work/america-voice-app/01-375.jpg"
+				"w": 640,
+				"src": "/images/work/america-voice-app/02-home-640.jpg"
+			},
+			{
+				"w": 750,
+				"src": "/images/work/america-voice-app/02-home-750.jpg"
 			}
 		]
 	},
-	"/images/work/america-voice-app/02.jpg": {
-		"width": 375,
-		"height": 812,
+	"/images/work/america-voice-app/03-top-up-products.png": {
+		"width": 750,
+		"height": 1624,
 		"srcs": [
 			{
-				"w": 375,
-				"src": "/images/work/america-voice-app/02-375.jpg"
+				"w": 640,
+				"src": "/images/work/america-voice-app/03-top-up-products-640.jpg"
+			},
+			{
+				"w": 750,
+				"src": "/images/work/america-voice-app/03-top-up-products-750.jpg"
 			}
 		]
 	},
-	"/images/work/america-voice-app/03.jpg": {
-		"width": 375,
-		"height": 812,
+	"/images/work/america-voice-app/04-top-up-summary.png": {
+		"width": 750,
+		"height": 1624,
 		"srcs": [
 			{
-				"w": 375,
-				"src": "/images/work/america-voice-app/03-375.jpg"
+				"w": 640,
+				"src": "/images/work/america-voice-app/04-top-up-summary-640.jpg"
+			},
+			{
+				"w": 750,
+				"src": "/images/work/america-voice-app/04-top-up-summary-750.jpg"
 			}
 		]
 	},
-	"/images/work/america-voice-app/04.jpg": {
-		"width": 375,
-		"height": 812,
+	"/images/work/america-voice-app/05-top-up-sent.png": {
+		"width": 750,
+		"height": 1624,
 		"srcs": [
 			{
-				"w": 375,
-				"src": "/images/work/america-voice-app/04-375.jpg"
+				"w": 640,
+				"src": "/images/work/america-voice-app/05-top-up-sent-640.jpg"
+			},
+			{
+				"w": 750,
+				"src": "/images/work/america-voice-app/05-top-up-sent-750.jpg"
 			}
 		]
 	},
-	"/images/work/america-voice-app/05.jpg": {
-		"width": 375,
-		"height": 812,
+	"/images/work/america-voice-app/06-gift-card-amount.png": {
+		"width": 750,
+		"height": 1624,
 		"srcs": [
 			{
-				"w": 375,
-				"src": "/images/work/america-voice-app/05-375.jpg"
+				"w": 640,
+				"src": "/images/work/america-voice-app/06-gift-card-amount-640.jpg"
+			},
+			{
+				"w": 750,
+				"src": "/images/work/america-voice-app/06-gift-card-amount-750.jpg"
 			}
 		]
 	},
-	"/images/work/america-voice-app/06.jpg": {
-		"width": 375,
-		"height": 812,
+	"/images/work/america-voice-app/07-gift-card-summary.png": {
+		"width": 750,
+		"height": 1624,
 		"srcs": [
 			{
-				"w": 375,
-				"src": "/images/work/america-voice-app/06-375.jpg"
+				"w": 640,
+				"src": "/images/work/america-voice-app/07-gift-card-summary-640.jpg"
+			},
+			{
+				"w": 750,
+				"src": "/images/work/america-voice-app/07-gift-card-summary-750.jpg"
+			}
+		]
+	},
+	"/images/work/america-voice-app/08-cart.png": {
+		"width": 750,
+		"height": 1624,
+		"srcs": [
+			{
+				"w": 640,
+				"src": "/images/work/america-voice-app/08-cart-640.jpg"
+			},
+			{
+				"w": 750,
+				"src": "/images/work/america-voice-app/08-cart-750.jpg"
+			}
+		]
+	},
+	"/images/work/america-voice-app/09-activity.png": {
+		"width": 750,
+		"height": 1624,
+		"srcs": [
+			{
+				"w": 640,
+				"src": "/images/work/america-voice-app/09-activity-640.jpg"
+			},
+			{
+				"w": 750,
+				"src": "/images/work/america-voice-app/09-activity-750.jpg"
 			}
 		]
 	},

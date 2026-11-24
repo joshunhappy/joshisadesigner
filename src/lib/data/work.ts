@@ -55,7 +55,7 @@ const workMeta: WorkMeta[] = [
 			'I designed the mobile experience for the America Voice app, leading the UX and UI for the gift card purchasing flow, onboarding, and checkout, focusing on speed and clarity for everyday users.',
 		problem: [
 			'App users are often sending credit to family abroad, usually from a phone and often in a hurry.',
-			'The purchase has to finish in a few taps; the screens follow it from onboarding through choosing a gift card or top-up, the order summary, and payment.'
+			'The purchase has to finish in a few taps. The screens follow both purchases, a top-up and a gift card, from the home screen to the confirmation, plus the cart and activity history.'
 		],
 		draft: true,
 		client: 'America Voice',

@@ -28,10 +28,13 @@ export function responsive(path: string) {
 
 export type DeviceKind = 'mobile' | 'desktop';
 
-/** Mobile screens are captured at phone widths (375–430px); everything wider is desktop. */
+/**
+ * Mobile screens are phone captures: 375–430px wide at 1×, up to ~1290px at 3×.
+ * Desktop captures are 1440px wide, so anything narrower than 1200px is mobile.
+ */
 export function deviceOf(path: string): DeviceKind {
 	const entry = images[path];
-	return entry && entry.width <= 600 ? 'mobile' : 'desktop';
+	return entry && entry.width < 1200 ? 'mobile' : 'desktop';
 }
 
 /**

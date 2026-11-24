@@ -92,7 +92,7 @@
 					: 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-4'}"
 			>
 				{#each group.screens as src, i (src)}
-					<li>
+					<li class="[&>figure]:mb-0">
 						<Figure
 							{src}
 							alt="{item.title}, {group.kind} screen: {screenName(src, i)}"
