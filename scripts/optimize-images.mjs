@@ -62,7 +62,9 @@ for (const file of files) {
 	const meta = { ...raw, ...(raw.autoOrient ?? {}) };
 	// Transparent originals are flattened onto indigo-950, the colour of the frames they sit in.
 	const ext = '.jpg';
-	const base = join(OUT, dirname(rel), basename(rel, extname(rel)));
+	// Output names are URL-safe (srcset splits on whitespace); the manifest key keeps the original name.
+	const safeName = basename(rel, extname(rel)).replace(/[^A-Za-z0-9._-]+/g, '-');
+	const base = join(OUT, dirname(rel), safeName);
 	await mkdir(dirname(base), { recursive: true });
 	before += (await stat(file)).size;
 

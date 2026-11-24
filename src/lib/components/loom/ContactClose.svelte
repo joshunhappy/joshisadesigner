@@ -37,9 +37,9 @@
 				{/if}
 			</div>
 
-			<ul class="mt-10 flex flex-wrap gap-x-8 gap-y-3 text-base">
+			<ul class="mt-8 flex flex-wrap gap-x-8 gap-y-1 text-base">
 				<li>
-					<a href={site.phone.href} class="underline decoration-on-indigo-muted hover:text-marigold">
+					<a href={site.phone.href} class="inline-block py-2.5 underline decoration-on-indigo-muted hover:text-marigold">
 						{site.phone.display}
 					</a>
 				</li>
@@ -48,7 +48,7 @@
 						href={site.linkedin}
 						target="_blank"
 						rel="noopener noreferrer"
-						class="underline decoration-on-indigo-muted hover:text-marigold"
+						class="inline-block py-2.5 underline decoration-on-indigo-muted hover:text-marigold"
 					>
 						LinkedIn<span class="sr-only"> (opens in a new tab)</span>
 					</a>

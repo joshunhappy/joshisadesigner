@@ -14,7 +14,7 @@
 >
 	<a href="/work/{prev.slug}" class="cell group no-underline">
 		<span class="dir">
-			<svg viewBox="0 0 20 20" class="h-4 w-4 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 10H4M9 5l-5 5 5 5" /></svg>
+			<svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 10H4M9 5l-5 5 5 5" /></svg>
 			Previous project
 		</span>
 		<span class="title">{prev.title}</span>
@@ -22,7 +22,7 @@
 	<a href="/work/{next.slug}" class="cell group no-underline sm:text-right">
 		<span class="dir sm:justify-end">
 			Next project
-			<svg viewBox="0 0 20 20" class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5" /></svg>
+			<svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5" /></svg>
 		</span>
 		<span class="title">{next.title}</span>
 	</a>
