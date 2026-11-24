@@ -4,7 +4,7 @@
 	let { prev, next }: { prev: WorkItem; next: WorkItem } = $props();
 </script>
 
-<nav aria-label="More projects" class="grid gap-px border-y border-rule bg-rule sm:grid-cols-2">
+<nav aria-label="More projects" class="grid border-y border-rule sm:grid-cols-2">
 	<a href="/work/{prev.slug}" class="cell group no-underline">
 		<span class="dir">
 			<img src="/icons/move-right.svg" alt="" width="16" height="16" class="rotate-180" />

@@ -74,7 +74,7 @@
 	{#each groups as group (group.kind)}
 		<section
 			aria-labelledby="screens-{group.kind}"
-			class="mx-auto max-w-[1200px] px-5 pt-10 pb-4 md:px-10 md:pt-14"
+			class="mx-auto max-w-[1200px] px-5 py-10 md:px-10"
 		>
 			<h2 id="screens-{group.kind}" class="type-title flex items-baseline gap-3">
 				{group.kind === 'desktop' ? 'Desktop' : 'Mobile'}
@@ -105,7 +105,7 @@
 		</section>
 	{/each}
 
-	<div class="mx-auto max-w-[1200px] px-5 pt-6 md:px-10">
+	<div class="mx-auto max-w-[1200px] px-5 pt-20 md:px-10">
 		<WorkPager {prev} {next} />
 	</div>
 </div>

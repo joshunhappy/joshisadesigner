@@ -137,6 +137,28 @@
 			}
 		]
 	},
+	"/images/covers/mercury.jpg": {
+		"width": 2000,
+		"height": 1181,
+		"srcs": [
+			{
+				"w": 640,
+				"src": "/images/covers/mercury-640.jpg"
+			},
+			{
+				"w": 1280,
+				"src": "/images/covers/mercury-1280.jpg"
+			},
+			{
+				"w": 1920,
+				"src": "/images/covers/mercury-1920.jpg"
+			},
+			{
+				"w": 2000,
+				"src": "/images/covers/mercury-2000.jpg"
+			}
+		]
+	},
 	"/images/covers/metis.jpg": {
 		"width": 1035,
 		"height": 611,
@@ -148,6 +170,28 @@
 			{
 				"w": 1035,
 				"src": "/images/covers/metis-1035.jpg"
+			}
+		]
+	},
+	"/images/covers/ministerios-ebenezer-mexico.jpg": {
+		"width": 2000,
+		"height": 1181,
+		"srcs": [
+			{
+				"w": 640,
+				"src": "/images/covers/ministerios-ebenezer-mexico-640.jpg"
+			},
+			{
+				"w": 1280,
+				"src": "/images/covers/ministerios-ebenezer-mexico-1280.jpg"
+			},
+			{
+				"w": 1920,
+				"src": "/images/covers/ministerios-ebenezer-mexico-1920.jpg"
+			},
+			{
+				"w": 2000,
+				"src": "/images/covers/ministerios-ebenezer-mexico-2000.jpg"
 			}
 		]
 	},
