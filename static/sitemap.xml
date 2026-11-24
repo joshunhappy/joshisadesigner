@@ -21,12 +21,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://joshisadesigner.com/work/america-voice-app</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://joshisadesigner.com/work/america-voice-reseller-portal</loc>
+    <loc>https://joshisadesigner.com/work/america-voice-app-and-portal</loc>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -47,11 +42,6 @@
   </url>
   <url>
     <loc>https://joshisadesigner.com/work/pronto-topup</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://joshisadesigner.com/work/pronto-topup-app</loc>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>

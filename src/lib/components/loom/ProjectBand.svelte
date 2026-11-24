@@ -19,7 +19,7 @@
 	const hasStudy = $derived(Boolean(item.caseStudy));
 	const kind = $derived(hasStudy ? 'Case study' : 'Screens only');
 	const media = $derived(
-		flagship && item.caseStudy?.hero ? [item.caseStudy.hero.src] : item.images.slice(0, 3)
+		flagship && item.caseStudy?.hero ? [item.caseStudy.hero.src] : item.preview
 	);
 	const mediaAlt = (i: number) =>
 		flagship && item.caseStudy?.hero ? item.caseStudy.hero.alt : `${item.title}, screen ${i + 1}`;

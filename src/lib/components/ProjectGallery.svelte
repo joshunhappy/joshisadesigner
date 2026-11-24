@@ -5,7 +5,7 @@
 
 	let { item, prev, next }: { item: WorkItem; prev: WorkItem; next: WorkItem } = $props();
 
-	const screens = $derived(item.images.slice(1));
+	const screens = $derived(item.screens);
 
 	const facts = $derived(
 		[
@@ -38,6 +38,14 @@
 		<p class="mt-6 max-w-[48ch] font-display text-xl font-medium leading-snug md:text-2xl">
 			{item.description}
 		</p>
+
+		{#if item.problem?.length}
+			<div class="mt-8 max-w-[38rem] space-y-3 text-lg leading-relaxed text-on-indigo">
+				{#each item.problem as sentence, i (i)}
+					<p>{sentence}</p>
+				{/each}
+			</div>
+		{/if}
 
 		<!-- Bare warp: honest about there being screens and no write-up yet. -->
 		<div class="mt-8 flex items-center gap-4">

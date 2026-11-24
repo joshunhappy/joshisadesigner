@@ -23,13 +23,12 @@
 
 /*
  * Backstrap Loom.
- * Indigo warp is the ground; cochineal, marigold and jade are the weft.
+ * Indigo warp is the ground; cochineal and marigold are the weft, alongside each client's own colour.
  * Undyed cotton is the reading surface for long-form text only.
  */
 @theme {
 	--color-indigo-950: #141c52;
 	--color-indigo-900: #1e2a78;
-	--color-indigo-800: #26338a;
 	--color-indigo-700: #2e3a8c;
 	--color-indigo-500: #4656b4;
 	--color-on-indigo: #ede6d6;
@@ -45,7 +44,6 @@
 
 	--color-cochineal: #b3122e;
 	--color-marigold: #f2a007;
-	--color-jade: #0b6b50;
 
 	--font-sans: 'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif;
 	--font-display: 'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif;

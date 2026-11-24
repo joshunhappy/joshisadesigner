@@ -7,7 +7,7 @@
 
 	const flagship = work.find((w) => w.caseStudy) ?? work[0];
 	const rest = work.filter((w) => w !== flagship);
-	const shown = rest.slice(0, 4);
+	const shown = rest;
 
 	// JOSH in undyed cotton, DE LA CRUZ in marigold weft.
 	const nameColors = [
@@ -97,7 +97,7 @@
 					href="/work"
 					class="inline-flex items-center gap-2 text-lg font-semibold text-on-indigo underline decoration-marigold decoration-2 hover:text-marigold"
 				>
-					All {work.length} projects
+					All work
 					<svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5" /></svg>
 				</a>
 			</div>

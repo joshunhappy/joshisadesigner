@@ -3,10 +3,21 @@ export interface WorkItem {
 	title: string;
 	category: string;
 	year: number;
+	/** Listing cover: the first `00…` file, else the first image. */
 	cover: string;
+	/** Every image across the project's folders. */
 	images: string[];
+	/** Product screens only (covers excluded). */
+	screens: string[];
+	/** Up to three screens for listings, spread across a merged project's folders. */
+	preview: string[];
 	description: string;
-	tags: string[];
+	/** Two or three sentences on the problem, for projects without a case study. */
+	problem?: string[];
+	/** True while `problem` copy is an unreviewed draft. */
+	draft?: boolean;
+	/** Former slugs that redirect here (merged projects). */
+	aliases?: string[];
 	client?: string;
 	role?: string;
 	timeline?: string;
@@ -15,11 +26,6 @@ export interface WorkItem {
 	responsibilities?: string[];
 	tools?: string[];
 	caseStudy?: CaseStudy;
-}
-
-export interface NavLink {
-	label: string;
-	href: string;
 }
 
 /* ---------------------------------------------------------------------------
