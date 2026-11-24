@@ -342,7 +342,7 @@
       "refersTo": "fact-cell",
       "description": "Ruled grid of paper-white cells: muted label over value.",
       "html": "<dl class=\"ds-facts\"><div><dt>Year</dt><dd>2026</dd></div><div><dt>Role</dt><dd>Lead UX/UI Designer</dd></div><div><dt>Tools</dt><dd>Figma</dd></div></dl>",
-      "css": ".ds-facts{display:grid;grid-template-columns:repeat(3,1fr);margin:0;border-top:1px solid rgb(0 0 0 / .2);border-left:1px solid rgb(0 0 0 / .2);font-family:var(--font-sans,Geist,Arial,sans-serif)}.ds-facts div{background:#fff;padding:16px 20px;border-right:1px solid rgb(0 0 0 / .2);border-bottom:1px solid rgb(0 0 0 / .2)}.ds-facts dt{margin-bottom:4px;font-size:.875rem;color:rgb(0 0 0 / .6)}.ds-facts dd{margin:0;font-size:1rem;line-height:1.375;color:#000}"
+      "css": ".ds-facts-wrap{overflow:hidden}.ds-facts{display:grid;grid-template-columns:repeat(3,1fr);margin:-1px 0 0 -1px;font-family:var(--font-sans,Geist,Arial,sans-serif)}.ds-facts div{padding:16px 20px;border-top:1px solid rgb(0 0 0 / .2);border-left:1px solid rgb(0 0 0 / .2)}.ds-facts div:nth-child(3n+1){padding-left:0}.ds-facts dt{margin-bottom:4px;font-size:.875rem;color:rgb(0 0 0 / .6)}.ds-facts dd{margin:0;font-size:1rem;line-height:1.375;color:#000}"
     },
     {
       "name": "Contact Band",

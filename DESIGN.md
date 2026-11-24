@@ -109,7 +109,6 @@ components:
     rounded: "{rounded.cover}"
     width: "648px"
   fact-cell:
-    backgroundColor: "{colors.surface}"
     textColor: "{colors.ink}"
     padding: "16px 20px"
   contact-band:
@@ -151,7 +150,7 @@ A greyscale built from one black at three opacities, with colour reserved for th
 
 ### Neutral
 - **Gallery Off-White** (`canvas`): page background everywhere, and the flatten colour for transparent images in the pipeline so screens sit on the page without a seam.
-- **Paper White** (`surface`): fact cells, decision cards, metric cells, flow steps, and browser-window interiors. Reads as a sheet laid on the canvas.
+- **Paper White** (`surface`): decision cards, metric cells, flow steps, and browser-window interiors. Reads as a sheet laid on the canvas.
 - **Wash** (`sunken`): 5% black. Cover fallback panels behind device frames, image-error placeholders, figure insets.
 - **Closing Grey** (`panel`): the contact band at the foot of every page. The only full-bleed tonal field.
 - **Muted Ink** (`ink-muted`): 60% black. Metadata (category, year, role), captions, secondary links, and body text inside case-study reading blocks.
@@ -233,7 +232,7 @@ Project name as a Title link whose hit area stretches over the whole row; meta l
 Screens appear in the frame of the device they were designed for: phone bezel at 375:812 or browser window at 16:10, cropped from the top, with the full image one click away in a lightbox (85% black backdrop, a pill hint naming Esc or tap). Width under 1200px decides phone versus desktop.
 
 ### Facts Grid
-A ruled grid of paper-white cells (one, two, then three columns), each with a muted 14px label over a 16px value. Shared by case studies and project galleries.
+Facts sit straight on the canvas with no fill and no outer box: hairline rules appear only between facts (each cell draws its top and left edge; the outer edges are clipped). One, two, then three columns; the cell that starts a row has no left padding, so its text aligns with the page text above. Each fact is a muted 14px label over a 16px value. Shared by case studies and project galleries.
 
 ### Case-Study Blocks
 Decision cards, metrics, and the callout are paper-white sheets with a hairline border and 2px corners. A decision's options use 8px dots, black when chosen and hairline grey otherwise. Pull quotes use a 2px black left rule. Flow steps carry their track colour as a 3px top border.
