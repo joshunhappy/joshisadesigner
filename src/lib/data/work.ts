@@ -113,8 +113,8 @@ const workMeta: WorkMeta[] = [
 		description:
 			'I led the UX and UI design for Metis, a fintech app built for the Mexican market, designing the onboarding flow, SAT integration screens, and account setup with a strong focus on clarity and trust.',
 		problem: [
-			'Invoicing in Mexico runs through the SAT, so an invoicing app has to collect tax details before it can do anything useful.',
-			'The screens follow that path: sign-up and SAT information first, then clients, products and services, line items, taxes, and a final review.'
+			'Invoices have to be valid for the tax authority (the SAT), so the app collects tax details before it does anything else.',
+			'The screens follow that path: tax information first, then the home dashboard, choosing who to bill, picking goods or services, adding an item, a new client, and the invoice review.'
 		],
 		draft: true,
 		role: 'Lead UX/UI Designer',

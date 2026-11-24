@@ -721,123 +721,115 @@
 			}
 		]
 	},
-	"/images/work/metis/01-splash-screen.jpg": {
-		"width": 393,
-		"height": 852,
+	"/images/work/metis/01-welcome.png": {
+		"width": 786,
+		"height": 1704,
 		"srcs": [
 			{
-				"w": 393,
-				"src": "/images/work/metis/01-splash-screen-393.jpg"
+				"w": 640,
+				"src": "/images/work/metis/01-welcome-640.jpg"
+			},
+			{
+				"w": 786,
+				"src": "/images/work/metis/01-welcome-786.jpg"
 			}
 		]
 	},
-	"/images/work/metis/02-access.jpg": {
-		"width": 393,
-		"height": 852,
+	"/images/work/metis/02-tax-information.png": {
+		"width": 786,
+		"height": 1704,
 		"srcs": [
 			{
-				"w": 393,
-				"src": "/images/work/metis/02-access-393.jpg"
+				"w": 640,
+				"src": "/images/work/metis/02-tax-information-640.jpg"
+			},
+			{
+				"w": 786,
+				"src": "/images/work/metis/02-tax-information-786.jpg"
 			}
 		]
 	},
-	"/images/work/metis/03-sign-up.jpg": {
-		"width": 393,
-		"height": 852,
+	"/images/work/metis/03-home.png": {
+		"width": 786,
+		"height": 1704,
 		"srcs": [
 			{
-				"w": 393,
-				"src": "/images/work/metis/03-sign-up-393.jpg"
+				"w": 640,
+				"src": "/images/work/metis/03-home-640.jpg"
+			},
+			{
+				"w": 786,
+				"src": "/images/work/metis/03-home-786.jpg"
 			}
 		]
 	},
-	"/images/work/metis/0400-user-info.jpg": {
-		"width": 393,
-		"height": 852,
+	"/images/work/metis/04-billed-to.png": {
+		"width": 786,
+		"height": 1704,
 		"srcs": [
 			{
-				"w": 393,
-				"src": "/images/work/metis/0400-user-info-393.jpg"
+				"w": 640,
+				"src": "/images/work/metis/04-billed-to-640.jpg"
+			},
+			{
+				"w": 786,
+				"src": "/images/work/metis/04-billed-to-786.jpg"
 			}
 		]
 	},
-	"/images/work/metis/05-sat-info.jpg": {
-		"width": 393,
-		"height": 852,
+	"/images/work/metis/05-goods-and-services.png": {
+		"width": 786,
+		"height": 1920,
 		"srcs": [
 			{
-				"w": 393,
-				"src": "/images/work/metis/05-sat-info-393.jpg"
+				"w": 640,
+				"src": "/images/work/metis/05-goods-and-services-640.jpg"
+			},
+			{
+				"w": 786,
+				"src": "/images/work/metis/05-goods-and-services-786.jpg"
 			}
 		]
 	},
-	"/images/work/metis/06-home.jpg": {
-		"width": 393,
-		"height": 852,
+	"/images/work/metis/06-add-item.png": {
+		"width": 786,
+		"height": 1704,
 		"srcs": [
 			{
-				"w": 393,
-				"src": "/images/work/metis/06-home-393.jpg"
+				"w": 640,
+				"src": "/images/work/metis/06-add-item-640.jpg"
+			},
+			{
+				"w": 786,
+				"src": "/images/work/metis/06-add-item-786.jpg"
 			}
 		]
 	},
-	"/images/work/metis/07-clients.jpg": {
-		"width": 393,
-		"height": 852,
+	"/images/work/metis/07-new-client.png": {
+		"width": 786,
+		"height": 2016,
 		"srcs": [
 			{
-				"w": 393,
-				"src": "/images/work/metis/07-clients-393.jpg"
+				"w": 640,
+				"src": "/images/work/metis/07-new-client-640.jpg"
+			},
+			{
+				"w": 786,
+				"src": "/images/work/metis/07-new-client-786.jpg"
 			}
 		]
 	},
-	"/images/work/metis/08-products-and-services.jpg": {
-		"width": 393,
-		"height": 960,
+	"/images/work/metis/08-review-invoice.png": {
+		"width": 786,
+		"height": 2926,
 		"srcs": [
 			{
-				"w": 393,
-				"src": "/images/work/metis/08-products-and-services-393.jpg"
-			}
-		]
-	},
-	"/images/work/metis/09-add-item.jpg": {
-		"width": 393,
-		"height": 852,
-		"srcs": [
+				"w": 640,
+				"src": "/images/work/metis/08-review-invoice-640.jpg"
+			},
 			{
-				"w": 393,
-				"src": "/images/work/metis/09-add-item-393.jpg"
-			}
-		]
-	},
-	"/images/work/metis/10-tax.jpg": {
-		"width": 393,
-		"height": 852,
-		"srcs": [
-			{
-				"w": 393,
-				"src": "/images/work/metis/10-tax-393.jpg"
-			}
-		]
-	},
-	"/images/work/metis/11-categories.jpg": {
-		"width": 393,
-		"height": 604,
-		"srcs": [
-			{
-				"w": 393,
-				"src": "/images/work/metis/11-categories-393.jpg"
-			}
-		]
-	},
-	"/images/work/metis/12-review.jpg": {
-		"width": 393,
-		"height": 1463,
-		"srcs": [
-			{
-				"w": 393,
-				"src": "/images/work/metis/12-review-393.jpg"
+				"w": 786,
+				"src": "/images/work/metis/08-review-invoice-786.jpg"
 			}
 		]
 	},
