@@ -13,10 +13,13 @@ function folderImages(dir: string): string[] {
 	return imagePaths.filter((path) => path.startsWith(`/images/work/${dir}/`)).sort();
 }
 
-/** Files named `00…` are covers made for listings, not screens of the product. */
-const isCover = (src: string) => /\/00[^/]*$/.test(src);
+/**
+ * Composite covers made for listings are the `00…png` files; `00…jpg` files are
+ * real screens (often the landing page) and stay in the gallery.
+ */
+const isCover = (src: string) => /\/00[^/]*\.png$/i.test(src);
 
-type WorkMeta = Omit<WorkItem, 'images' | 'cover' | 'screens' | 'preview' | 'caseStudy'> & {
+type WorkMeta = Omit<WorkItem, 'images' | 'cover' | 'screens' | 'caseStudy'> & {
 	/** Image folders under assets/images/work/ (originals). Defaults to [slug]. */
 	dirs?: string[];
 };
@@ -144,12 +147,12 @@ const workMeta: WorkMeta[] = [
 		slug: 'pronto-topup',
 		aliases: ['pronto-topup-app'],
 		dirs: ['pronto-topup', 'pronto-topup-app'],
-		title: 'Pronto Top-up',
+		title: 'Pronto Topup',
 		category: 'Web App & Mobile App Design',
 		year: 2023,
 		bgColor: '#0F766E',
 		description:
-			'I designed Pronto Top-up on the web and in its mobile app, streamlining carrier selection, product browsing, and checkout for fast mobile recharges.',
+			'I designed Pronto Topup on the web and in its mobile app, streamlining carrier selection, product browsing, and checkout for fast mobile recharges.',
 		problem: [
 			'A recharge is a small purchase people want over in seconds, on whichever device is at hand.',
 			'The screens cover the whole run on web and app: phone number, carrier, top-ups, packages or internet, card review, and the receipt, plus the dashboard, history and settings around it.'
@@ -164,21 +167,14 @@ const workMeta: WorkMeta[] = [
 ];
 
 export const work: WorkItem[] = workMeta.map(({ dirs, ...item }) => {
-	const perDir = (dirs ?? [item.slug]).map((dir) => folderImages(dir).filter((src) => !isCover(src)));
 	const images = (dirs ?? [item.slug]).flatMap(folderImages);
 	const covers = images.filter(isCover);
-	const screens = perDir.flat();
-	// Listing preview: take screens round-robin across folders so a merged project shows both sides.
-	const preview: string[] = [];
-	for (let i = 0; preview.length < 3 && perDir.some((d) => d[i]); i++) {
-		for (const d of perDir) if (d[i] && preview.length < 3) preview.push(d[i]);
-	}
+	const screens = images.filter((src) => !isCover(src));
 	return {
 		...item,
 		images,
 		cover: covers[0] ?? images[0],
 		screens,
-		preview,
 		caseStudy: caseStudies[item.slug]
 	};
 });

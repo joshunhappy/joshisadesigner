@@ -25,3 +25,27 @@ export function responsive(path: string) {
 		height: entry.height
 	};
 }
+
+export type DeviceKind = 'mobile' | 'desktop';
+
+/** Mobile screens are captured at phone widths (375–430px); everything wider is desktop. */
+export function deviceOf(path: string): DeviceKind {
+	const entry = images[path];
+	return entry && entry.width <= 600 ? 'mobile' : 'desktop';
+}
+
+/**
+ * Human name for a screen from its file name: "0400-user-info.jpg" → "User info".
+ * Files named only by number ("03.jpg") get "Screen <n>" from their position.
+ */
+export function screenName(path: string, index?: number): string {
+	const file = path.split('/').pop() ?? path;
+	const words = file
+		.replace(/\.[a-z]+$/i, '')
+		.replace(/^[0-9]+[.\-_ ]*/, '')
+		.replace(/\bmobile\b/i, '')
+		.replace(/[.\-_]+/g, ' ')
+		.trim();
+	if (words) return words[0].toUpperCase() + words.slice(1);
+	return index === undefined ? 'Screen' : `Screen ${index + 1}`;
+}

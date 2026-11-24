@@ -7,6 +7,8 @@
 	 */
 	import type { WorkItem } from '$lib/types';
 	import Img from './Img.svelte';
+	import DeviceFrame from './DeviceFrame.svelte';
+	import { deviceOf, screenName } from '$lib/images';
 	import { beat } from '$lib/actions/beat';
 
 	let {
@@ -18,9 +20,9 @@
 
 	const hasStudy = $derived(Boolean(item.caseStudy));
 	const kind = $derived(hasStudy ? 'Case study' : 'Screens only');
-	const media = $derived(
-		flagship && item.caseStudy?.hero ? [item.caseStudy.hero.src] : item.preview
-	);
+	const media = $derived(item.caseStudy?.hero ? [item.caseStudy.hero.src] : item.screens.slice(0, 1));
+	const desktop = $derived(item.screens.filter((src) => deviceOf(src) === 'desktop'));
+	const mobile = $derived(item.screens.filter((src) => deviceOf(src) === 'mobile'));
 	const mediaAlt = (i: number) =>
 		flagship && item.caseStudy?.hero ? item.caseStudy.hero.alt : `${item.title}, screen ${i + 1}`;
 </script>
@@ -80,19 +82,39 @@
 			</p>
 		</div>
 
-		<div class="media min-w-0 {flagship ? '' : 'grid grid-cols-3 gap-2 md:gap-3'}">
-			{#each media as src, i (src)}
-				<div class="frame overflow-hidden {flagship ? 'aspect-[1926/1078]' : 'aspect-[4/5]'}">
-					<Img
-						{src}
-						alt={mediaAlt(i)}
-						priority={priority && i === 0}
-						eager={flagship && i === 0}
-						class="h-full w-full {flagship ? 'object-contain' : 'object-cover object-top'}"
-					/>
+		{#if flagship}
+			<div class="media min-w-0">
+				{#each media as src, i (src)}
+					<div class="frame aspect-[1926/1078] overflow-hidden">
+						<Img
+							{src}
+							alt={mediaAlt(i)}
+							priority={priority && i === 0}
+							eager={i === 0}
+							class="h-full w-full object-contain"
+						/>
+					</div>
+				{/each}
+			</div>
+		{:else if desktop.length && mobile.length}
+			<!-- Web and app: the browser window with the phone overlapping its corner. -->
+			<div class="media relative min-w-0 pr-[14%] pb-[6%]">
+				<DeviceFrame src={desktop[0]} alt="{item.title}, desktop: {screenName(desktop[0])}" kind="desktop" />
+				<div class="absolute right-0 bottom-0 w-[24%]">
+					<DeviceFrame src={mobile[0]} alt="{item.title}, mobile: {screenName(mobile[0])}" kind="mobile" sizes="160px" />
 				</div>
-			{/each}
-		</div>
+			</div>
+		{:else if desktop.length}
+			<div class="media min-w-0">
+				<DeviceFrame src={desktop[0]} alt="{item.title}, desktop: {screenName(desktop[0])}" kind="desktop" />
+			</div>
+		{:else}
+			<div class="media grid min-w-0 grid-cols-3 gap-3 md:gap-5">
+				{#each mobile.slice(0, 3) as src (src)}
+					<DeviceFrame {src} alt="{item.title}, mobile: {screenName(src)}" kind="mobile" sizes="(min-width: 1024px) 200px, 30vw" />
+				{/each}
+			</div>
+		{/if}
 	</div>
 </article>
 

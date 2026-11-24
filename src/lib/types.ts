@@ -9,8 +9,6 @@ export interface WorkItem {
 	images: string[];
 	/** Product screens only (covers excluded). */
 	screens: string[];
-	/** Up to three screens for listings, spread across a merged project's folders. */
-	preview: string[];
 	description: string;
 	/** Two or three sentences on the problem, for projects without a case study. */
 	problem?: string[];

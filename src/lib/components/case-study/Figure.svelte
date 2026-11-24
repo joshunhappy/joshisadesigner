@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { ImageRef } from '$lib/types';
-	import { responsive } from '$lib/images';
+	import { responsive, type DeviceKind } from '$lib/images';
+	import DeviceFrame from '$lib/components/loom/DeviceFrame.svelte';
 
 	let {
 		src,
@@ -11,8 +12,15 @@
 		frame,
 		eager = false,
 		compact = false,
-		plain = false
-	}: ImageRef & { eager?: boolean; compact?: boolean; plain?: boolean } = $props();
+		plain = false,
+		chrome
+	}: ImageRef & {
+		eager?: boolean;
+		compact?: boolean;
+		plain?: boolean;
+		/** Present the image inside a phone or browser frame at a fixed viewport. */
+		chrome?: DeviceKind;
+	} = $props();
 
 	let dialogEl: HTMLDialogElement | undefined = $state();
 	/** The full-size copy only exists while the lightbox is open, so closed dialogs fetch nothing. */
@@ -33,6 +41,11 @@
 		class="block w-full text-left {device === 'mobile' ? 'max-w-[300px]' : ''}"
 		aria-label="Enlarge image: {alt}"
 	>
+		{#if chrome}
+			<div class="transition-opacity hover:opacity-90">
+				<DeviceFrame {src} {alt} kind={chrome} {eager} />
+			</div>
+		{:else}
 		<div
 			class="overflow-hidden rounded-sm transition-opacity hover:opacity-90 {plain
 				? ''
@@ -50,6 +63,7 @@
 				class="w-full h-auto block"
 			/>
 		</div>
+		{/if}
 	</a>
 
 	{#if caption || annotation || frame}

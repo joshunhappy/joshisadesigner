@@ -49,8 +49,7 @@ joshisadesigner.com is Josh De La Cruz's portfolio. It exists to get him hired, 
   - Mercury (2024);
   - Metis (2024);
   - Ministerios Ebenezer (2023);
-  - Pronto Top-up (2023);
-  - Pronto Top-up App (2023).
+  - Pronto Topup, web and app (2023).
 - **Résumé/CV:** Josh will supply a PDF to link. Until it exists, don't link to a placeholder.
 - **Contact:** email joshisadesigner@me.com and LinkedIn.
 - **Absent:** no testimonials, client logos, awards, press, or metrics. Don't fabricate any.

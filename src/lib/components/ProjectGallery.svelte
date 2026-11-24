@@ -2,10 +2,15 @@
 	import type { WorkItem } from '$lib/types';
 	import Figure from './case-study/Figure.svelte';
 	import WorkPager from './loom/WorkPager.svelte';
+	import { deviceOf, screenName } from '$lib/images';
 
 	let { item, prev, next }: { item: WorkItem; prev: WorkItem; next: WorkItem } = $props();
 
-	const screens = $derived(item.screens);
+	const groups = $derived(
+		(['desktop', 'mobile'] as const)
+			.map((kind) => ({ kind, screens: item.screens.filter((src) => deviceOf(src) === kind) }))
+			.filter((g) => g.screens.length)
+	);
 
 	const facts = $derived(
 		[
@@ -67,22 +72,39 @@
 		{/if}
 	</div>
 
-	<section aria-label="Screens" class="mx-auto max-w-[1200px] px-5 pt-10 pb-6 md:px-10 md:pt-14">
-		<p class="mb-6 text-base text-on-indigo-muted">
-			{screens.length === 1 ? '1 screen' : `${screens.length} screens`}. Select one to see it full size.
-		</p>
-		<!-- Bare warp drawn on its own layer behind the columns, so leftover column space reads as unwoven warp. -->
-		<div class="relative">
-			<div class="bare-warp absolute inset-0 -z-0 opacity-60" aria-hidden="true"></div>
-		<div class="relative columns-1 gap-6 md:columns-2">
-			{#each screens as src, i (src)}
-				<div class="mb-6 break-inside-avoid">
-					<Figure {src} alt="{item.title}, screen {i + 1}" eager={i < 2} plain />
-				</div>
-			{/each}
-		</div>
-		</div>
-	</section>
+	{#each groups as group (group.kind)}
+		<section
+			aria-labelledby="screens-{group.kind}"
+			class="mx-auto max-w-[1200px] px-5 pt-10 pb-4 md:px-10 md:pt-14"
+		>
+			<h2 id="screens-{group.kind}" class="type-title flex items-baseline gap-3">
+				{group.kind === 'desktop' ? 'Desktop' : 'Mobile'}
+				<span class="text-base font-normal tracking-normal text-on-indigo-muted">
+					{group.screens.length === 1 ? '1 screen' : `${group.screens.length} screens`}
+				</span>
+			</h2>
+			<p class="mt-2 mb-8 text-base text-on-indigo-muted">
+				Shown at the top of each screen. Select one to see it full length.
+			</p>
+			<ul
+				class="grid gap-x-6 gap-y-10 {group.kind === 'desktop'
+					? 'md:grid-cols-2'
+					: 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-4'}"
+			>
+				{#each group.screens as src, i (src)}
+					<li>
+						<Figure
+							{src}
+							alt="{item.title}, {group.kind} screen: {screenName(src, i)}"
+							chrome={group.kind}
+							eager={i < 2}
+						/>
+						<p class="mt-3 text-sm text-on-indigo-muted">{screenName(src, i)}</p>
+					</li>
+				{/each}
+			</ul>
+		</section>
+	{/each}
 
 	<div class="mx-auto max-w-[1200px] px-5 pt-6 md:px-10">
 		<WorkPager {prev} {next} />

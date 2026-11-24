@@ -60,6 +60,9 @@
 	--color-thread-fringe: color-mix(in oklab, var(--color-on-indigo) 30%, transparent);
 	--color-thread-cotton: color-mix(in oklab, var(--color-ink) 2.5%, transparent);
 
+	/* Device bezel for phone frames: a step darker than the deepest indigo. */
+	--color-bezel: color-mix(in oklab, var(--color-indigo-950) 75%, black);
+
 	/* The one shadow: screenshots sitting on the cloth. */
 	--shadow-screen: 0 18px 40px -18px color-mix(in oklab, var(--color-indigo-950) 85%, black);
 
