@@ -1,0 +1,14 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "design-system-font",
+        "value": "bricolage fallback",
+        "createdAt": "2026-11-24T03:29:45.652Z",
+        "reason": "agent: metric-matched local('Arial') @font-face alias for Bricolage Grotesque added in typeset step to limit swap reflow; not a second brand face"
+      }
+    ]
+  }
+}

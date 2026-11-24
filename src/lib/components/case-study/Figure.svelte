@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { ImageRef } from '$lib/types';
+	import { responsive } from '$lib/images';
 
 	let {
 		src,
@@ -16,12 +17,13 @@
 	let dialogEl: HTMLDialogElement | undefined = $state();
 	/** The full-size copy only exists while the lightbox is open, so closed dialogs fetch nothing. */
 	let open = $state(false);
+	const r = $derived(responsive(src));
 </script>
 
 <figure class="mb-10 last:mb-0">
 	<!-- A real link to the full image, so it still works without JavaScript; with JS it opens the lightbox. -->
 	<a
-		href={src}
+		href={r.src}
 		onclick={(e) => {
 			if (!dialogEl?.showModal) return;
 			e.preventDefault();
@@ -37,7 +39,11 @@
 				: 'bg-cotton-deep border border-rule'}"
 		>
 			<img
-				{src}
+				src={r.src}
+				srcset={r.srcset}
+				sizes={device === 'mobile' ? '300px' : '(min-width: 1200px) 900px, 100vw'}
+				width={r.width}
+				height={r.height}
 				{alt}
 				loading={eager ? 'eager' : 'lazy'}
 				decoding="async"
@@ -79,7 +85,7 @@
 		aria-label="Close enlarged image"
 	>
 		{#if open}
-			<img {src} {alt} class="max-w-full max-h-full object-contain rounded-sm" />
+			<img src={r.src} {alt} class="max-w-full max-h-full object-contain rounded-sm" />
 		{/if}
 	</button>
 	<span

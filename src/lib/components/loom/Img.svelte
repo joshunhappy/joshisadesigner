@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { responsive } from '$lib/images';
 	/**
 	 * Single place every project raster renders through, so the image pipeline
 	 * (srcset, modern formats, intrinsic size) can change in one file.
@@ -21,6 +22,7 @@
 	} = $props();
 
 	let failed = $state(false);
+	const r = $derived(responsive(src));
 </script>
 
 {#if failed}
@@ -33,7 +35,10 @@
 	</span>
 {:else}
 	<img
-		{src}
+		src={r.src}
+		srcset={r.srcset}
+		width={r.width}
+		height={r.height}
 		{alt}
 		{sizes}
 		loading={eager || priority ? 'eager' : 'lazy'}

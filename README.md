@@ -30,3 +30,13 @@ Push to `main`. Cloudflare Pages builds automatically.
 ## Figma
 
 Replace placeholder tokens in `src/app.css` (`@theme` block) with exported colors and fonts after Figma handoff. Drop font files into `static/fonts/`, images into `static/images/`, and update `src/lib/data/work.ts` with real project data.
+
+## Images
+
+Originals live in `assets/images/` (committed, not deployed). After adding or changing one, run:
+
+```bash
+bun run images
+```
+
+This writes resized, provenance-stamped JPEGs to `static/images/` and updates `src/lib/data/image-manifest.json`. Commit both. Content data keeps referring to images by their original path (`/images/work/<project>/<file>`).

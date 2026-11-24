@@ -1,7 +1,6 @@
 import type { CaseStudy, WorkItem } from '$lib/types';
 import { americaVoiceCaseStudy } from './case-studies/america-voice';
-
-const imageFiles = import.meta.glob('/static/images/work/**/*.{jpg,jpeg,png}');
+import { imagePaths } from '$lib/images';
 
 /** Projects listed here render the long-form case study template. */
 const caseStudies: Record<string, CaseStudy> = {
@@ -10,17 +9,15 @@ const caseStudies: Record<string, CaseStudy> = {
 
 /** Every image in one project folder, sorted by file name. */
 function folderImages(dir: string): string[] {
-	return Object.keys(imageFiles)
-		.filter((path) => path.startsWith(`/static/images/work/${dir}/`))
-		.sort()
-		.map((path) => path.replace('/static/images', '/images'));
+	// Paths come from the image pipeline's manifest (no glob, so no duplicate build assets).
+	return imagePaths.filter((path) => path.startsWith(`/images/work/${dir}/`)).sort();
 }
 
 /** Files named `00…` are covers made for listings, not screens of the product. */
 const isCover = (src: string) => /\/00[^/]*$/.test(src);
 
 type WorkMeta = Omit<WorkItem, 'images' | 'cover' | 'screens' | 'preview' | 'caseStudy'> & {
-	/** Image folders under static/images/work/. Defaults to [slug]. */
+	/** Image folders under assets/images/work/ (originals). Defaults to [slug]. */
 	dirs?: string[];
 };
 
