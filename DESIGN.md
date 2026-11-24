@@ -1,309 +1,268 @@
 ---
 name: Joshisadesigner
-description: Josh De La Cruz's portfolio, woven as a backstrap loom cloth: indigo warp ground, bright weft for the work.
+description: Josh De La Cruz's portfolio. Black Geist on an off-white canvas; the work supplies the only colour.
 colors:
-  indigo-950: "#141c52"
-  indigo-900: "#1e2a78"
-  indigo-700: "#2e3a8c"
-  indigo-500: "#4656b4"
-  on-indigo: "#ede6d6"
-  on-indigo-muted: "#a9b3e6"
-  marigold: "#f2a007"
-  cochineal: "#b3122e"
-  cotton: "#ede6d6"
-  cotton-deep: "#e2d9c4"
-  cotton-light: "#f6f1e6"
-  ink: "#15183a"
-  ink-muted: "#4a4e6e"
-  ink-faint: "#5a5e7e"
-  rule: "#cfc5ae"
-  thread-bare: "rgb(237 230 214 / 0.38)"
-  thread-fringe: "rgb(237 230 214 / 0.3)"
-  thread-cotton: "rgb(21 24 58 / 0.025)"
-  track-shared: "#15183a"
-  track-a: "#b3122e"
-  track-b: "#2e3a8c"
+  canvas: "#f8f8f8"
+  surface: "#ffffff"
+  sunken: "rgb(0 0 0 / 0.05)"
+  panel: "#e5e5e5"
+  ink: "#000000"
+  ink-muted: "rgb(0 0 0 / 0.6)"
+  rule: "rgb(0 0 0 / 0.2)"
+  open: "#03ae03"
+  bezel: "#111111"
+  chrome: "#e8e8e8"
+  track-shared: "#000000"
+  track-a: "#e2532c"
+  track-b: "#4b5bd4"
 typography:
   display:
-    fontFamily: "Bricolage Grotesque, Bricolage Fallback, ui-sans-serif, system-ui, sans-serif"
-    fontSize: "clamp(3rem, 2rem + 4.5vw, 6rem)"
-    fontWeight: 800
-    lineHeight: 0.9
-    letterSpacing: "-0.035em"
+    fontFamily: "Geist, Geist Fallback, ui-sans-serif, system-ui, sans-serif"
+    fontSize: "clamp(3rem, 1.6rem + 5vw, 6rem)"
+    fontWeight: 900
+    lineHeight: 1
+    letterSpacing: "-0.02em"
   headline:
-    fontFamily: "Bricolage Grotesque, Bricolage Fallback, ui-sans-serif, system-ui, sans-serif"
-    fontSize: "4.5rem"
-    fontWeight: 800
-    lineHeight: 0.95
-    letterSpacing: "-0.03em"
+    fontFamily: "Geist, Geist Fallback, ui-sans-serif, system-ui, sans-serif"
+    fontSize: "clamp(2.5rem, 1.6rem + 3vw, 4rem)"
+    fontWeight: 700
+    lineHeight: 1.25
+    letterSpacing: "-0.015em"
   title:
-    fontFamily: "Bricolage Grotesque, Bricolage Fallback, ui-sans-serif, system-ui, sans-serif"
-    fontSize: "2.25rem"
-    fontWeight: 800
-    lineHeight: 1.05
-    letterSpacing: "-0.025em"
+    fontFamily: "Geist, Geist Fallback, ui-sans-serif, system-ui, sans-serif"
+    fontSize: "clamp(2rem, 1.4rem + 2vw, 3rem)"
+    fontWeight: 700
+    lineHeight: 1.2
+    letterSpacing: "-0.01em"
   lede:
-    fontFamily: "Bricolage Grotesque, Bricolage Fallback, ui-sans-serif, system-ui, sans-serif"
-    fontSize: "1.875rem"
-    fontWeight: 500
-    lineHeight: 1.3
+    fontFamily: "Geist, Geist Fallback, ui-sans-serif, system-ui, sans-serif"
+    fontSize: "clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem)"
+    fontWeight: 300
+    lineHeight: 1.4
   body:
-    fontFamily: "Bricolage Grotesque, Bricolage Fallback, ui-sans-serif, system-ui, sans-serif"
-    fontSize: "1.125rem"
-    fontWeight: 400
-    lineHeight: 1.625
-  body-reading:
-    fontFamily: "Bricolage Grotesque, Bricolage Fallback, ui-sans-serif, system-ui, sans-serif"
+    fontFamily: "Geist, Geist Fallback, ui-sans-serif, system-ui, sans-serif"
     fontSize: "1.0625rem"
     fontWeight: 400
-    lineHeight: 1.625
+    lineHeight: 1.6
+  body-light:
+    fontFamily: "Geist, Geist Fallback, ui-sans-serif, system-ui, sans-serif"
+    fontSize: "1rem"
+    fontWeight: 300
+    lineHeight: 1.6
   label:
-    fontFamily: "Bricolage Grotesque, Bricolage Fallback, ui-sans-serif, system-ui, sans-serif"
+    fontFamily: "Geist, Geist Fallback, ui-sans-serif, system-ui, sans-serif"
     fontSize: "1.0625rem"
     fontWeight: 600
     lineHeight: 1.4
-  ui:
-    fontFamily: "Bricolage Grotesque, Bricolage Fallback, ui-sans-serif, system-ui, sans-serif"
-    fontSize: "0.9375rem"
-    fontWeight: 400
-    lineHeight: 1.5
   meta:
-    fontFamily: "Bricolage Grotesque, Bricolage Fallback, ui-sans-serif, system-ui, sans-serif"
+    fontFamily: "Geist, Geist Fallback, ui-sans-serif, system-ui, sans-serif"
     fontSize: "0.875rem"
     fontWeight: 400
-    lineHeight: 1.4
+    lineHeight: 1.2
+  button:
+    fontFamily: "Geist, Geist Fallback, ui-sans-serif, system-ui, sans-serif"
+    fontSize: "1.125rem"
+    fontWeight: 500
+    lineHeight: 1.25
 rounded:
-  thread: "2px"
-  frame: "4px"
-  pill: "9999px"
+  sm: "2px"
+  window: "8px"
+  cover: "24px"
+  phone: "2rem"
+  pill: "999px"
 spacing:
-  pick-0: "4px"
-  pick-1: "6px"
-  pick-2: "9px"
-  pick-3: "22px"
-  gutter-sm: "20px"
-  gutter-md: "40px"
-  container-wide: "1440px"
-  container-reading: "1200px"
+  gutter-sm: "16px"
+  gutter: "32px"
+  gutter-content: "40px"
+  gutter-about: "48px"
+  row-gap: "40px"
+  section: "72px"
+  shell: "1440px"
+  reading: "1200px"
+  rule-width: "640px"
+  cover-width: "648px"
+  portrait-height: "790px"
+  about-lede: "560px"
 components:
   button-primary:
-    backgroundColor: "{colors.marigold}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body}"
+    backgroundColor: "{colors.ink}"
+    textColor: "{colors.canvas}"
+    typography: "{typography.button}"
     rounded: "{rounded.pill}"
-    padding: "16px 28px"
-  button-primary-hover:
-    backgroundColor: "{colors.on-indigo}"
-    textColor: "{colors.ink}"
+    padding: "12px 16px"
   button-outline:
     backgroundColor: "transparent"
-    textColor: "{colors.on-indigo}"
+    textColor: "{colors.ink}"
+    typography: "{typography.button}"
     rounded: "{rounded.pill}"
-    padding: "14px 28px"
+    padding: "12px 16px"
   button-outline-hover:
-    backgroundColor: "{colors.on-indigo}"
-    textColor: "{colors.ink}"
-  nav-link:
-    textColor: "{colors.on-indigo-muted}"
-    padding: "8px 12px"
-  nav-link-active:
-    textColor: "{colors.on-indigo}"
+    backgroundColor: "{colors.ink}"
+    textColor: "{colors.canvas}"
+  brand-tile:
+    backgroundColor: "{colors.ink}"
+    textColor: "{colors.canvas}"
+    width: "72px"
+    height: "86px"
+  work-cover:
+    backgroundColor: "{colors.sunken}"
+    rounded: "{rounded.cover}"
+    width: "648px"
   fact-cell:
-    backgroundColor: "{colors.indigo-950}"
-    textColor: "{colors.on-indigo}"
+    backgroundColor: "{colors.surface}"
+    textColor: "{colors.ink}"
     padding: "16px 20px"
-  decision-card:
-    backgroundColor: "{colors.cotton-light}"
+  contact-band:
+    backgroundColor: "{colors.panel}"
     textColor: "{colors.ink}"
-    rounded: "{rounded.thread}"
-    padding: "28px"
-  pager-cell-indigo:
-    backgroundColor: "{colors.indigo-900}"
-    textColor: "{colors.on-indigo}"
-    padding: "24px 20px"
-  pager-cell-cotton:
-    backgroundColor: "{colors.cotton}"
-    textColor: "{colors.ink}"
-    padding: "24px 20px"
+    padding: "128px 32px"
 ---
 
 # Design System: Joshisadesigner
 
 ## Overview
 
-**Creative North Star: "The Backstrap Loom"**
+**Creative North Star: "The Quiet Contact Sheet"**
 
-Warp is the design, weft is the build, and the cloth exists only where both cross. Every page is set on an indigo warp field: a deep blue ground striped with fine vertical threads at a fixed 6px pitch. The work arrives as weft. Each project is a horizontal brocade band whose woven strip carries the client's own colour, and how tightly that strip is beaten says how much weight the project carries. Long-form reading moves onto undyed cotton, a warm off-white with a faint 4px cross weave, so the case study reads as cloth rather than paper.
+A monochrome, type-led page where Josh's projects supply every bit of colour. Black Geist sits on an off-white canvas; the structure is set by type weight, hairline rules, and generous vertical space rather than by decoration, tinted surfaces, or ornament. The work list reads like a contact sheet: a ruled column of project names on the left, each with its full-colour cover on the right.
 
-The system is dense and saturated on indigo, quiet and generous on cotton. One display family (Bricolage Grotesque) does all the talking, heavy and tightly tracked for headings and plain for reading. The name on the home page is not set in a font at all: it is woven as 5x7 brocade lettering, with the warp passing over every float. A single 2px marigold thread runs the length of the home page, from the portrait through every band to a knot in the contact close.
+The weight ladder carries the hierarchy. Black (900) is for the one page title, Bold (700) for section and project headings, Light (300) for the opening line and long reading. Secondary text is the same black at 60%, and every divider is the same black at 20%. Surfaces are flat; the only lifted objects are device-framed screens, which rest on the canvas with one soft shadow.
 
-Absence is drawn on purpose. A project with screens and no write-up shows bare warp, loose threads with one started pick, and says "Screens only". An empty grid cell shows warp instead of a hole. Motion is vertical packing: picks slide down and pack tight as a band enters view, and hover or focus beats a band tighter. The one exception is continuity between pages, where a project's title travels from its band into the project header. With reduced motion, everything renders already beaten and pages simply cross-fade.
+The system is a user-pinned design (Figma portfolio.v2, landing frame) and replaces the earlier Backstrap Loom world entirely. Case-study pages keep their established layout (facts grid, section rail, reading column) and are restyled into this vocabulary.
 
 **Key Characteristics:**
-- Indigo warp field owns the ground; undyed cotton appears only under long-form reading.
-- Projects are brocade bands; pick density encodes rank.
-- One integer density scale (pick-0 to pick-3) drives rank, the active state, and the beat-in.
-- One continuous marigold weft thread ties the home page together.
-- Missing content is drawn as bare warp, never left blank and never faked.
-- Motion packs vertically and nothing else moves, except the title's travel between pages.
+- Off-white canvas, pure black ink, no brand hue.
+- Colour comes only from project imagery, the green open-for-work dot, and data tracks in case-study flows.
+- Geist throughout, separated by weight (900 / 700 / 500 / 300) rather than by a second family.
+- Hairline rules at 20% black; 640px-wide rules between work rows.
+- Pill buttons in two states only: black fill, or 1px black outline.
+- 24px-radius covers and portrait; everything else nearly square.
 
 ## Colors
 
-A cold indigo ground with three hot accents. Marigold is the action colour on indigo, cochineal the action colour on cotton, and each client's own colour is the weft of its band.
+A greyscale built from one black at three opacities, with colour reserved for the work and for meaning.
 
 ### Primary
-- **Indigo Warp** (indigo-900): the default field behind every page (`warp` surface), the fill of indigo pager cells, and the warp thread drawn over brocade lettering.
-- **Deep Indigo** (indigo-950): the page background, header, contact close (`warp-deep` surface), fact cells, image frames, and the lightbox scrim at 90%.
-- **Warp Thread** (indigo-700): the 1px vertical thread line in the warp pattern, the 3px interlace threads crossing the portrait's edges, and the 1px dividers of fact grids and indigo pagers.
-- **Loose Indigo** (indigo-500): scrollbar thumb only.
-
-### Secondary
-- **Marigold Weft** (marigold): the one action colour on indigo. Primary buttons, the header Email pill, the running weft thread and its knot, the active nav tab's picks, the "Case study" kind label, band call-to-action text, the reading-progress pick, focus rings, the skip link, and text selection.
+- **Ink Black** (`ink`): all type, filled buttons, the brand tile, focus outlines, selection fill, active section marks, and the reading-progress bar. There is no other primary; the accent token aliases it.
 
 ### Tertiary
-- **Cochineal** (cochineal): the action and active colour on cotton. The woven-tab picks of the active case-study section, the "Chosen" mark in decisions, link underlines and hovers in cotton text.
-- **Client weft** (per project, from work data): each band's strip is woven in the client's own colour, lifted on indigo to at least OKLCH lightness 0.72 and chroma 0.08 so it reads.
+- **Open Green** (`open`): the single dot in the "Open for work" pill. It is a status signal, not a brand colour, and appears nowhere else.
+- **Flow Tracks** (`track-shared`, `track-a` vermilion, `track-b` indigo): category colours for case-study flow steps and their legend only, as a 3px top border and an 8px dot.
 
 ### Neutral
-- **Undyed Cotton** (cotton): the long-form reading surface, with a 4px cross weave at 2 to 2.5% ink. Also the primary text colour on indigo (`on-indigo` shares the value).
-- **Cotton Light** (cotton-light): raised panels on cotton (decision cards, callouts, flow steps, metric cells).
-- **Cotton Deep** (cotton-deep): figure wells and annotation panels on cotton.
-- **Pale Indigo** (on-indigo-muted): secondary text on indigo (meta rows, nav links at rest, captions, footer). 6.2:1 on indigo-900.
-- **Ink** (ink): headings and emphasis on cotton; text on marigold.
-- **Ink Muted** (ink-muted): reading body on cotton (6.5:1).
-- **Ink Faint** (ink-faint): numerals, notes, and unchosen options on cotton (5.1:1 minimum).
-- **Selvage Rule** (rule): 1px dividers and borders on cotton.
-- **Thread inks** (thread-bare, thread-fringe, thread-cotton): one ink per thread job, mixed in OKLab from an existing colour rather than hand-tuned per component. Bare warp threads (on-indigo at 38%), the header and close fringes (on-indigo at 30%), and the cotton cross weave (ink at 2.5%).
-- **Data tracks** (track-shared, track-a, track-b): category colours for case-study flows on cotton, aliased to ink, cochineal and indigo-700. Any step without a track falls back to ink-faint.
+- **Gallery Off-White** (`canvas`): page background everywhere, and the flatten colour for transparent images in the pipeline so screens sit on the page without a seam.
+- **Paper White** (`surface`): fact cells, decision cards, metric cells, flow steps, and browser-window interiors. Reads as a sheet laid on the canvas.
+- **Wash** (`sunken`): 5% black. Cover fallback panels behind device frames, image-error placeholders, figure insets.
+- **Closing Grey** (`panel`): the contact band at the foot of every page. The only full-bleed tonal field.
+- **Muted Ink** (`ink-muted`): 60% black. Metadata (category, year, role), captions, secondary links, and body text inside case-study reading blocks.
+- **Hairline** (`rule`): 20% black. Every divider, grid line, outline on figures, and the browser-window dots.
+- **Bezel** (`bezel`) and **Window Chrome** (`chrome`): device frames around project screens only.
 
 ### Named Rules
-**The Warp Owns the Ground Rule.** Indigo is the page. Cotton is laid down only where someone reads long text (case-study body, the About background panel). Short pages, galleries, and the 404 stay on indigo.
+**The Work Is the Colour Rule.** No interface element carries hue except the open-for-work dot and the data tracks inside case-study flows. A new surface that needs emphasis gets it from weight, size, or a black fill, never from a new colour.
 
-**The Two Hands Rule.** Marigold acts on indigo; cochineal acts on cotton. They do not swap surfaces.
-
-**The Thread Ink Rule.** Every thread drawn over a surface uses a thread-ink token. Add a token for a new job; never type a one-off opacity into a pattern.
-
-**The Client Weft Rule.** A band's strip colour is the client's colour, lifted to OKLCH L ≥ 0.72 and C ≥ 0.08 on indigo. It never becomes a large fill.
+**The One Black Rule.** Secondary and tertiary greys are the same black at reduced opacity (60% text, 20% rules, 5% wash), so they stay in key on both canvas and paper white. Do not introduce opaque mid-greys for text or lines.
 
 ## Typography
 
-**Display Font:** Bricolage Grotesque (self-hosted variable, weight axis 200–800 only, latin and latin-ext subsets; falls back to 'Bricolage Fallback', a metric-matched local Arial at 104.4% size-adjust, then ui-sans-serif, system-ui)
-**Body Font:** Bricolage Grotesque
-**Signature lettering:** 5x7 brocade grid (WovenWord) of square-ended packed floats (0.9 of the row tall, near-square corners), used for the name on the home hero only
+**Display Font:** Geist (variable, self-hosted, with a metric-matched Arial fallback)
+**Body Font:** Geist
+**Label/Mono Font:** none; numbers use tabular figures where they align.
 
-**Character:** One characterful grotesque, used at ExtraBold with tight negative tracking for headings and at Regular for reading. The shipped file carries the weight axis only, so there is no optical-size axis and no separate display cut: headings get their density from weight and tracking alone. The woven name is drawn, not set, so it carries the loom; the font carries everything else.
+**Character:** One grotesque family pushed to its extremes. Black display set tight against Light reading text gives the page its contrast without a second typeface.
 
 ### Hierarchy
-Roles are defined once (`type-display`, `type-title`, `type-lede`, `type-label` utilities, plus the `read` and `ui` size tokens) so repeated roles stay identical.
-- **Display** (800, clamp(3rem, 2rem + 4.5vw, 6rem), line-height 0.9, -0.035em): the one page-title role, used on Work, About, case-study and gallery titles.
-- **Headline** (800, stepped sizes, 0.95, -0.03em): the contact close heading (2.25rem to 4.5rem), the flagship band title (3rem, 3.75rem from 768px, 4.5rem from 1280px), and the 404 title (3rem to 4.5rem), which keeps its own size rather than the page-title role.
-- **Title** (800, 1.875rem, 2.25rem from 768px, 1.05, -0.025em): band titles, the "Screens" section head, case-study section heads (with a 1px rule beneath). Pager titles are 1.75rem at line-height 1, -0.02em; decision titles 1.25rem.
-- **Lede** (500, 1.5rem, 1.875rem from 768px, 1.3): the positioning line, page ledes, lead paragraphs.
-- **Body** (400, 1.125rem, leading relaxed): text on indigo.
-- **Body Reading** (400, 1.0625rem, 1.625): case-study prose on cotton.
-- **Label** (600, 1.0625rem, 1.4, ink, sentence case): the heading over a block of reading in case studies.
-- **UI** (400, 0.9375rem): rail links, pager direction labels, header links on phones, quiet notes.
-- **Meta** (400 or 600, 0.875rem): the band meta row, fact labels, captions, decision sub-heads.
-
-**Measures:** reading on cotton is capped in rem (35rem for prose, 38rem for About and problem paragraphs, 30 to 31rem for captions and notes); ledes and text on indigo are capped in ch (26 to 52ch). Headings balance and paragraphs wrap pretty; there is no automatic hyphenation. Font smoothing is set to antialiased only on cotton, so light text on indigo keeps default smoothing and doesn't thin.
+- **Display** (900, 48px to 96px fluid, line-height 1, -0.02em): the one page title per route: the hero "UI/UX DESIGNER", project names on project pages, error titles. Uppercase only in the hero, as set in the frame.
+- **Headline** (700, 40px to 64px fluid, 1.25): section headings: Work, About, gallery groups when used as page sections.
+- **Title** (700, 32px to 48px fluid, 1.2): project names in the work list, case-study section headings (with a hairline beneath), gallery group headings.
+- **Lede** (300, 20px to 24px fluid, 1.4): the opening line under a display title; max 30 to 40ch.
+- **Body** (400, 17px, 1.6): case-study reading paragraphs in muted ink, max 35rem.
+- **Body Light** (300, 16px, 1.6): About copy and the contact list.
+- **Label** (600, 17px, 1.4): heading over a block of reading inside a case study.
+- **Meta** (400, 14px, 1.2, muted): category, year, role lines; captions; fact labels.
 
 ### Named Rules
-**The Sentence Case Rule.** Labels and meta are sentence case at normal tracking. No all-caps tracked-out labels anywhere.
+**The Weight Ladder Rule.** Hierarchy is carried by Geist at 900, 700, 600, 500, and 300. Black is for the single title of a page and the closing contact heading; nothing else uses it.
 
-**The Four Weights Rule.** 400 for reading, 500 for ledes, 600 for labels, actions and active states, 800 for headings. No other weights.
-
-**The One Page Title Rule.** Every page title is the display role. Only the 404 sets its own headline size.
-
-**The Woven Name Rule.** Brocade lettering is reserved for the name. Decorative only: the real text sits beside it for assistive tech.
+**The Sentence-Case Rule.** Headings are sentence or title case. The hero title is the sole uppercase setting; no tracked-out uppercase labels sit above headings.
 
 ## Layout
 
-Two containers: 1440px for home and the Work index, 1200px for case studies, galleries and the 404. Side gutters are 20px on phones and 40px from 768px. The home hero is a 12-column grid: selvage text on the left seven columns, the portrait on the right five, aligned to the hero's foot. Bands run full container width with a 20px (40px desktop) indent where the running thread enters; band bodies split 4:8 (flagship 5:7) from 1024px and stack below it, so tablet widths get a full-width title. Non-flagship band media is a three-up row of 4:5 crops.
+A 1440px shell with 16px side gutters on phones. From 640px up, the header and contact band sit at 32px, while the hero and work sections sit at 40px, so content columns run from 40px to 1400px at 1440; About widens to 48px from 768px. Sections are separated by a 72px rhythm on desktop (64px on phones); work rows step at 72px desktop and 40px mobile.
 
-Warp backgrounds are repeating patterns at fixed pitch (6px for the field, 10px for bare warp), so threads re-count with the viewport and never stretch. Case studies pair a 180px sticky contents rail with the reading column on desktop; on phones the rail becomes a sticky horizontal bar. Fact grids go one, two, then three columns. Below 640px the header wraps its links under the handle.
-
-Vertical rhythm is generous: sections close with 64px to 96px of bottom padding on indigo and 80px to 112px between case-study sections on cotton.
-
-### Named Rules
-**The One Running Thread Rule.** On home, a single 2px marigold thread starts at the portrait. On phones it drops from the portrait's bottom-left corner down the selvage; on desktop it leaves the portrait's bottom edge and runs along the hero's foot to the gutter. From there it runs down the left edge of the work column, enters each band at its strip, and ties into the close with a 10px marigold knot above the contact heading. The Work index carries the same left thread. Add no second thread.
-
-**The Re-count, Never Stretch Rule.** Woven patterns are tiled at fixed pixel pitch. Responsive change adds or removes threads; it never scales them.
+- **Hero:** on large screens, a 640px text column and a 648px portrait column pushed to opposite edges, so the portrait shares its column (752 to 1400 at 1440) with the work covers below. 64px top padding from 1024px. On smaller screens the portrait follows the text at full width, keeping the 648:790 frame.
+- **Work list:** each row is a free info column and a 648px cover, 72px apart, stacking below 1024px. A 640px hairline sits above every row and after the last, left-aligned, never full width.
+- **About:** a large Light statement (28 to 32px, max 560px) beside a 660px reading column.
+- **Project and case-study pages:** a 1200px reading frame with 20px gutters (40px from 768px). Case studies add a 180px sticky section rail beside the body from 768px; below that the rail becomes a sticky horizontal bar with edge fades.
+- **Galleries:** desktop screens in two columns, phone screens in four, all at fixed device viewports so every project's screens share one scale.
+- **Contact band:** full bleed, 96px to 128px vertical padding, content left-aligned in the shell.
 
 ## Elevation & Depth
 
-Depth is woven, not lifted. Surfaces are flat colour plus thread patterns; layering reads through tone (indigo-950 under indigo-900, cotton-light on cotton) and through warp drawn over things: over the brocade floats, and over and under the portrait's top and bottom edges. The one shadow sits under project screenshots in bands so the screens sit on the cloth.
+Flat by default. Depth is tonal: canvas, then paper-white sheets bounded by hairlines, then the grey contact band. The one shadow belongs to device-framed screens, which rest on the canvas like prints on a table.
 
 ### Shadow Vocabulary
-- **Screen drop** (`--shadow-screen: 0 18px 40px -18px color-mix(in oklab, indigo-950 85%, black)`): under band screenshot frames only.
+- **Screen rest** (`box-shadow: 0 18px 40px -20px rgb(0 0 0 / 0.35)`): phone bezels and browser windows around project screens. Nothing else casts a shadow.
 
 ### Named Rules
-**The Warp-Over Rule.** When an image or float needs to sit in the cloth, interlace warp across its edge rather than adding a border or shadow. At the portrait the interlace is its own layer outside the clipped photo frame, in the field's own thread colour (indigo-700): 3px threads come down out of the field to the photo edge, odd threads pass over and run about 24px into the photo, even threads stop at the edge so they read as passing under. The bottom edge mirrors the top, kept short on phones (16px of field, 10px over the photo).
+**The Only Prints Cast Shadows Rule.** Shadows belong to device frames holding the work. Cards, buttons, headers, and panels stay flat and use hairlines or tone instead.
 
 ## Shapes
 
-Mostly square. Pills (fully round) are the shape of actions: primary and outline buttons and the Email tab. Flagship screenshot frames take a 4px radius; cotton panels and figures take 2px, as does the focus ring. Everything else (bands, strips, fact grids, pager cells, hero portrait) is square-cornered. Dividers are 1px; the running thread and the outline button border are 2px; active tabs are 8px-tall stacks of 2px picks with 2px gaps.
+Two corner families. The work's imagery (covers, the portrait, and the gallery cover) takes a soft 24px radius; interface containers are square or nearly square (2px on cards, figures, and metric grids). Buttons are full pills. Device frames follow their hardware: 2rem phone bezel with a 1.6rem screen, 8px browser window with a 26px chrome bar, three dots, and an address field. Small round dots (4px separators, 8px markers, the 12px green dot) are the only circles.
 
 ## Components
 
 ### Buttons
-Woven pills: saturated, round, unmistakable on the indigo field.
-- **Shape:** fully round pill. Below 640px the Email button stacks its label (never wrapping) over the address and relaxes to a 2rem radius.
-- **Primary:** marigold fill, ink text, 600 weight, 1.125rem, 16px by 28px (12px by 24px on the 404). Hover swaps the fill to undyed cotton.
-- **Outline:** 2px undyed-cotton border, transparent fill, 600 weight, 14px by 28px. Hover fills with cotton and flips text to ink.
-- **Focus:** 3px marigold outline at 3px offset, 2px radius.
+Two pills, nothing else.
+- **Shape:** full pill (999px), 12px by 16px padding, 18px Geist Medium, 8px gap for a leading icon.
+- **Primary:** black fill, canvas text. Contact Me in the header and band, the primary error action. Hover lowers the fill to 80% black.
+- **Outline:** 1px black border, black text; hover inverts to black fill and canvas text. Used for the open-for-work pill (16px, tighter padding, green dot leading) and secondary actions.
+- **Transition:** background and colour, 150ms ease-out.
 
 ### Navigation
-- **Header:** handle on the left in ExtraBold, links on the right in pale indigo, a marigold Email pill at the end, then an 8px fringe of loose warp (thread-fringe) tying the header to the page. Below 640px the links drop to UI size with tighter padding and wrap under the handle.
-- **Active tab:** the current link turns cotton, 600 weight, with a woven tab beneath: an 8px band of 2px marigold picks on 4px pitch, inset half a rem each side of the label.
-- **Case-study contents:** a sticky rail on a 1px rule; the active section gets a 6px column of 2px cochineal picks at its left edge. On phones it becomes a sticky scrolling bar with the cochineal picks as an 8px band under the active label and fades only on sides with hidden items.
+- **Header:** brand tile left, links and the Contact Me pill right, inside the 1440px shell. The tile is a 72 by 86px black block holding JOSH / DE LA CRUZ in white 18px Bold on 18px leading; it overhangs the header's vertical padding to sit flush at the top.
+- **Links:** 16px (18px from 640px) Medium, black, underlined on hover only. The current page carries no visible mark; it is announced with `aria-current` alone, as in the frame. Home is hidden on phones.
+- **Case-study rail:** "Contents" label, then links in muted 15px over a hairline left border; the active link turns black Semibold with a 2px inset black mark on the left. The mobile bar uses the same mark beneath the label.
+- **Pager:** two cells divided by hairlines; muted direction line with an arrow, 28px Bold project name that underlines on hover.
 
-### Project Band (signature)
-One project as a brocade band. A full-width strip sits on top: weft picks in the client colour (14px tall, pick-1 density; the flagship is 30px at pick-0, the tightest beat). A 2px marigold weft line enters from the running thread. Below, the title links the whole band, then a meta row ("Case study" in marigold or "Screens only" in pale indigo, category, year), summary, role, and a marigold call to action with an arrow. The flagship title is headline type; other bands use title type. Hover underlines the title 3px in the band's weft colour; keyboard focus outlines the whole band in marigold at 6px offset.
+### Work Row (signature)
+Project name as a Title link whose hit area stretches over the whole row; meta line (category, 4px dot, year) in muted 14px; a 20px summary; the role line; a Light "View" with an arrow. The cover is 648 by 383 at 24px radius. A project without a composed cover shows its first screen in its device frame on a wash panel, so every row keeps the same rhythm. Hover and keyboard focus underline the name at 3px; focus draws a 2px black outline 8px around the row.
 
-### Bare Warp
-Projects with screens and no write-up draw their strip as loose vertical threads (10px pitch, thread-bare) with one started pick in the client colour across the first fifth. The same bare warp backs the fact grid (so any cell the grid leaves empty is drawn, not a hole) and the 404's head. Behind gallery screens it is its own absolutely positioned layer at 60% opacity under the multi-column container; never put it on the columns element itself, which hides the screenshots.
+### Device Frame (signature)
+Screens appear in the frame of the device they were designed for: phone bezel at 375:812 or browser window at 16:10, cropped from the top, with the full image one click away in a lightbox (85% black backdrop, a pill hint naming Esc or tap). Width under 1200px decides phone versus desktop.
 
-### Beat-in (motion)
-Bands below the fold start loose at pick-3, then pack to their resting density over 0.9s on `cubic-bezier(0.16, 1, 0.3, 1)` as they enter view; a bare-warp band's one started pick sits high and is beaten down into place on the same timing. Hover and focus beat a band to pick-0 (3px on the flagship) in 180ms and release in 120ms. Page navigation uses a View Transition: the root cross-fades (160ms out, 240ms in) and the project title, sharing a `view-transition-name`, travels from band to header over 420ms; under reduced motion only the cross-fade remains. The woven name packs row by row on load (1.1s, 18ms stagger per row). Bands already in view, and every visitor with reduced motion, render packed. One orchestration per band; vertical only.
+### Facts Grid
+A ruled grid of paper-white cells (one, two, then three columns), each with a muted 14px label over a 16px value. Shared by case studies and project galleries.
 
-### Fact Grid
-Indigo-950 cells divided by 1px indigo-700 lines; sentence-case pale-indigo label over a cotton value. Empty trailing cells show bare warp.
+### Case-Study Blocks
+Decision cards, metrics, and the callout are paper-white sheets with a hairline border and 2px corners. A decision's options use 8px dots, black when chosen and hairline grey otherwise. Pull quotes use a 2px black left rule. Flow steps carry their track colour as a 3px top border.
 
-### Project Imagery
-Every project raster renders through one image component. Originals live outside the deployed tree; a build script (`bun run images`) writes progressive mozjpeg variants at 640, 1280 and 1920px, each stamped with its provenance, plus a manifest the components read. Images ship with srcset, sizes and intrinsic width and height, so nothing shifts as they load; any transparency is flattened onto indigo-950, the colour of the frames they sit in. A failed load renders as bare warp carrying the alt text, never a broken icon. Composite covers (`00…png`) are made for listings and sharing and are never shown among a project's screens; a `00…jpg` is a real screen, usually the landing page.
+### Contact Band
+Closing grey band on every page: a Black 40px to 56px question heading set in two fixed lines ("Hiring a designer" / "who builds? Let's talk."), held as a two-part array in the site copy and joined into one wrapping line on phones; then the pill pair, then the contact list in Light 16px with underline on hover, and the copyright line in muted ink.
 
-### Device Frames
-Screens of projects without a case study are always shown in the frame of the device they were designed for, at one fixed viewport per kind, so mobile and desktop read apart at a glance and every project sits at the same scale. A screen narrower than 1200px is mobile (phone captures at 1× to 3×; desktop captures are 1440px): a phone bezel in `--color-bezel` (6px, 2rem outer radius) around a 375:812 screen. Anything wider is desktop: a browser window with a 26px cotton-deep bar (three rule-coloured dots, a cotton-light address pill) over a 16:10 screen. Long screens show from the top; the full length is one click away in the lightbox. Galleries group screens under Desktop and Mobile headings with each screen named from its file. Project bands preview by kind: one browser window for web work, three phones for app work, and the window with a phone overlapping its lower-right corner when a project has both. The America Voice case study keeps its own composed imagery and is never framed this way.
+### Portrait
+The portrait sits in a 648:790 frame with 24px radius and a fixed crop taken from the frame: the photo at 128.5% of the frame width, left-aligned, raised 34.2%. Keep the geometry when the frame resizes rather than switching to object-fit.
 
-### Case-study Panels (on cotton)
-- **Decision card:** cotton-light, 1px rule border, 2px radius. Sub-heads "The tension", "Options", "Why", "What it cost" in semibold meta type; options are dots (ink for chosen, rule for others) with a cochineal "Chosen".
-- **Callout / flow step / metric cell:** cotton-light panels; flow steps carry a 3px top border in their track colour.
-- **Figure:** cotton-deep well with a 1px rule border; opens a full-screen lightbox over a 90% deep-indigo scrim.
-- **Pull quote:** 2px ink left rule, lede type.
+### Reading Progress
+A 3px black bar fixed to the top of case studies, scaled from the left as the article is read.
 
-### Work Pager
-Two cells divided by a 1px line: direction label with arrow over a 1.75rem ExtraBold title. On indigo, hover turns the title marigold; on cotton, cochineal.
-
-### Contact Close
-Every route ends on deep-indigo warp. The running thread comes down into the close and is tied off in a 10px marigold knot above the headline. Then the headline, availability line, the marigold Email pill (with the address), an outline résumé pill only when the PDF exists, then phone and LinkedIn as underlined links, and a fading warp fringe at the foot.
+### Images
+Every project raster renders through one component with a responsive srcset. Originals live outside the static folder; the pipeline flattens transparency onto the canvas colour and writes JPEG variants that carry their provenance in a comment segment. A failed load becomes a wash panel with the alt text.
 
 ## Do's and Don'ts
 
 ### Do:
-- **Do** set every page on the indigo warp field and lay cotton only under long-form reading.
-- **Do** encode rank and active state with the pick scale (4, 6, 9, 22px): flagship at pick-0, other bands at pick-1, loose state at pick-3, active tabs as 2px picks on a 4px pitch.
-- **Do** draw absence: bare warp with a single started pick, labelled "Screens only", instead of an empty slot or a placeholder.
-- **Do** use marigold for actions and focus on indigo and cochineal for actions and active states on cotton.
-- **Do** weave each band in the client's own colour, lifted to OKLCH L ≥ 0.72, C ≥ 0.08.
-- **Do** tile woven patterns at fixed pixel pitch so threads re-count across viewports.
-- **Do** render everything already beaten under `prefers-reduced-motion: reduce`.
-- **Do** draw threads with the thread-ink tokens and send every project raster through the image pipeline.
+- **Do** keep the canvas at Gallery Off-White and every rule at 20% black; dividers between work rows stop at 640px.
+- **Do** carry hierarchy with Geist weight: 900 for the page title, 700 for headings, 300 for ledes and long reading.
+- **Do** use the two pills (black fill, 1px outline) for every button.
+- **Do** give project imagery the 24px radius and present screens in their device frame with the single screen-rest shadow.
+- **Do** keep focus visible as a 2px black outline offset 3px (8px around whole-row links).
+- **Do** honour reduced motion: page cross-fades remain, the shared-title travel between list and page is dropped.
 
 ### Don't:
-- **Don't** use the monochrome name-plus-photo-plus-card-grid portfolio layout; projects are bands, not cards.
-- **Don't** move anything on any axis but vertical packing, other than the title's page-to-page travel; no slides, fades-in from the side, parallax, scale-ins or hover nudges.
-- **Don't** add a second running thread or break the one that exists.
-- **Don't** use brocade lettering for anything but the name.
-- **Don't** copy community textile motifs; the world borrows loom structure only.
-- **Don't** invent metrics, logos, or endorsements to fill a panel; leave the warp bare.
-- **Don't** use all-caps tracked labels; meta and labels stay sentence case.
+- **Don't** add a brand hue; colour is the work's, the open-for-work dot's, and the flow tracks' alone.
+- **Don't** add shadows to cards, buttons, or the header.
+- **Don't** set small uppercase tracked labels above headings, or use a second display family.
+- **Don't** bring back anything from the retired Backstrap Loom world (indigo ground, woven thread textures, Bricolage Grotesque).
+- **Don't** draw rules full-bleed across the work list.

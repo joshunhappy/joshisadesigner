@@ -6,8 +6,9 @@
 
 <footer class="bg-panel" aria-labelledby="contact-heading">
 	<div class="mx-auto flex max-w-[1440px] flex-col items-start gap-8 px-4 py-24 sm:px-8 md:py-32">
-		<h2 id="contact-heading" class="max-w-[19ch] text-[2.5rem] leading-[1.2] font-black tracking-[-0.02em] md:text-[3.5rem]">
-			{copy.contactHeading}
+		<h2 id="contact-heading" class="text-[2.5rem] leading-[1.2] font-black tracking-[-0.02em] md:text-[3.5rem]">
+			{copy.contactHeading[0]}<br class="hidden sm:inline" />
+			{copy.contactHeading[1]}
 		</h2>
 
 		<div class="flex flex-wrap items-center gap-3">

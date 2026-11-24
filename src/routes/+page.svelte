@@ -36,8 +36,8 @@
 </svelte:head>
 
 <!-- Hero -->
-<section class="mx-auto max-w-[1440px] px-4 pt-8 pb-16 sm:px-8 md:pt-12 md:pb-[72px]" aria-labelledby="hero-title">
-	<div class="grid items-center gap-10 lg:grid-cols-[640px_minmax(0,1fr)] lg:gap-[72px]">
+<section class="mx-auto max-w-[1440px] px-4 pt-8 pb-16 sm:px-10 md:pt-12 md:pb-[72px] lg:pt-16" aria-labelledby="hero-title">
+	<div class="grid items-center gap-10 lg:grid-cols-[640px_648px] lg:justify-between lg:gap-[72px]">
 		<div class="flex flex-col items-start gap-6">
 			<h1 id="hero-title" class="type-display">
 				<span class="sr-only">{site.name}, </span>UI/UX<br />DESIGNER
@@ -52,20 +52,21 @@
 			</a>
 		</div>
 
-		<div class="aspect-[4/5] overflow-hidden rounded-[24px] lg:aspect-auto lg:h-[790px]">
+		<!-- Crop matches the Figma frame: the photo at 128.5% of the frame width, left-aligned, raised 34.2%. -->
+		<div class="relative aspect-[648/790] w-full overflow-hidden rounded-[24px] lg:w-[648px]">
 			<Img
 				src="/images/josh.jpg"
 				alt="Portrait of Josh De La Cruz"
 				priority
-				sizes="(min-width: 1024px) 45vw, 100vw"
-				class="h-full w-full object-cover object-[0%_77%]"
+				sizes="(min-width: 1024px) 840px, 130vw"
+				class="absolute top-[-34.2%] left-0 h-auto w-[128.5%] max-w-none"
 			/>
 		</div>
 	</div>
 </section>
 
 <!-- Work -->
-<section id="work" class="mx-auto max-w-[1440px] scroll-mt-8 px-4 py-16 sm:px-8 md:py-[72px]" aria-labelledby="work-heading">
+<section id="work" class="mx-auto max-w-[1440px] scroll-mt-8 px-4 py-16 sm:px-10 md:py-[72px]" aria-labelledby="work-heading">
 	<h2 id="work-heading" class="type-section">Work</h2>
 	<ul class="mt-10 flex flex-col gap-10 md:mt-[72px] md:gap-[72px]">
 		{#each work as item, i (item.slug)}

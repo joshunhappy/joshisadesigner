@@ -22,7 +22,7 @@
 	<link rel="canonical" href="{site.url}/work" />
 </svelte:head>
 
-<section class="mx-auto max-w-[1440px] px-4 pt-8 pb-16 sm:px-8 md:pt-12 md:pb-[72px]" aria-labelledby="work-heading">
+<section class="mx-auto max-w-[1440px] px-4 pt-8 pb-16 sm:px-10 md:pt-12 md:pb-[72px]" aria-labelledby="work-heading">
 	<h1 id="work-heading" class="type-section">Work</h1>
 	<ul class="mt-10 flex flex-col gap-10 md:mt-[72px] md:gap-[72px]">
 		{#each work as item, i (item.slug)}

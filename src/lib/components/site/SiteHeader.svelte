@@ -70,8 +70,4 @@
 	.nav-link:hover {
 		text-decoration: underline;
 	}
-	.nav-link[aria-current='page'] {
-		text-decoration: underline;
-		text-decoration-thickness: 2px;
-	}
 </style>

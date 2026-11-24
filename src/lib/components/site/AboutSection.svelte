@@ -11,7 +11,7 @@
 	<svelte:element this={headingLevel === 1 ? 'h1' : 'h2'} id="about-heading" class="type-section">About</svelte:element>
 
 	<div class="mt-6 grid gap-8 lg:grid-cols-[minmax(0,1fr)_660px] lg:gap-6">
-		<p class="max-w-[22ch] text-[1.75rem] leading-[1.4] font-light md:text-[2rem]">{copy.aboutLede}</p>
+		<p class="max-w-[560px] text-[1.75rem] leading-[1.4] font-light md:text-[2rem]">{copy.aboutLede}</p>
 
 		<div class="flex flex-col gap-2">
 			<div class="flex flex-col gap-6">

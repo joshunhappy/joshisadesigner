@@ -8,6 +8,12 @@
         "value": "bricolage fallback",
         "createdAt": "2026-11-24T03:29:45.652Z",
         "reason": "agent: metric-matched local('Arial') @font-face alias for Bricolage Grotesque added in typeset step to limit swap reflow; not a second brand face"
+      },
+      {
+        "rule": "overused-font",
+        "value": "geist",
+        "createdAt": "2026-11-24T19:38:39.558Z",
+        "reason": "user pinned the Figma frame portfolio.v2.260504 (168:215), which sets all type in Geist"
       }
     ]
   }

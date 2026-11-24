@@ -18,7 +18,7 @@ export const copy = {
 	role: 'UI/UX Designer',
 	line: 'I design interfaces and build the front-end that ships them.',
 	availability: 'Open for work',
-	contactHeading: 'Hiring a designer who builds? Let’s talk.',
+	contactHeading: ['Hiring a designer', 'who builds? Let’s talk.'],
 	contactCta: 'Contact Me',
 	resumeCta: 'Download résumé',
 	aboutLede: 'I design digital products that feel clear, useful, and ready for real people.'
