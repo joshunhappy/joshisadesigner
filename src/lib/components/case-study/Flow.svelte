@@ -4,9 +4,9 @@
 	let { block }: { block: FlowBlock } = $props();
 
 	const trackColors: Record<string, string> = {
-		Shared: 'var(--color-ink)',
-		'Top-up': '#F97316',
-		'Gift card': '#6D28D9'
+		Shared: 'var(--color-track-shared)',
+		'Top-up': 'var(--color-track-a)',
+		'Gift card': 'var(--color-track-b)'
 	};
 
 	const color = (track?: string) => (track && trackColors[track]) || 'var(--color-ink-faint)';

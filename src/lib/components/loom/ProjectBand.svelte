@@ -146,7 +146,7 @@
 			repeating-linear-gradient(
 				90deg,
 				transparent 0 9px,
-				color-mix(in oklab, var(--color-on-indigo) 38%, transparent) 9px 10px
+				var(--color-thread-bare) 9px 10px
 			);
 		background-size:
 			22% 4px,
@@ -184,7 +184,7 @@
 
 	.frame {
 		background: var(--color-indigo-950);
-		box-shadow: 0 18px 40px -18px rgb(5 8 30 / 0.7);
+		box-shadow: var(--shadow-screen);
 	}
 	.flagship .frame {
 		border-radius: 4px;

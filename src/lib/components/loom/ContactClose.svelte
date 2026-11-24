@@ -98,7 +98,7 @@
 		background-image: repeating-linear-gradient(
 			90deg,
 			transparent 0 5px,
-			color-mix(in oklab, var(--color-on-indigo) 45%, transparent) 5px 6px
+			var(--color-thread-fringe) 5px 6px
 		);
 		mask-image: linear-gradient(to bottom, black, transparent);
 	}

@@ -45,6 +45,19 @@
 	--color-cochineal: #b3122e;
 	--color-marigold: #f2a007;
 
+	/* Thread inks: one value per job instead of hand-tuned opacities. */
+	--color-thread-bare: color-mix(in oklab, var(--color-on-indigo) 38%, transparent);
+	--color-thread-fringe: color-mix(in oklab, var(--color-on-indigo) 30%, transparent);
+	--color-thread-cotton: color-mix(in oklab, var(--color-ink) 2.5%, transparent);
+
+	/* The one shadow: screenshots sitting on the cloth. */
+	--shadow-screen: 0 18px 40px -18px color-mix(in oklab, var(--color-indigo-950) 85%, black);
+
+	/* Data categories on cotton (case-study flows). */
+	--color-track-shared: var(--color-ink);
+	--color-track-a: var(--color-cochineal);
+	--color-track-b: var(--color-indigo-700);
+
 	--font-sans: 'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif;
 	--font-display: 'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif;
 
@@ -127,8 +140,8 @@ p {
 .cotton {
 	background-color: var(--color-cotton);
 	background-image:
-		repeating-linear-gradient(90deg, rgb(21 24 58 / 0.025) 0 1px, transparent 1px 4px),
-		repeating-linear-gradient(0deg, rgb(21 24 58 / 0.02) 0 1px, transparent 1px 4px);
+		repeating-linear-gradient(90deg, var(--color-thread-cotton) 0 1px, transparent 1px 4px),
+		repeating-linear-gradient(0deg, var(--color-thread-cotton) 0 1px, transparent 1px 4px);
 }
 
 /* Bare warp: loose threads with nothing woven through them yet. */
@@ -136,7 +149,7 @@ p {
 	background-image: repeating-linear-gradient(
 		90deg,
 		transparent 0 9px,
-		color-mix(in oklab, var(--color-on-indigo) 38%, transparent) 9px 10px
+		var(--color-thread-bare) 9px 10px
 	);
 }
 

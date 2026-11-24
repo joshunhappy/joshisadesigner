@@ -96,7 +96,7 @@
 		background-image: repeating-linear-gradient(
 			90deg,
 			transparent 0 9px,
-			color-mix(in oklab, var(--color-on-indigo) 30%, transparent) 9px 10px
+			var(--color-thread-bare) 9px 10px
 		);
 		border-top: 1px solid var(--color-indigo-700);
 		border-left: 1px solid var(--color-indigo-700);
@@ -117,7 +117,7 @@
 			repeating-linear-gradient(
 				90deg,
 				transparent 0 9px,
-				color-mix(in oklab, var(--color-on-indigo) 45%, transparent) 9px 10px
+				var(--color-thread-bare) 9px 10px
 			);
 		background-size:
 			30% 4px,
