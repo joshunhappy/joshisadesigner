@@ -833,111 +833,135 @@
 			}
 		]
 	},
-	"/images/work/ministerios-ebenezer-mexico/00.landing.jpg": {
-		"width": 1440,
-		"height": 3679,
+	"/images/work/ministerios-ebenezer-mexico/01-landing.jpg": {
+		"width": 2880,
+		"height": 7358,
 		"srcs": [
 			{
 				"w": 640,
-				"src": "/images/work/ministerios-ebenezer-mexico/00.landing-640.jpg"
+				"src": "/images/work/ministerios-ebenezer-mexico/01-landing-640.jpg"
 			},
 			{
 				"w": 1280,
-				"src": "/images/work/ministerios-ebenezer-mexico/00.landing-1280.jpg"
+				"src": "/images/work/ministerios-ebenezer-mexico/01-landing-1280.jpg"
 			},
 			{
-				"w": 1440,
-				"src": "/images/work/ministerios-ebenezer-mexico/00.landing-1440.jpg"
+				"w": 1920,
+				"src": "/images/work/ministerios-ebenezer-mexico/01-landing-1920.jpg"
+			},
+			{
+				"w": 2400,
+				"src": "/images/work/ministerios-ebenezer-mexico/01-landing-2400.jpg"
 			}
 		]
 	},
-	"/images/work/ministerios-ebenezer-mexico/02.event-listing.jpg": {
-		"width": 1440,
-		"height": 2749,
+	"/images/work/ministerios-ebenezer-mexico/02-events.jpg": {
+		"width": 2880,
+		"height": 5498,
 		"srcs": [
 			{
 				"w": 640,
-				"src": "/images/work/ministerios-ebenezer-mexico/02.event-listing-640.jpg"
+				"src": "/images/work/ministerios-ebenezer-mexico/02-events-640.jpg"
 			},
 			{
 				"w": 1280,
-				"src": "/images/work/ministerios-ebenezer-mexico/02.event-listing-1280.jpg"
+				"src": "/images/work/ministerios-ebenezer-mexico/02-events-1280.jpg"
 			},
 			{
-				"w": 1440,
-				"src": "/images/work/ministerios-ebenezer-mexico/02.event-listing-1440.jpg"
+				"w": 1920,
+				"src": "/images/work/ministerios-ebenezer-mexico/02-events-1920.jpg"
+			},
+			{
+				"w": 2400,
+				"src": "/images/work/ministerios-ebenezer-mexico/02-events-2400.jpg"
 			}
 		]
 	},
-	"/images/work/ministerios-ebenezer-mexico/03.event-single.jpg": {
-		"width": 1440,
-		"height": 3378,
+	"/images/work/ministerios-ebenezer-mexico/03-event.jpg": {
+		"width": 2880,
+		"height": 6756,
 		"srcs": [
 			{
 				"w": 640,
-				"src": "/images/work/ministerios-ebenezer-mexico/03.event-single-640.jpg"
+				"src": "/images/work/ministerios-ebenezer-mexico/03-event-640.jpg"
 			},
 			{
 				"w": 1280,
-				"src": "/images/work/ministerios-ebenezer-mexico/03.event-single-1280.jpg"
+				"src": "/images/work/ministerios-ebenezer-mexico/03-event-1280.jpg"
 			},
 			{
-				"w": 1440,
-				"src": "/images/work/ministerios-ebenezer-mexico/03.event-single-1440.jpg"
+				"w": 1920,
+				"src": "/images/work/ministerios-ebenezer-mexico/03-event-1920.jpg"
+			},
+			{
+				"w": 2400,
+				"src": "/images/work/ministerios-ebenezer-mexico/03-event-2400.jpg"
 			}
 		]
 	},
-	"/images/work/ministerios-ebenezer-mexico/04.post single.jpg": {
-		"width": 1440,
-		"height": 1581,
+	"/images/work/ministerios-ebenezer-mexico/04-article.jpg": {
+		"width": 2880,
+		"height": 3162,
 		"srcs": [
 			{
 				"w": 640,
-				"src": "/images/work/ministerios-ebenezer-mexico/04.post-single-640.jpg"
+				"src": "/images/work/ministerios-ebenezer-mexico/04-article-640.jpg"
 			},
 			{
 				"w": 1280,
-				"src": "/images/work/ministerios-ebenezer-mexico/04.post-single-1280.jpg"
+				"src": "/images/work/ministerios-ebenezer-mexico/04-article-1280.jpg"
 			},
 			{
-				"w": 1440,
-				"src": "/images/work/ministerios-ebenezer-mexico/04.post-single-1440.jpg"
+				"w": 1920,
+				"src": "/images/work/ministerios-ebenezer-mexico/04-article-1920.jpg"
+			},
+			{
+				"w": 2400,
+				"src": "/images/work/ministerios-ebenezer-mexico/04-article-2400.jpg"
 			}
 		]
 	},
-	"/images/work/ministerios-ebenezer-mexico/05.church-directory.jpg": {
-		"width": 1440,
-		"height": 2050,
+	"/images/work/ministerios-ebenezer-mexico/05-church-directory.jpg": {
+		"width": 2880,
+		"height": 4100,
 		"srcs": [
 			{
 				"w": 640,
-				"src": "/images/work/ministerios-ebenezer-mexico/05.church-directory-640.jpg"
+				"src": "/images/work/ministerios-ebenezer-mexico/05-church-directory-640.jpg"
 			},
 			{
 				"w": 1280,
-				"src": "/images/work/ministerios-ebenezer-mexico/05.church-directory-1280.jpg"
+				"src": "/images/work/ministerios-ebenezer-mexico/05-church-directory-1280.jpg"
 			},
 			{
-				"w": 1440,
-				"src": "/images/work/ministerios-ebenezer-mexico/05.church-directory-1440.jpg"
+				"w": 1920,
+				"src": "/images/work/ministerios-ebenezer-mexico/05-church-directory-1920.jpg"
+			},
+			{
+				"w": 2400,
+				"src": "/images/work/ministerios-ebenezer-mexico/05-church-directory-2400.jpg"
 			}
 		]
 	},
-	"/images/work/ministerios-ebenezer-mexico/06.menu-overlay.jpg": {
-		"width": 1440,
-		"height": 1024,
+	"/images/work/ministerios-ebenezer-mexico/06-menu.jpg": {
+		"width": 2880,
+		"height": 2048,
 		"srcs": [
 			{
 				"w": 640,
-				"src": "/images/work/ministerios-ebenezer-mexico/06.menu-overlay-640.jpg"
+				"src": "/images/work/ministerios-ebenezer-mexico/06-menu-640.jpg"
 			},
 			{
 				"w": 1280,
-				"src": "/images/work/ministerios-ebenezer-mexico/06.menu-overlay-1280.jpg"
+				"src": "/images/work/ministerios-ebenezer-mexico/06-menu-1280.jpg"
 			},
 			{
-				"w": 1440,
-				"src": "/images/work/ministerios-ebenezer-mexico/06.menu-overlay-1440.jpg"
+				"w": 1920,
+				"src": "/images/work/ministerios-ebenezer-mexico/06-menu-1920.jpg"
+			},
+			{
+				"w": 2400,
+				"src": "/images/work/ministerios-ebenezer-mexico/06-menu-2400.jpg"
 			}
 		]
 	},
