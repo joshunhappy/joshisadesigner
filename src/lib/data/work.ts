@@ -111,7 +111,7 @@ const workMeta: WorkMeta[] = [
 		year: 2024,
 		bgColor: '#6D28D9',
 		description:
-			'I led the UX and UI design for Metis, a fintech app built for the Mexican market, designing the onboarding flow, SAT integration screens, and account setup with a strong focus on clarity and trust.',
+			'I led the UX and UI design for Metis, a fintech app built for more than one Latin American market, including Mexico and Guatemala, designing the onboarding flow, SAT integration screens, and account setup with a strong focus on clarity and trust.',
 		problem: [
 			'Invoices have to be valid for the tax authority (the SAT), so the app collects tax details before it does anything else.',
 			'The screens follow that path: tax information first, then the home dashboard, choosing who to bill, picking goods or services, adding an item, a new client, and the invoice review.'
@@ -119,7 +119,7 @@ const workMeta: WorkMeta[] = [
 		draft: true,
 		role: 'Lead UX/UI Designer',
 		timeline: '2024',
-		summary: 'Fintech mobile app for the Mexican market: onboarding and SAT integration designed for clarity and trust.',
+		summary: 'Invoicing app for Latin American markets such as Mexico and Guatemala: onboarding and SAT integration designed for clarity and trust.',
 		responsibilities: ['End-to-End UX & UI', 'Onboarding Flow', 'SAT Integration UX', 'Design System'],
 		tools: ['Figma', 'Photoshop']
 	},
