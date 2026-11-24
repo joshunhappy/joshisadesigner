@@ -19,12 +19,15 @@
 </script>
 
 <figure class="mb-10 last:mb-0">
-	<button
-		type="button"
-		onclick={() => {
-		open = true;
-		dialogEl?.showModal();
-	}}
+	<!-- A real link to the full image, so it still works without JavaScript; with JS it opens the lightbox. -->
+	<a
+		href={src}
+		onclick={(e) => {
+			if (!dialogEl?.showModal) return;
+			e.preventDefault();
+			open = true;
+			dialogEl.showModal();
+		}}
 		class="block w-full text-left {device === 'mobile' ? 'max-w-[300px]' : ''}"
 		aria-label="Enlarge image: {alt}"
 	>
@@ -41,7 +44,7 @@
 				class="w-full h-auto block"
 			/>
 		</div>
-	</button>
+	</a>
 
 	{#if caption || annotation || frame}
 		<figcaption class="mt-3 {device === 'mobile' ? 'max-w-[300px]' : ''}">

@@ -97,8 +97,14 @@
 		--strip-h: 14px;
 		--indent: 1.25rem;
 		/* Client colours vary in value; lift dark ones so the weft reads on indigo. */
-		--weft-lit: oklch(from var(--weft) max(l, 0.72) max(c, 0.08) h);
+		--weft-lit: var(--weft);
+		/* Client colours vary in value; lift dark ones so the weft reads on indigo. */
 		padding-left: var(--indent);
+	}
+	@supports (color: oklch(from red l c h)) {
+		.band {
+			--weft-lit: oklch(from var(--weft) max(l, 0.72) max(c, 0.08) h);
+		}
 	}
 	@media (min-width: 768px) {
 		.band {

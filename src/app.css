@@ -95,6 +95,9 @@ h1,
 h2,
 h3 {
 	text-wrap: balance;
+	/* Long project names or translated titles break instead of overflowing the column. */
+	overflow-wrap: break-word;
+	hyphens: auto;
 }
 
 p {

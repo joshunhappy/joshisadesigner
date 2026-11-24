@@ -69,7 +69,7 @@
 
 	<section aria-label="Screens" class="mx-auto max-w-[1200px] px-5 pt-10 pb-6 md:px-10 md:pt-14">
 		<p class="mb-6 text-base text-on-indigo-muted">
-			{screens.length} screens. Select one to see it full size.
+			{screens.length === 1 ? '1 screen' : `${screens.length} screens`}. Select one to see it full size.
 		</p>
 		<!-- Bare warp drawn on its own layer behind the columns, so leftover column space reads as unwoven warp. -->
 		<div class="relative">
@@ -104,8 +104,13 @@
 		border-right: 1px solid var(--color-indigo-700);
 		border-bottom: 1px solid var(--color-indigo-700);
 	}
+	@supports (color: oklch(from red l c h)) {
+		.strip {
+			--weft-lit: oklch(from var(--weft) max(l, 0.72) max(c, 0.08) h);
+		}
+	}
 	.strip {
-		--weft-lit: oklch(from var(--weft) max(l, 0.72) max(c, 0.08) h);
+		--weft-lit: var(--weft);
 		background-image:
 			linear-gradient(var(--weft-lit), var(--weft-lit)),
 			repeating-linear-gradient(

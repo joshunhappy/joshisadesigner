@@ -33,7 +33,9 @@
 			</h1>
 			<p class="mt-5 max-w-[52ch] text-lg text-on-indigo-muted">
 				{work.length} projects from 2023 to 2026.
-				{#if studies.length === 1}
+				{#if studies.length === 0}
+					None is written up as a full case study yet; these are screens for now.
+				{:else if studies.length === 1}
 					{studies[0].title} is written up as a full case study; the others are screens for now.
 				{:else}
 					{studies.length} are written up as full case studies; the others are screens for now.
