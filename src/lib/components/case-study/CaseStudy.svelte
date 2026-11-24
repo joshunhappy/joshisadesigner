@@ -5,6 +5,7 @@
 	import Block from './Block.svelte';
 	import Figure from './Figure.svelte';
 	import WorkPager from '$lib/components/site/WorkPager.svelte';
+	import FactsGrid from '$lib/components/site/FactsGrid.svelte';
 
 	let {
 		item,
@@ -96,18 +97,7 @@
 				</p>
 			{/if}
 
-			{#if facts.length}
-				<div class="mt-10 overflow-hidden">
-				<dl class="facts -mt-px -ml-px grid sm:grid-cols-2 lg:grid-cols-3">
-					{#each [{ label: 'Year', value: String(item.year) }, ...facts] as fact (fact.label)}
-						<div class="fact py-4 pr-5">
-							<dt class="mb-1 text-sm text-ink-muted">{fact.label}</dt>
-							<dd class="text-base leading-snug">{fact.value}</dd>
-						</div>
-					{/each}
-				</dl>
-				</div>
-			{/if}
+			<FactsGrid facts={[{ label: 'Year', value: String(item.year) }, ...facts]} />
 
 			{#if study.hero}
 				<div class="mt-10">
@@ -148,32 +138,3 @@
 		</div>
 	</div>
 </article>
-
-<style>
-	/* Lines only between facts: each cell draws its top and left edge, and the
-	   grid sits 1px up-left inside a clipping wrapper so the outer edges are hidden. */
-	.fact {
-		border-top: 1px solid var(--color-rule);
-		border-left: 1px solid var(--color-rule);
-	}
-	/* Cells that start a row sit flush with the page text: 1, 2 or 3 columns. */
-	.fact {
-		padding-left: 0;
-	}
-	@media (min-width: 640px) {
-		.fact {
-			padding-left: 1.25rem;
-		}
-		.fact:nth-child(2n + 1) {
-			padding-left: 0;
-		}
-	}
-	@media (min-width: 1024px) {
-		.fact:nth-child(2n + 1) {
-			padding-left: 1.25rem;
-		}
-		.fact:nth-child(3n + 1) {
-			padding-left: 0;
-		}
-	}
-</style>
