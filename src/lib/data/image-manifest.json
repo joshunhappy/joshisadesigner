@@ -1656,5 +1656,41 @@
 				"src": "/images/work/swiftly-push/13.app-customers-1440.jpg"
 			}
 		]
+	},
+	"/images/work/swiftly-push/14.schedule-notification.jpg": {
+		"width": 1475,
+		"height": 1000,
+		"srcs": [
+			{
+				"w": 640,
+				"src": "/images/work/swiftly-push/14.schedule-notification-640.jpg"
+			},
+			{
+				"w": 1280,
+				"src": "/images/work/swiftly-push/14.schedule-notification-1280.jpg"
+			},
+			{
+				"w": 1475,
+				"src": "/images/work/swiftly-push/14.schedule-notification-1475.jpg"
+			}
+		]
+	},
+	"/images/work/swiftly-push/15.dashboard-dark-mode.jpg": {
+		"width": 1543,
+		"height": 1000,
+		"srcs": [
+			{
+				"w": 640,
+				"src": "/images/work/swiftly-push/15.dashboard-dark-mode-640.jpg"
+			},
+			{
+				"w": 1280,
+				"src": "/images/work/swiftly-push/15.dashboard-dark-mode-1280.jpg"
+			},
+			{
+				"w": 1543,
+				"src": "/images/work/swiftly-push/15.dashboard-dark-mode-1543.jpg"
+			}
+		]
 	}
 }
