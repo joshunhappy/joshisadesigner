@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-24T00:50:37+00:00",
+  "generatedAt": "2026-11-24T04:23:28+00:00",
   "title": "Design System: Joshisadesigner",
   "extensions": {
     "colorMeta": {
@@ -228,24 +228,114 @@
           "#cfc9ba",
           "#f3eee2"
         ]
+      },
+      "thread-bare": {
+        "role": "neutral",
+        "displayName": "Bare Thread",
+        "canonical": "color-mix(in oklab, var(--color-on-indigo) 38%, transparent)",
+        "tonalRamp": [
+          "#0d0b06",
+          "#28251d",
+          "#464237",
+          "#666154",
+          "#888274",
+          "#aaa599",
+          "#cdc9bf",
+          "#f2eee6"
+        ]
+      },
+      "thread-fringe": {
+        "role": "neutral",
+        "displayName": "Fringe Thread",
+        "canonical": "color-mix(in oklab, var(--color-on-indigo) 30%, transparent)",
+        "tonalRamp": [
+          "#0d0b06",
+          "#28251d",
+          "#464237",
+          "#666154",
+          "#888274",
+          "#aaa599",
+          "#cdc9bf",
+          "#f2eee6"
+        ]
+      },
+      "thread-cotton": {
+        "role": "neutral",
+        "displayName": "Cotton Weave Thread",
+        "canonical": "color-mix(in oklab, var(--color-ink) 2.5%, transparent)",
+        "tonalRamp": [
+          "#080a18",
+          "#202339",
+          "#3b405d",
+          "#585e84",
+          "#7880a7",
+          "#9ca3c5",
+          "#c1c7e5",
+          "#e8edff"
+        ]
+      },
+      "track-shared": {
+        "role": "neutral",
+        "displayName": "Shared Track",
+        "canonical": "var(--color-ink)",
+        "tonalRamp": [
+          "#080a18",
+          "#202339",
+          "#3b405d",
+          "#585e84",
+          "#7880a7",
+          "#9ca3c5",
+          "#c1c7e5",
+          "#e8edff"
+        ]
+      },
+      "track-a": {
+        "role": "tertiary",
+        "displayName": "Track A",
+        "canonical": "var(--color-cochineal)",
+        "tonalRamp": [
+          "#270000",
+          "#510008",
+          "#7e061d",
+          "#af2233",
+          "#d74b53",
+          "#f37b7d",
+          "#ffa9a7",
+          "#ffd6d4"
+        ]
+      },
+      "track-b": {
+        "role": "primary",
+        "displayName": "Track B",
+        "canonical": "var(--color-indigo-700)",
+        "tonalRamp": [
+          "#040626",
+          "#181f4e",
+          "#2f3b7a",
+          "#495aa8",
+          "#697ccd",
+          "#8ea1e8",
+          "#b5c6ff",
+          "#dfedff"
+        ]
       }
     },
     "typographyMeta": {
       "display": {
         "displayName": "Display",
-        "purpose": "Page titles."
+        "purpose": "The one page-title role: Work, About, case-study and gallery titles (type-display)."
       },
       "headline": {
         "displayName": "Headline",
-        "purpose": "Contact close heading, flagship band title, 404 title."
+        "purpose": "Contact close heading, flagship band title (3rem/3.75rem/4.5rem), 404 title (its own size)."
       },
       "title": {
         "displayName": "Title",
-        "purpose": "Band titles, section heads, pager titles."
+        "purpose": "Band titles, section heads (type-title); pager titles 1.75rem."
       },
       "lede": {
         "displayName": "Lede",
-        "purpose": "Positioning line, case-study ledes, lead paragraphs."
+        "purpose": "Positioning line, page ledes, lead paragraphs (type-lede)."
       },
       "body": {
         "displayName": "Body",
@@ -253,11 +343,19 @@
       },
       "body-reading": {
         "displayName": "Body Reading",
-        "purpose": "Case-study prose on cotton, max 35rem."
+        "purpose": "Case-study prose on cotton (--text-read), max 35rem."
       },
       "label": {
         "displayName": "Label",
-        "purpose": "Sentence-case block headings, meta rows, fact labels."
+        "purpose": "Sentence-case heading over a block of reading on cotton (type-label)."
+      },
+      "ui": {
+        "displayName": "UI",
+        "purpose": "Rail links, pager direction labels, header links on phones (--text-ui)."
+      },
+      "meta": {
+        "displayName": "Meta",
+        "purpose": "Band meta row, fact labels, captions, decision sub-heads."
       },
       "woven-word": {
         "displayName": "Brocade lettering",
@@ -277,13 +375,18 @@
       },
       {
         "name": "cotton",
-        "value": "#ede6d6 + 4px cross weave at 2-2.5% ink",
+        "value": "#ede6d6 + 4px cross weave in thread-cotton (ink 2.5%); antialiased text",
         "purpose": "Long-form reading surface only."
       },
       {
         "name": "bare-warp",
-        "value": "repeating-linear-gradient(90deg, transparent 0 9px, on-indigo 38% 9px 10px)",
+        "value": "repeating-linear-gradient(90deg, transparent 0 9px, var(--color-thread-bare) 9px 10px)",
         "purpose": "Drawn absence."
+      },
+      {
+        "name": "fringe",
+        "value": "repeating-linear-gradient(90deg, transparent 0 5px, var(--color-thread-fringe) 5px 6px)",
+        "purpose": "Header foot (8px) and contact close foot (24px, masked to fade)."
       },
       {
         "name": "picks",
@@ -293,9 +396,9 @@
     ],
     "shadows": [
       {
-        "name": "screen-drop",
-        "value": "0 18px 40px -18px rgb(5 8 30 / 0.7)",
-        "purpose": "Under band screenshot frames only."
+        "name": "screen",
+        "value": "0 18px 40px -18px color-mix(in oklab, var(--color-indigo-950) 85%, black)",
+        "purpose": "Under band screenshot frames only (--shadow-screen)."
       }
     ],
     "focus": {
@@ -327,7 +430,8 @@
     "breakpoints": [
       {
         "name": "sm",
-        "value": "640px"
+        "value": "640px",
+        "purpose": "Header links wrap under the handle below this."
       },
       {
         "name": "md",
@@ -335,9 +439,26 @@
       },
       {
         "name": "lg",
-        "value": "1024px"
+        "value": "1024px",
+        "purpose": "Project band bodies go two-column from here; stacked below."
       }
-    ]
+    ],
+    "fonts": {
+      "family": "Bricolage Grotesque, self-hosted variable woff2, weight axis 200-800 only (no opsz), latin + latin-ext subsets, font-display swap",
+      "fallback": "'Bricolage Fallback': local('Arial'), size-adjust 104.4%, ascent 89%, descent 26%, line-gap 0%",
+      "weights": [
+        400,
+        500,
+        600,
+        800
+      ]
+    },
+    "imagery": {
+      "source": "assets/images (originals, not deployed)",
+      "build": "bun run images: progressive mozjpeg 640/1280/1920 to static/images, provenance-stamped, manifest at src/lib/data/image-manifest.json",
+      "render": "srcset + sizes + intrinsic width/height; transparency flattened onto indigo-950; failed load renders bare warp with alt text",
+      "covers": "Files named 00… are listing/share covers, never shown among screens; merged projects preview round-robin across folders"
+    }
   },
   "components": [
     {
@@ -346,7 +467,7 @@
       "refersTo": "button-primary",
       "description": "Marigold pill for the one action on indigo (Email me, Read the case study).",
       "html": "<div class=\"ds-ground\"><a class=\"ds-btn-primary\" href=\"#\">Email me</a></div>",
-      "css": ".ds-ground{background:#141c52;padding:24px} .ds-btn-primary{display:inline-flex;align-items:center;background:var(--color-marigold,#f2a007);color:var(--color-ink,#15183a);font-family:'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif;font-weight:700;font-size:1.125rem;padding:16px 28px;border-radius:9999px;text-decoration:none} .ds-btn-primary:hover{background:var(--color-on-indigo,#ede6d6)} .ds-btn-primary:focus-visible{outline:3px solid #f2a007;outline-offset:3px}"
+      "css": ".ds-ground{background:#141c52;padding:24px} .ds-btn-primary{display:inline-flex;align-items:center;background:var(--color-marigold,#f2a007);color:var(--color-ink,#15183a);font-family:'Bricolage Grotesque', 'Bricolage Fallback', ui-sans-serif, system-ui, sans-serif;font-weight:600;font-size:1.125rem;padding:16px 28px;border-radius:9999px;text-decoration:none} .ds-btn-primary:hover{background:var(--color-on-indigo,#ede6d6)} .ds-btn-primary:focus-visible{outline:3px solid #f2a007;outline-offset:3px}"
     },
     {
       "name": "Outline Button",
@@ -354,7 +475,7 @@
       "refersTo": "button-outline",
       "description": "Secondary pill on indigo (Download résumé, All work).",
       "html": "<div class=\"ds-ground\"><a class=\"ds-btn-outline\" href=\"#\">All work</a></div>",
-      "css": ".ds-ground{background:#141c52;padding:24px} .ds-btn-outline{display:inline-flex;align-items:center;background:transparent;color:#ede6d6;border:2px solid #ede6d6;font-family:'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif;font-weight:700;font-size:1.125rem;padding:14px 28px;border-radius:9999px;text-decoration:none} .ds-btn-outline:hover{background:#ede6d6;color:#15183a} .ds-btn-outline:focus-visible{outline:3px solid #f2a007;outline-offset:3px}"
+      "css": ".ds-ground{background:#141c52;padding:24px} .ds-btn-outline{display:inline-flex;align-items:center;background:transparent;color:#ede6d6;border:2px solid #ede6d6;font-family:'Bricolage Grotesque', 'Bricolage Fallback', ui-sans-serif, system-ui, sans-serif;font-weight:600;font-size:1.125rem;padding:14px 28px;border-radius:9999px;text-decoration:none} .ds-btn-outline:hover{background:#ede6d6;color:#15183a} .ds-btn-outline:focus-visible{outline:3px solid #f2a007;outline-offset:3px}"
     },
     {
       "name": "Header Navigation",
@@ -362,7 +483,7 @@
       "refersTo": "nav-link",
       "description": "Handle, pale-indigo links with a woven marigold tab under the current page, Email pill, warp fringe.",
       "html": "<header class=\"ds-nav\"><div class=\"ds-nav-row\"><a class=\"ds-nav-handle\" href=\"#\">Joshisadesigner</a><nav><a class=\"ds-nav-link is-active\" href=\"#\">Work</a><a class=\"ds-nav-link\" href=\"#\">About</a><a class=\"ds-nav-email\" href=\"#\">Email</a></nav></div><div class=\"ds-fringe\"></div></header>",
-      "css": ".ds-nav{background:#141c52;color:#ede6d6;font-family:'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif} .ds-nav-row{display:flex;justify-content:space-between;align-items:center;padding:20px 40px} .ds-nav-handle{color:#ede6d6;font-weight:800;font-size:1.125rem;letter-spacing:-0.02em;text-decoration:none} .ds-nav-handle:hover{color:#f2a007} .ds-nav nav{display:flex;align-items:center;gap:8px} .ds-nav-link{color:#a9b3e6;padding:8px 12px;text-decoration:none} .ds-nav-link:hover{color:#ede6d6} .ds-nav-link.is-active{color:#ede6d6;font-weight:600;background-image:repeating-linear-gradient(180deg,#f2a007 0 2px,transparent 2px 4px);background-repeat:no-repeat;background-size:calc(100% - 1rem) 8px;background-position:50% 100%} .ds-nav-link:focus-visible,.ds-nav-email:focus-visible{outline:3px solid #f2a007;outline-offset:3px} .ds-nav-email{margin-left:4px;background:#f2a007;color:#15183a;font-weight:600;padding:8px 16px;border-radius:9999px;text-decoration:none} .ds-nav-email:hover{background:#ede6d6} .ds-fringe{height:8px;background-image:repeating-linear-gradient(90deg,transparent 0 5px,rgb(237 230 214 / .3) 5px 6px)}"
+      "css": ".ds-nav{background:#141c52;color:#ede6d6;font-family:'Bricolage Grotesque', 'Bricolage Fallback', ui-sans-serif, system-ui, sans-serif} .ds-nav-row{display:flex;justify-content:space-between;align-items:center;padding:20px 40px} .ds-nav-handle{color:#ede6d6;font-weight:800;font-size:1.125rem;letter-spacing:-0.02em;text-decoration:none} .ds-nav-handle:hover{color:#f2a007} .ds-nav nav{display:flex;align-items:center;gap:8px} .ds-nav-link{color:#a9b3e6;padding:8px 12px;text-decoration:none} .ds-nav-link:hover{color:#ede6d6} .ds-nav-link.is-active{color:#ede6d6;font-weight:600;background-image:repeating-linear-gradient(180deg,#f2a007 0 2px,transparent 2px 4px);background-repeat:no-repeat;background-size:calc(100% - 1rem) 8px;background-position:50% 100%} .ds-nav-link:focus-visible,.ds-nav-email:focus-visible{outline:3px solid #f2a007;outline-offset:3px} .ds-nav-email{margin-left:4px;background:#f2a007;color:#15183a;font-weight:600;padding:8px 16px;border-radius:9999px;text-decoration:none} .ds-nav-email:hover{background:#ede6d6} .ds-fringe{height:8px;background-image:repeating-linear-gradient(90deg,transparent 0 5px,var(--color-thread-fringe,rgb(237 230 214 / .3)) 5px 6px)}"
     },
     {
       "name": "Project Band",
@@ -370,7 +491,7 @@
       "refersTo": "project-band",
       "description": "Signature: a project as a brocade band whose weft strip is the client colour; pick density encodes rank.",
       "html": "<div class=\"ds-warp\"><article class=\"ds-band\" style=\"--weft:#F97316\"><span class=\"ds-weft-line\"></span><div class=\"ds-strip\"></div><h3 class=\"ds-band-title\"><a href=\"#\">America Voice</a></h3><p class=\"ds-band-meta\"><span class=\"ds-kind\">Case study</span> · Web App Design · 2026</p><p class=\"ds-band-cta\">Read the case study →</p></article></div>",
-      "css": ".ds-warp{background-color:#1e2a78;background-image:repeating-linear-gradient(90deg,transparent 0 5px,rgb(46 58 140 / .7) 5px 6px);padding:24px 24px 32px 0;font-family:'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif;color:#ede6d6} .ds-band{position:relative;padding-left:40px;--weft-lit:oklch(from var(--weft) max(l,0.72) max(c,0.08) h);--pick:6px} .ds-weft-line{position:absolute;left:0;top:6px;width:40px;height:2px;background:#f2a007} .ds-strip{height:14px;background-image:repeating-linear-gradient(180deg,var(--weft-lit) 0 calc(var(--pick)*0.55),transparent calc(var(--pick)*0.55) var(--pick));transition:background-image .9s cubic-bezier(0.16,1,0.3,1)} .ds-band:hover .ds-strip{--pick:4px} .ds-band-title{margin:20px 0 0;font-weight:800;font-size:2.25rem;line-height:.95;letter-spacing:-0.025em} .ds-band-title a{color:#ede6d6;text-decoration:none} .ds-band:hover .ds-band-title a,.ds-band-title a:focus-visible{text-decoration:underline;text-decoration-color:var(--weft-lit);text-decoration-thickness:3px;outline:none} .ds-band:has(a:focus-visible){outline:3px solid #f2a007;outline-offset:6px} .ds-band-meta{margin:12px 0 0;font-size:.875rem;color:#a9b3e6} .ds-kind{color:#f2a007;font-weight:600} .ds-band-cta{margin:24px 0 0;color:#f2a007;font-weight:600}"
+      "css": ".ds-warp{background-color:#1e2a78;background-image:repeating-linear-gradient(90deg,transparent 0 5px,rgb(46 58 140 / .7) 5px 6px);padding:24px 24px 32px 0;font-family:'Bricolage Grotesque', 'Bricolage Fallback', ui-sans-serif, system-ui, sans-serif;color:#ede6d6} .ds-band{position:relative;padding-left:40px;--weft-lit:oklch(from var(--weft) max(l,0.72) max(c,0.08) h);--pick:6px} .ds-weft-line{position:absolute;left:0;top:6px;width:40px;height:2px;background:#f2a007} .ds-strip{height:14px;background-image:repeating-linear-gradient(180deg,var(--weft-lit) 0 calc(var(--pick)*0.55),transparent calc(var(--pick)*0.55) var(--pick));transition:background-image .9s cubic-bezier(0.16,1,0.3,1)} .ds-band:hover .ds-strip{--pick:4px} .ds-band-title{margin:20px 0 0;font-weight:800;font-size:2.25rem;line-height:1.05;letter-spacing:-0.025em} .ds-band-title a{color:#ede6d6;text-decoration:none} .ds-band:hover .ds-band-title a,.ds-band-title a:focus-visible{text-decoration:underline;text-decoration-color:var(--weft-lit);text-decoration-thickness:3px;outline:none} .ds-band:has(a:focus-visible){outline:3px solid #f2a007;outline-offset:6px} .ds-band-meta{margin:12px 0 0;font-size:.875rem;color:#a9b3e6} .ds-kind{color:#f2a007;font-weight:600} .ds-band-cta{margin:24px 0 0;color:#f2a007;font-weight:600}"
     },
     {
       "name": "Bare Warp Strip",
@@ -378,7 +499,7 @@
       "refersTo": "bare-warp",
       "description": "Drawn absence: loose warp with one started pick for projects that are screens only.",
       "html": "<div class=\"ds-bare-ground\"><div class=\"ds-bare\" style=\"--weft-lit:#f6a15b\"></div><p class=\"ds-bare-label\">Screens only</p></div>",
-      "css": ".ds-bare-ground{background:#1e2a78;padding:24px;font-family:'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif} .ds-bare{height:14px;background-image:linear-gradient(var(--weft-lit),var(--weft-lit)),repeating-linear-gradient(90deg,transparent 0 9px,rgb(237 230 214 / .38) 9px 10px);background-size:22% 4px,auto;background-repeat:no-repeat,repeat;background-position:0 50%,0 0} .ds-bare-label{margin:12px 0 0;font-size:.875rem;font-weight:600;color:#a9b3e6}"
+      "css": ".ds-bare-ground{background:#1e2a78;padding:24px;font-family:'Bricolage Grotesque', 'Bricolage Fallback', ui-sans-serif, system-ui, sans-serif} .ds-bare{height:14px;background-image:linear-gradient(var(--weft-lit),var(--weft-lit)),repeating-linear-gradient(90deg,transparent 0 9px,var(--color-thread-bare,rgb(237 230 214 / .38)) 9px 10px);background-size:22% 4px,auto;background-repeat:no-repeat,repeat;background-position:0 50%,0 0} .ds-bare-label{margin:12px 0 0;font-size:.875rem;font-weight:600;color:#a9b3e6}"
     },
     {
       "name": "Fact Grid",
@@ -386,7 +507,7 @@
       "refersTo": "fact-cell",
       "description": "Project facts as indigo-950 cells on 1px warp-thread dividers; empty cells show bare warp.",
       "html": "<dl class=\"ds-facts\"><div class=\"ds-fact\"><dt>Year</dt><dd>2026</dd></div><div class=\"ds-fact\"><dt>Role</dt><dd>Lead UX/UI Designer</dd></div></dl>",
-      "css": ".ds-facts{display:grid;grid-template-columns:repeat(3,1fr);margin:0;font-family:'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif;background-color:#1e2a78;background-image:repeating-linear-gradient(90deg,transparent 0 9px,rgb(237 230 214 / .3) 9px 10px);border-top:1px solid #2e3a8c;border-left:1px solid #2e3a8c} .ds-fact{background:#141c52;padding:16px 20px;border-right:1px solid #2e3a8c;border-bottom:1px solid #2e3a8c} .ds-fact dt{font-size:.875rem;color:#a9b3e6;margin-bottom:4px} .ds-fact dd{margin:0;color:#ede6d6}"
+      "css": ".ds-facts{display:grid;grid-template-columns:repeat(3,1fr);margin:0;font-family:'Bricolage Grotesque', 'Bricolage Fallback', ui-sans-serif, system-ui, sans-serif;background-color:#1e2a78;background-image:repeating-linear-gradient(90deg,transparent 0 9px,var(--color-thread-fringe,rgb(237 230 214 / .3)) 9px 10px);border-top:1px solid #2e3a8c;border-left:1px solid #2e3a8c} .ds-fact{background:#141c52;padding:16px 20px;border-right:1px solid #2e3a8c;border-bottom:1px solid #2e3a8c} .ds-fact dt{font-size:.875rem;color:#a9b3e6;margin-bottom:4px} .ds-fact dd{margin:0;color:#ede6d6}"
     },
     {
       "name": "Decision Card",
@@ -394,7 +515,7 @@
       "refersTo": "decision-card",
       "description": "Case-study decision on cotton: tension, options with a cochineal Chosen mark, why, and what it cost.",
       "html": "<div class=\"ds-cotton\"><article class=\"ds-decision\"><h3>One checkout for two products</h3><p class=\"ds-lbl\">Options</p><p class=\"ds-opt\"><span class=\"ds-dot on\"></span>Shared flow <span class=\"ds-chosen\">Chosen</span></p><p class=\"ds-opt off\"><span class=\"ds-dot\"></span>Separate flows</p></article></div>",
-      "css": ".ds-cotton{background:#ede6d6;padding:24px;font-family:'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif} .ds-decision{background:#f6f1e6;border:1px solid #cfc5ae;border-radius:2px;padding:28px;color:#15183a} .ds-decision h3{margin:0 0 20px;font-size:1.25rem;font-weight:700} .ds-lbl{font-size:.875rem;font-weight:600;margin:0 0 8px} .ds-opt{display:flex;gap:12px;align-items:center;font-size:.875rem;margin:4px 0} .ds-opt.off{color:#5a5e7e} .ds-dot{width:8px;height:8px;border-radius:50%;background:#cfc5ae} .ds-dot.on{background:#15183a} .ds-chosen{font-size:.75rem;font-weight:600;color:#b3122e}"
+      "css": ".ds-cotton{background:#ede6d6;padding:24px;font-family:'Bricolage Grotesque', 'Bricolage Fallback', ui-sans-serif, system-ui, sans-serif} .ds-decision{background:#f6f1e6;border:1px solid #cfc5ae;border-radius:2px;padding:28px;color:#15183a} .ds-decision h3{margin:0 0 20px;font-size:1.25rem;font-weight:800} .ds-lbl{font-size:.875rem;font-weight:600;margin:0 0 8px} .ds-opt{display:flex;gap:12px;align-items:center;font-size:.875rem;margin:4px 0} .ds-opt.off{color:#5a5e7e} .ds-dot{width:8px;height:8px;border-radius:50%;background:#cfc5ae} .ds-dot.on{background:#15183a} .ds-chosen{font-size:.75rem;font-weight:600;color:#b3122e}"
     },
     {
       "name": "Contents Rail",
@@ -402,19 +523,19 @@
       "refersTo": "woven-tab",
       "description": "Case-study section rail on cotton; the active section is a woven tab of cochineal picks.",
       "html": "<div class=\"ds-cotton-r\"><p class=\"ds-rail-h\">Contents</p><ul class=\"ds-rail\"><li><a class=\"is-active\" href=\"#\">Overview</a></li><li><a href=\"#\">Decisions</a></li><li><a href=\"#\">Handoff</a></li></ul></div>",
-      "css": ".ds-cotton-r{background:#ede6d6;padding:24px;font-family:'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif} .ds-rail-h{font-size:.875rem;font-weight:600;color:#15183a;margin:0 0 16px} .ds-rail{list-style:none;margin:0;padding:0;border-left:1px solid #cfc5ae} .ds-rail a{display:block;margin-left:-1px;padding:6px 0 6px 16px;font-size:15px;color:#4a4e6e;text-decoration:none} .ds-rail a:hover{color:#15183a} .ds-rail a:focus-visible{outline:3px solid #f2a007;outline-offset:3px} .ds-rail a.is-active{color:#15183a;font-weight:600;background-image:repeating-linear-gradient(180deg,#b3122e 0 2px,transparent 2px 4px);background-repeat:no-repeat;background-size:6px 100%}"
+      "css": ".ds-cotton-r{background:#ede6d6;padding:24px;font-family:'Bricolage Grotesque', 'Bricolage Fallback', ui-sans-serif, system-ui, sans-serif} .ds-rail-h{font-size:.875rem;font-weight:600;color:#15183a;margin:0 0 16px} .ds-rail{list-style:none;margin:0;padding:0;border-left:1px solid #cfc5ae} .ds-rail a{display:block;margin-left:-1px;padding:6px 0 6px 16px;font-size:15px;color:#4a4e6e;text-decoration:none} .ds-rail a:hover{color:#15183a} .ds-rail a:focus-visible{outline:3px solid #f2a007;outline-offset:3px} .ds-rail a.is-active{color:#15183a;font-weight:600;background-image:repeating-linear-gradient(180deg,#b3122e 0 2px,transparent 2px 4px);background-repeat:no-repeat;background-size:6px 100%}"
     }
   ],
   "narrative": {
     "northStar": "The Backstrap Loom",
-    "overview": "Warp is the design, weft is the build, and the cloth exists only where both cross. Every page is set on an indigo warp field: a deep blue ground striped with fine vertical threads at a fixed 6px pitch. The work arrives as weft. Each project is a horizontal brocade band whose woven strip carries the client's own colour, and how tightly that strip is beaten says how much weight the project carries. Long-form reading moves onto undyed cotton, a warm off-white with a faint 4px cross weave, so the case study reads as cloth rather than paper.\n\nThe system is dense and saturated on indigo, quiet and generous on cotton. One display family (Bricolage Grotesque) does all the talking, heavy and tightly tracked for headings and plain for reading. The name on the home page is not set in a font at all: it is woven as 5x7 brocade lettering, with the warp passing over every float. A single 2px marigold thread runs the length of the home page, from the portrait through every band to a knot in the contact close.\n\nAbsence is drawn on purpose. A project with screens and no write-up shows bare warp, loose threads with one started pick, and says \"Screens only\". An empty grid cell shows warp instead of a hole. Motion is vertical packing only: picks slide down and pack tight as a band enters view. With reduced motion, everything renders already beaten.",
+    "overview": "Warp is the design, weft is the build, and the cloth exists only where both cross. Every page is set on an indigo warp field: a deep blue ground striped with fine vertical threads at a fixed 6px pitch. The work arrives as weft. Each project is a horizontal brocade band whose woven strip carries the client's own colour, and how tightly that strip is beaten says how much weight the project carries. Long-form reading moves onto undyed cotton, a warm off-white with a faint 4px cross weave, so the case study reads as cloth rather than paper.\n\nThe system is dense and saturated on indigo, quiet and generous on cotton. One display family (Bricolage Grotesque) does all the talking, heavy and tightly tracked for headings and plain for reading. The name on the home page is not set in a font at all: it is woven as 5x7 brocade lettering, with the warp passing over every float. A single 2px marigold thread runs the length of the home page, from the portrait through every band to a knot in the contact close.\n\nAbsence is drawn on purpose. A project with screens and no write-up shows bare warp, loose threads with one started pick, and says \"Screens only\". An empty grid cell shows warp instead of a hole. Motion is vertical packing: picks slide down and pack tight as a band enters view, and hover or focus beats a band tighter. The one exception is continuity between pages, where a project's title travels from its band into the project header. With reduced motion, everything renders already beaten and pages simply cross-fade.",
     "keyCharacteristics": [
       "Indigo warp field owns the ground; undyed cotton appears only under long-form reading.",
       "Projects are brocade bands; pick density encodes rank.",
       "One integer density scale (pick-0 to pick-3) drives rank, the active state, and the beat-in.",
       "One continuous marigold weft thread ties the home page together.",
       "Missing content is drawn as bare warp, never left blank and never faked.",
-      "Motion packs vertically and nothing else moves."
+      "Motion packs vertically and nothing else moves, except the title's travel between pages."
     ],
     "rules": [
       {
@@ -428,6 +549,11 @@
         "section": "colors"
       },
       {
+        "name": "The Thread Ink Rule",
+        "body": "Every thread drawn over a surface uses a thread-ink token. Add a token for a new job; never type a one-off opacity into a pattern.",
+        "section": "colors"
+      },
+      {
         "name": "The Client Weft Rule",
         "body": "A band's strip colour is the client's colour, lifted to OKLCH L ≥ 0.72 and C ≥ 0.08 on indigo. It never becomes a large fill.",
         "section": "colors"
@@ -435,6 +561,16 @@
       {
         "name": "The Sentence Case Rule",
         "body": "Labels and meta are sentence case at normal tracking. No all-caps tracked-out labels anywhere.",
+        "section": "typography"
+      },
+      {
+        "name": "The Four Weights Rule",
+        "body": "400 for reading, 500 for ledes, 600 for labels, actions and active states, 800 for headings. No other weights.",
+        "section": "typography"
+      },
+      {
+        "name": "The One Page Title Rule",
+        "body": "Every page title is the display role. Only the 404 sets its own headline size.",
         "section": "typography"
       },
       {
@@ -465,11 +601,12 @@
       "**Do** use marigold for actions and focus on indigo and cochineal for actions and active states on cotton.",
       "**Do** weave each band in the client's own colour, lifted to OKLCH L ≥ 0.72, C ≥ 0.08.",
       "**Do** tile woven patterns at fixed pixel pitch so threads re-count across viewports.",
-      "**Do** render everything already beaten under `prefers-reduced-motion: reduce`."
+      "**Do** render everything already beaten under `prefers-reduced-motion: reduce`.",
+      "**Do** draw threads with the thread-ink tokens and send every project raster through the image pipeline."
     ],
     "donts": [
       "**Don't** use the monochrome name-plus-photo-plus-card-grid portfolio layout; projects are bands, not cards.",
-      "**Don't** move anything on any axis but vertical packing; no slides, fades-in from the side, parallax, or scale-ins beyond the 2% screenshot hover.",
+      "**Don't** move anything on any axis but vertical packing, other than the title's page-to-page travel; no slides, fades-in from the side, parallax, scale-ins or hover nudges.",
       "**Don't** add a second running thread or break the one that exists.",
       "**Don't** use brocade lettering for anything but the name.",
       "**Don't** copy community textile motifs; the world borrows loom structure only.",
