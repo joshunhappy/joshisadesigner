@@ -75,7 +75,7 @@ const workMeta: WorkMeta[] = [
 			'I designed the B2B onboarding experience for America Voice resellers, creating the account setup flow, KYC verification process, and store management dashboard from the ground up.',
 		problem: [
 			'Before a reseller can sell, they have to set up an account, pass verification, and upload store documents.',
-			'The screens follow that path, from account setup and verification to pending review and document upload, plus the reseller page on mobile.'
+			'The screens follow that path, from account setup and verification to pending review and document upload.'
 		],
 		draft: true,
 		client: 'America Voice',
