@@ -39,12 +39,12 @@
 		aria-hidden="true"
 	></div>
 
-	<div class="body grid gap-6 pt-5 pb-8 md:gap-10 {flagship ? 'md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]' : 'md:grid-cols-[minmax(0,4fr)_minmax(0,8fr)]'}">
+	<div class="body grid gap-6 pt-5 pb-8 md:gap-10 {flagship ? 'lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]' : 'lg:grid-cols-[minmax(0,4fr)_minmax(0,8fr)]'}">
 		<div class="min-w-0">
 			<svelte:element
 				this={headingLevel === 2 ? 'h2' : 'h3'}
 				class="text-on-indigo {flagship
-					? 'font-display text-5xl font-extrabold leading-[0.95] tracking-[-0.03em] md:text-7xl'
+					? 'font-display text-5xl font-extrabold leading-[0.95] tracking-[-0.03em] md:text-6xl xl:text-7xl'
 					: 'type-title'}"
 			>
 				<a
