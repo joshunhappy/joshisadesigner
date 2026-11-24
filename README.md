@@ -22,6 +22,8 @@ bun run dev
 
 Push to `main`. Cloudflare Pages builds automatically.
 
+Every page is pre-rendered to static HTML (`src/routes/+layout.ts`). Static folders (`/images`, `/fonts`, `/icons`) are excluded from the Pages Function by folder in `svelte.config.js`, which keeps `_routes.json` under Cloudflare's 100-rule limit. Old slugs listed as `aliases` in `src/lib/data/work.ts` become real 301s in the generated `_redirects`.
+
 **Cloudflare Pages settings:**
 - Build command: `bun run build`
 - Build output directory: `.svelte-kit/cloudflare`
