@@ -7,8 +7,8 @@
 		variant = 'rail'
 	}: { sections: CaseStudySection[]; activeId: string; variant?: 'rail' | 'bar' } = $props();
 
-	const fadeRight = `background: linear-gradient(to left, var(--color-cotton) 40%, transparent 100%);`;
-	const fadeLeft = `background: linear-gradient(to right, var(--color-cotton) 40%, transparent 100%);`;
+	const fadeRight = `background: linear-gradient(to left, var(--color-canvas) 40%, transparent 100%);`;
+	const fadeLeft = `background: linear-gradient(to right, var(--color-canvas) 40%, transparent 100%);`;
 
 	let listEl: HTMLUListElement | undefined = $state();
 	let canScrollLeft = $state(false);
@@ -75,7 +75,7 @@
 {:else}
 	<nav
 		aria-label="Case study sections"
-		class="sticky top-0 z-40 -mx-5 border-b border-rule bg-cotton md:hidden"
+		class="sticky top-0 z-40 -mx-5 border-b border-rule bg-canvas md:hidden"
 	>
 		<div class="relative">
 			<ul
@@ -122,25 +122,11 @@
 {/if}
 
 <style>
-	/* Woven tabs: the active section is a short band of tightly beaten cochineal picks. */
+	/* Active section: a solid 2px black mark, beside the label in the rail and under it in the bar. */
 	.rail-link.is-active {
-		background-image: repeating-linear-gradient(
-			180deg,
-			var(--color-cochineal) 0 2px,
-			transparent 2px 4px
-		);
-		background-repeat: no-repeat;
-		background-size: 6px 100%;
-		background-position: 0 0;
+		box-shadow: inset 2px 0 0 var(--color-ink);
 	}
 	.bar-link.is-active {
-		background-image: repeating-linear-gradient(
-			180deg,
-			var(--color-cochineal) 0 2px,
-			transparent 2px 4px
-		);
-		background-repeat: no-repeat;
-		background-size: calc(100% - 1.5rem) 8px;
-		background-position: 50% 100%;
+		box-shadow: inset 0 -2px 0 var(--color-ink);
 	}
 </style>

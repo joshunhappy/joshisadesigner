@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { ImageRef } from '$lib/types';
 	import { responsive, type DeviceKind } from '$lib/images';
-	import DeviceFrame from '$lib/components/loom/DeviceFrame.svelte';
+	import DeviceFrame from '$lib/components/site/DeviceFrame.svelte';
 
 	let {
 		src,
@@ -49,7 +49,7 @@
 		<div
 			class="overflow-hidden rounded-sm transition-opacity hover:opacity-90 {plain
 				? ''
-				: 'bg-cotton-deep border border-rule'}"
+				: 'bg-sunken border border-rule'}"
 		>
 			<img
 				src={r.src}
@@ -79,7 +79,7 @@
 				<p class="max-w-[30rem] text-sm text-ink-muted leading-relaxed">{caption}</p>
 			{/if}
 			{#if annotation && !compact}
-				<p class="mt-3 max-w-[30rem] bg-cotton-deep px-4 py-3 text-sm text-ink-muted leading-relaxed">
+				<p class="mt-3 max-w-[30rem] bg-sunken px-4 py-3 text-sm text-ink-muted leading-relaxed">
 					{annotation}
 				</p>
 			{/if}
@@ -90,7 +90,7 @@
 <dialog
 	bind:this={dialogEl}
 	onclose={() => (open = false)}
-	class="backdrop:bg-indigo-950/90 bg-transparent p-0 m-0 max-w-none max-h-none w-full h-full open:flex items-center justify-center"
+	class="backdrop:bg-black/85 bg-transparent p-0 m-0 max-w-none max-h-none w-full h-full open:flex items-center justify-center"
 >
 	<button
 		type="button"
@@ -103,7 +103,7 @@
 		{/if}
 	</button>
 	<span
-		class="hint pointer-events-none fixed bottom-5 left-1/2 -translate-x-1/2 max-w-[calc(100vw-2rem)] rounded-full bg-indigo-950/85 px-4 py-2 text-center text-sm text-on-indigo"
+		class="hint pointer-events-none fixed bottom-5 left-1/2 -translate-x-1/2 max-w-[calc(100vw-2rem)] rounded-full bg-black/80 px-4 py-2 text-center text-sm text-white"
 	>
 		<span class="pointer">Click anywhere or press Esc to close</span>
 		<span class="touch">Tap anywhere to close</span>

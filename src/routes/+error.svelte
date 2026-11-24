@@ -11,36 +11,17 @@
 	<meta name="robots" content="noindex" />
 </svelte:head>
 
-<div class="warp">
-	<div class="mx-auto max-w-[1200px] px-5 pt-16 pb-24 md:px-10 md:pt-24">
-		<div class="bare-warp mb-10 h-10 w-full max-w-md" aria-hidden="true"></div>
-		<h1 class="font-display text-5xl font-extrabold leading-[0.95] tracking-[-0.03em] md:text-7xl">
-			{notFound ? 'Page not found' : 'Something went wrong'}
-		</h1>
-		<p class="mt-6 max-w-[48ch] text-lg text-on-indigo-muted">
-			{#if notFound}
-				This thread ends here. The link may be old or mistyped; everything else is still on the loom.
-			{:else}
-				The page couldn’t load. Try again in a moment, or head back to the work.
-			{/if}
-		</p>
-		<ul class="mt-10 flex flex-wrap gap-4">
-			<li>
-				<a
-					href="/work/{flagship.slug}"
-					class="inline-flex rounded-full bg-marigold px-6 py-3 text-lg font-semibold text-ink no-underline hover:bg-on-indigo"
-				>
-					Read the case study
-				</a>
-			</li>
-			<li>
-				<a
-					href="/work"
-					class="inline-flex rounded-full border-2 border-on-indigo px-6 py-[10px] text-lg font-semibold no-underline hover:bg-on-indigo hover:text-ink"
-				>
-					All work
-				</a>
-			</li>
-		</ul>
+<section class="mx-auto max-w-[1440px] px-4 pt-16 pb-24 sm:px-8 md:pt-24">
+	<h1 class="type-display">{notFound ? 'Page not found' : 'Something went wrong'}</h1>
+	<p class="type-lede mt-6 max-w-[40ch]">
+		{#if notFound}
+			The link may be old or mistyped. The work is still here.
+		{:else}
+			The page couldn’t load. Try again in a moment, or head back to the work.
+		{/if}
+	</p>
+	<div class="mt-10 flex flex-wrap gap-3">
+		<a href="/work/{flagship.slug}" class="pill bg-ink text-canvas hover:bg-ink/80">Read the case study</a>
+		<a href="/work" class="pill border border-ink text-ink hover:bg-ink hover:text-canvas">All work</a>
 	</div>
-</div>
+</section>

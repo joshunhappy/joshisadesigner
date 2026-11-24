@@ -4,7 +4,7 @@
 	import SectionNav from './SectionNav.svelte';
 	import Block from './Block.svelte';
 	import Figure from './Figure.svelte';
-	import WorkPager from '$lib/components/loom/WorkPager.svelte';
+	import WorkPager from '$lib/components/site/WorkPager.svelte';
 
 	let {
 		item,
@@ -65,34 +65,33 @@
 	});
 </script>
 
-<!-- Reading progress: a single weft pick drawn across the top as you read. -->
+<!-- Reading progress: a thin black rule across the top as you read. -->
 <div
-	class="fixed top-0 left-0 z-[150] h-[3px] w-full origin-left bg-marigold"
+	class="fixed top-0 left-0 z-[150] h-[3px] w-full origin-left bg-ink"
 	style:transform="scaleX({progress})"
 	aria-hidden="true"
 ></div>
 
 <article bind:this={articleEl}>
-	<!-- Header on the indigo warp -->
-	<header class="warp">
+	<header>
 		<div class="mx-auto max-w-[1200px] px-5 pt-10 pb-12 md:px-10 md:pt-16 md:pb-16">
 			<a
 				href="/work"
-				class="inline-flex items-center gap-2 text-base text-on-indigo-muted no-underline hover:text-on-indigo"
+				class="inline-flex items-center gap-2 text-base text-ink-muted no-underline hover:text-ink"
 			>
-				<svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 10H4M9 5l-5 5 5 5" /></svg>
+				<img src="/icons/move-right.svg" alt="" width="16" height="16" class="rotate-180" />
 				All work
 			</a>
 
 			<h1
 			style:view-transition-name="title-{item.slug}"
-				class="type-display mt-8 text-on-indigo"
+				class="type-display mt-8"
 			>
 				{item.title}
 			</h1>
 
 			{#if study.lede ?? item.summary}
-				<p class="type-lede mt-6 max-w-[40ch] text-on-indigo">
+				<p class="type-lede mt-6 max-w-[40ch]">
 					{study.lede ?? item.summary}
 				</p>
 			{/if}
@@ -100,9 +99,9 @@
 			{#if facts.length}
 				<dl class="facts mt-10 grid sm:grid-cols-2 lg:grid-cols-3">
 					{#each [{ label: 'Year', value: String(item.year) }, ...facts] as fact (fact.label)}
-						<div class="fact bg-indigo-950 px-5 py-4">
-							<dt class="mb-1 text-sm text-on-indigo-muted">{fact.label}</dt>
-							<dd class="text-base leading-snug text-on-indigo">{fact.value}</dd>
+						<div class="fact bg-surface px-5 py-4">
+							<dt class="mb-1 text-sm text-ink-muted">{fact.label}</dt>
+							<dd class="text-base leading-snug">{fact.value}</dd>
 						</div>
 					{/each}
 				</dl>
@@ -116,8 +115,8 @@
 		</div>
 	</header>
 
-	<!-- Body on undyed cotton, the reading surface -->
-	<div class="cotton bg-cotton text-ink">
+	<!-- Body: the reading column -->
+	<div class="bg-canvas text-ink">
 		<div class="mx-auto w-full max-w-[1200px] px-5 md:px-10">
 			<SectionNav sections={study.sections} {activeId} variant="bar" />
 
@@ -141,7 +140,7 @@
 						</section>
 					{/each}
 
-					<WorkPager {prev} {next} tone="cotton" />
+					<WorkPager {prev} {next} />
 				</div>
 			</div>
 		</div>
@@ -150,17 +149,11 @@
 
 <style>
 	.facts {
-		/* Any cell the grid leaves empty shows bare warp, not a hole. */
-		background-image: repeating-linear-gradient(
-			90deg,
-			transparent 0 9px,
-			var(--color-thread-bare) 9px 10px
-		);
-		border-top: 1px solid var(--color-indigo-700);
-		border-left: 1px solid var(--color-indigo-700);
+		border-top: 1px solid var(--color-rule);
+		border-left: 1px solid var(--color-rule);
 	}
 	.fact {
-		border-right: 1px solid var(--color-indigo-700);
-		border-bottom: 1px solid var(--color-indigo-700);
+		border-right: 1px solid var(--color-rule);
+		border-bottom: 1px solid var(--color-rule);
 	}
 </style>

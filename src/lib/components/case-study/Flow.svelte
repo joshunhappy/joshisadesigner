@@ -32,7 +32,7 @@
 
 	<ol class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
 		{#each block.steps as step, i (step.label + i)}
-			<li class="border-t-[3px] bg-cotton-light px-4 py-4" style:border-color={color(step.track)}>
+			<li class="border-t-[3px] bg-surface px-4 py-4" style:border-color={color(step.track)}>
 				<div class="flex items-baseline gap-3">
 					<span class="text-xs tabular-nums text-ink-faint shrink-0">
 						{String(i + 1).padStart(2, '0')}

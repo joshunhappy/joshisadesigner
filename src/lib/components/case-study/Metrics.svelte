@@ -11,7 +11,7 @@
 
 	<div class="grid gap-px bg-rule rounded-sm overflow-hidden sm:grid-cols-3">
 		{#each block.items as metric (metric.label)}
-			<div class="bg-cotton-light px-5 py-6">
+			<div class="bg-surface px-5 py-6">
 				<p class="text-3xl font-extrabold tabular-nums text-ink leading-none mb-2">{metric.value}</p>
 				<p class="text-sm text-ink-muted leading-snug">{metric.label}</p>
 				{#if metric.note}

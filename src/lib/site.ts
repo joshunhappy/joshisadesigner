@@ -4,21 +4,22 @@
  */
 export const site = {
 	name: 'Josh De La Cruz',
+	legalName: 'Josue De La Cruz',
 	handle: 'Joshisadesigner',
 	url: 'https://joshisadesigner.com',
 	email: 'joshisadesigner@me.com',
-	phone: { display: '+502 5052 8589', href: 'tel:+50250528589' },
-	linkedin: 'https://linkedin.com/in/joshisadesigner',
+	phone: { display: '+502 5052-8589', href: 'tel:+50250528589' },
+	linkedin: { display: '@joshisadesigner', href: 'https://linkedin.com/in/joshisadesigner' },
 	/** Set to the PDF path (e.g. '/josh-de-la-cruz-resume.pdf') once it exists in /static. */
 	resumeUrl: null as string | null
 };
 
 export const copy = {
-	role: 'UI/UX designer',
-	line: 'I design interfaces and build the front end that ships them.',
-	availability: 'Open to full-time roles and select freelance work.',
+	role: 'UI/UX Designer',
+	line: 'I design interfaces and build the front-end that ships them.',
+	availability: 'Open for work',
 	contactHeading: 'Hiring a designer who builds? Let’s talk.',
-	contactBody: 'Email is the fastest way to reach me.',
-	emailCta: 'Email me',
-	resumeCta: 'Download résumé'
+	contactCta: 'Contact Me',
+	resumeCta: 'Download résumé',
+	aboutLede: 'I design digital products that feel clear, useful, and ready for real people.'
 };

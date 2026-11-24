@@ -4,7 +4,7 @@
 	let { block }: { block: DecisionBlock } = $props();
 </script>
 
-<article class="mb-8 rounded-sm border border-rule bg-cotton-light overflow-hidden">
+<article class="mb-8 rounded-sm border border-rule bg-surface overflow-hidden">
 	<header class="px-5 pt-5 pb-4 md:px-7 md:pt-7">
 				<h3 class="font-display text-xl font-extrabold leading-snug text-ink">{block.title}</h3>
 	</header>
@@ -28,7 +28,7 @@
 						<span class="text-sm leading-relaxed {option.chosen ? 'text-ink' : 'text-ink-faint'}">
 							<span class={option.chosen ? 'font-semibold' : ''}>{option.label}</span>
 							{#if option.chosen}
-								<span class="ml-2 text-xs font-semibold text-cochineal">Chosen</span>
+								<span class="ml-2 text-xs font-semibold text-accent">Chosen</span>
 							{/if}
 							{#if option.note}
 								<span class="block text-xs text-ink-faint mt-0.5">{option.note}</span>

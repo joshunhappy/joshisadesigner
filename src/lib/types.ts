@@ -5,6 +5,8 @@ export interface WorkItem {
 	year: number;
 	/** Listing cover: the first `00…` file, else the first image. */
 	cover: string;
+	/** Composed cover for project lists (assets/images/covers/<slug>.jpg), when one exists. */
+	listCover?: string;
 	/** Every image across the project's folders. */
 	images: string[];
 	/** Product screens only (covers excluded). */

@@ -3,8 +3,8 @@
 	import { onMount } from 'svelte';
 	import { env } from '$env/dynamic/public';
 	import { onNavigate } from '$app/navigation';
-	import SiteHeader from '$lib/components/loom/SiteHeader.svelte';
-	import ContactClose from '$lib/components/loom/ContactClose.svelte';
+	import SiteHeader from '$lib/components/site/SiteHeader.svelte';
+	import ContactClose from '$lib/components/site/ContactClose.svelte';
 
 	let { children } = $props();
 
@@ -27,7 +27,7 @@
 </script>
 
 <svelte:head>
-	<link rel="preload" href="/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+	<link rel="preload" href="/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
 </svelte:head>
 
 <a href="#main" class="skip-link">Skip to content</a>

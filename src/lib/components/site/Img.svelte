@@ -3,7 +3,7 @@
 	/**
 	 * Single place every project raster renders through, so the image pipeline
 	 * (srcset, modern formats, intrinsic size) can change in one file.
-	 * A failed load renders as bare warp carrying the alt text.
+	 * A failed load renders as a neutral panel carrying the alt text.
 	 */
 	let {
 		src,
@@ -29,7 +29,7 @@
 	<span
 		role="img"
 		aria-label={alt}
-		class="bare-warp flex items-end p-3 text-sm text-on-indigo-muted {className}"
+		class="flex items-end bg-sunken p-3 text-sm text-ink-muted {className}"
 	>
 		<span aria-hidden="true">Image unavailable</span>
 	</span>

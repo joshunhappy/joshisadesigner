@@ -46,9 +46,7 @@
 		padding: 6px;
 		border-radius: 2rem;
 		background: var(--color-bezel);
-		box-shadow:
-			var(--shadow-screen),
-			inset 0 0 0 1.5px var(--color-thread-fringe);
+		box-shadow: var(--shadow-screen);
 	}
 	.phone .screen {
 		overflow: hidden;
@@ -59,7 +57,7 @@
 	.window {
 		overflow: hidden;
 		border-radius: 8px;
-		background: var(--color-cotton-light);
+		background: var(--color-surface);
 		box-shadow: var(--shadow-screen);
 	}
 	.bar {
@@ -68,7 +66,7 @@
 		gap: 12px;
 		height: 26px;
 		padding: 0 10px;
-		background: var(--color-cotton-deep);
+		background: var(--color-chrome);
 	}
 	.dots {
 		display: flex;
@@ -86,7 +84,7 @@
 		height: 12px;
 		margin: 0 auto;
 		border-radius: 6px;
-		background: var(--color-cotton-light);
+		background: var(--color-surface);
 	}
 	.window .screen {
 		overflow: hidden;

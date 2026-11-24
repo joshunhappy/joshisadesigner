@@ -19,7 +19,7 @@ function folderImages(dir: string): string[] {
  */
 const isCover = (src: string) => /\/00[^/]*\.png$/i.test(src);
 
-type WorkMeta = Omit<WorkItem, 'images' | 'cover' | 'screens' | 'caseStudy'> & {
+type WorkMeta = Omit<WorkItem, 'images' | 'cover' | 'screens' | 'listCover' | 'caseStudy'> & {
 	/** Image folders under assets/images/work/ (originals). Defaults to [slug]. */
 	dirs?: string[];
 };
@@ -46,23 +46,22 @@ const workMeta: WorkMeta[] = [
 		tools: ['Figma', 'Photoshop', 'WebStorm']
 	},
 	{
-		slug: 'america-voice-app',
-		title: 'America Voice App',
+		slug: 'metis',
+		title: 'Metis',
 		category: 'Mobile App Design',
 		year: 2024,
-		bgColor: '#EA580C',
+		bgColor: '#6D28D9',
 		description:
-			'I designed the mobile experience for the America Voice app, leading the UX and UI for the gift card purchasing flow, onboarding, and checkout, focusing on speed and clarity for everyday users.',
+			'I led the UX and UI design for Metis, a fintech app built for more than one Latin American market, including Mexico and Guatemala, designing the onboarding flow, SAT integration screens, and account setup with a strong focus on clarity and trust.',
 		problem: [
-			'App users are often sending credit to family abroad, usually from a phone and often in a hurry.',
-			'The purchase has to finish in a few taps. The screens follow both purchases, a top-up and a gift card, from the home screen to the confirmation, plus the cart and activity history.'
+			'Invoices have to be valid for the tax authority (the SAT), so the app collects tax details before it does anything else.',
+			'The screens follow that path: tax information first, then the home dashboard, choosing who to bill, picking goods or services, adding an item, a new client, and the invoice review.'
 		],
 		draft: true,
-		client: 'America Voice',
-		role: 'UX/UI Designer',
+		role: 'Lead UX/UI Designer',
 		timeline: '2024',
-		summary: 'Mobile app design for a top-up and gift card platform targeting the Latino diaspora.',
-		responsibilities: ['UX Flows', 'UI Design', 'Prototyping', 'Handoff'],
+		summary: 'Invoicing app for Latin American markets such as Mexico and Guatemala: onboarding and SAT integration designed for clarity and trust.',
+		responsibilities: ['End-to-End UX & UI', 'Onboarding Flow', 'SAT Integration UX', 'Design System'],
 		tools: ['Figma', 'Photoshop']
 	},
 	{
@@ -86,6 +85,59 @@ const workMeta: WorkMeta[] = [
 		tools: ['Figma', 'Photoshop']
 	},
 	{
+		slug: 'pronto-topup',
+		aliases: ['pronto-topup-app'],
+		dirs: ['pronto-topup', 'pronto-topup-app'],
+		title: 'Pronto Topup',
+		category: 'Web App & Mobile App Design',
+		year: 2023,
+		bgColor: '#0F766E',
+		description:
+			'I designed Pronto Topup on the web and in its mobile app, streamlining carrier selection, product browsing, and checkout for fast mobile recharges.',
+		problem: [
+			'A recharge is a small purchase people want over in seconds, on whichever device is at hand.',
+			'The screens cover the whole run on web and app: phone number, carrier, top-ups, packages or internet, card review, and the receipt, plus the dashboard, history and settings around it.'
+		],
+		draft: true,
+		role: 'UX/UI Designer',
+		timeline: '2023',
+		summary: 'Web and mobile app for fast mobile recharges: carrier selection, product browsing, and checkout.',
+		responsibilities: ['UX Flows', 'UI Design', 'Prototyping', 'Dev Handoff'],
+		tools: ['Figma', 'Photoshop']
+	},
+	{
+		slug: 'swiftly-push',
+		title: 'Swiftly Push',
+		category: 'Web App Design',
+		year: 2025,
+		bgColor: '#0f3b36',
+		description: 'Web app design for Swiftly Push. The full write-up and screens are on their way.',
+		draft: true,
+		role: 'Lead UX/UI Designer',
+		timeline: '2025',
+		summary: 'Web app design for Swiftly Push. Screens and write-up coming soon.'
+	},
+	{
+		slug: 'america-voice-app',
+		title: 'America Voice App',
+		category: 'Mobile App Design',
+		year: 2024,
+		bgColor: '#EA580C',
+		description:
+			'I designed the mobile experience for the America Voice app, leading the UX and UI for the gift card purchasing flow, onboarding, and checkout, focusing on speed and clarity for everyday users.',
+		problem: [
+			'App users are often sending credit to family abroad, usually from a phone and often in a hurry.',
+			'The purchase has to finish in a few taps. The screens follow both purchases, a top-up and a gift card, from the home screen to the confirmation, plus the cart and activity history.'
+		],
+		draft: true,
+		client: 'America Voice',
+		role: 'UX/UI Designer',
+		timeline: '2024',
+		summary: 'Mobile app design for a top-up and gift card platform targeting the Latino diaspora.',
+		responsibilities: ['UX Flows', 'UI Design', 'Prototyping', 'Handoff'],
+		tools: ['Figma', 'Photoshop']
+	},
+	{
 		slug: 'mercury',
 		title: 'Mercury',
 		category: 'Web Design',
@@ -103,25 +155,6 @@ const workMeta: WorkMeta[] = [
 		summary: 'Brand and web design for a single-page product experience focused on clarity and conversion.',
 		responsibilities: ['Brand Identity', 'UI Design', 'Responsive Layout'],
 		tools: ['Figma', 'Illustrator']
-	},
-	{
-		slug: 'metis',
-		title: 'Metis',
-		category: 'Mobile App Design',
-		year: 2024,
-		bgColor: '#6D28D9',
-		description:
-			'I led the UX and UI design for Metis, a fintech app built for more than one Latin American market, including Mexico and Guatemala, designing the onboarding flow, SAT integration screens, and account setup with a strong focus on clarity and trust.',
-		problem: [
-			'Invoices have to be valid for the tax authority (the SAT), so the app collects tax details before it does anything else.',
-			'The screens follow that path: tax information first, then the home dashboard, choosing who to bill, picking goods or services, adding an item, a new client, and the invoice review.'
-		],
-		draft: true,
-		role: 'Lead UX/UI Designer',
-		timeline: '2024',
-		summary: 'Invoicing app for Latin American markets such as Mexico and Guatemala: onboarding and SAT integration designed for clarity and trust.',
-		responsibilities: ['End-to-End UX & UI', 'Onboarding Flow', 'SAT Integration UX', 'Design System'],
-		tools: ['Figma', 'Photoshop']
 	},
 	{
 		slug: 'ministerios-ebenezer-mexico',
@@ -142,27 +175,6 @@ const workMeta: WorkMeta[] = [
 		summary: 'Website redesign for a large congregation: events, directory, and editorial content structured for scale.',
 		responsibilities: ['Web Design', 'Editorial Layout', 'CMS Structure', 'Navigation UX'],
 		tools: ['Figma', 'WordPress', 'Illustrator']
-	},
-	{
-		slug: 'pronto-topup',
-		aliases: ['pronto-topup-app'],
-		dirs: ['pronto-topup', 'pronto-topup-app'],
-		title: 'Pronto Topup',
-		category: 'Web App & Mobile App Design',
-		year: 2023,
-		bgColor: '#0F766E',
-		description:
-			'I designed Pronto Topup on the web and in its mobile app, streamlining carrier selection, product browsing, and checkout for fast mobile recharges.',
-		problem: [
-			'A recharge is a small purchase people want over in seconds, on whichever device is at hand.',
-			'The screens cover the whole run on web and app: phone number, carrier, top-ups, packages or internet, card review, and the receipt, plus the dashboard, history and settings around it.'
-		],
-		draft: true,
-		role: 'UX/UI Designer',
-		timeline: '2023',
-		summary: 'Web and mobile app for fast mobile recharges: carrier selection, product browsing, and checkout.',
-		responsibilities: ['UX Flows', 'UI Design', 'Prototyping', 'Dev Handoff'],
-		tools: ['Figma', 'Photoshop']
 	}
 ];
 
@@ -174,6 +186,7 @@ export const work: WorkItem[] = workMeta.map(({ dirs, ...item }) => {
 		...item,
 		images,
 		cover: covers[0] ?? images[0],
+		listCover: imagePaths.includes(`/images/covers/${item.slug}.jpg`) ? `/images/covers/${item.slug}.jpg` : undefined,
 		screens,
 		caseStudy: caseStudies[item.slug]
 	};

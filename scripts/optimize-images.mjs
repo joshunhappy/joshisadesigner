@@ -3,7 +3,7 @@
  *
  * Source of truth: assets/images/** (originals, committed, never deployed).
  * Output: static/images/** as <name>-<width>.jpg (mozjpeg, progressive; any
- * transparency flattened onto indigo-950) at up to three widths, plus
+ * transparency flattened onto the canvas, #f8f8f8) at up to three widths, plus
  * src/lib/data/image-manifest.json keyed by the original public path
  * (/images/...), so content data keeps referring to images by that path.
  *
@@ -60,7 +60,7 @@ for (const file of files) {
 	const raw = await sharp(file).metadata();
 	// Width/height as displayed, after EXIF rotation.
 	const meta = { ...raw, ...(raw.autoOrient ?? {}) };
-	// Transparent originals are flattened onto indigo-950, the colour of the frames they sit in.
+	// Transparent originals are flattened onto the page canvas (#f8f8f8).
 	const ext = '.jpg';
 	// Output names are URL-safe (srcset splits on whitespace); the manifest key keeps the original name.
 	const safeName = basename(rel, extname(rel)).replace(/[^A-Za-z0-9._-]+/g, '-');
@@ -76,7 +76,7 @@ for (const file of files) {
 	for (const w of unique) {
 		const outPath = `${base}-${w}${ext}`;
 		let img = sharp(file).rotate().resize({ width: w, withoutEnlargement: true });
-		img = img.flatten({ background: '#141c52' }).jpeg({ quality: 78, mozjpeg: true, progressive: true });
+		img = img.flatten({ background: '#f8f8f8' }).jpeg({ quality: 78, mozjpeg: true, progressive: true });
 		await img.toFile(outPath);
 		await embedOrigin(
 			outPath,

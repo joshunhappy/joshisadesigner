@@ -87,6 +87,106 @@
 			}
 		]
 	},
+	"/images/covers/america-voice-app.jpg": {
+		"width": 1035,
+		"height": 611,
+		"srcs": [
+			{
+				"w": 640,
+				"src": "/images/covers/america-voice-app-640.jpg"
+			},
+			{
+				"w": 1035,
+				"src": "/images/covers/america-voice-app-1035.jpg"
+			}
+		]
+	},
+	"/images/covers/america-voice-reseller-portal.jpg": {
+		"width": 1035,
+		"height": 611,
+		"srcs": [
+			{
+				"w": 640,
+				"src": "/images/covers/america-voice-reseller-portal-640.jpg"
+			},
+			{
+				"w": 1035,
+				"src": "/images/covers/america-voice-reseller-portal-1035.jpg"
+			}
+		]
+	},
+	"/images/covers/america-voice.jpg": {
+		"width": 2070,
+		"height": 1222,
+		"srcs": [
+			{
+				"w": 640,
+				"src": "/images/covers/america-voice-640.jpg"
+			},
+			{
+				"w": 1280,
+				"src": "/images/covers/america-voice-1280.jpg"
+			},
+			{
+				"w": 1920,
+				"src": "/images/covers/america-voice-1920.jpg"
+			},
+			{
+				"w": 2070,
+				"src": "/images/covers/america-voice-2070.jpg"
+			}
+		]
+	},
+	"/images/covers/metis.jpg": {
+		"width": 1035,
+		"height": 611,
+		"srcs": [
+			{
+				"w": 640,
+				"src": "/images/covers/metis-640.jpg"
+			},
+			{
+				"w": 1035,
+				"src": "/images/covers/metis-1035.jpg"
+			}
+		]
+	},
+	"/images/covers/pronto-topup.jpg": {
+		"width": 1035,
+		"height": 611,
+		"srcs": [
+			{
+				"w": 640,
+				"src": "/images/covers/pronto-topup-640.jpg"
+			},
+			{
+				"w": 1035,
+				"src": "/images/covers/pronto-topup-1035.jpg"
+			}
+		]
+	},
+	"/images/covers/swiftly-push.jpg": {
+		"width": 2070,
+		"height": 1222,
+		"srcs": [
+			{
+				"w": 640,
+				"src": "/images/covers/swiftly-push-640.jpg"
+			},
+			{
+				"w": 1280,
+				"src": "/images/covers/swiftly-push-1280.jpg"
+			},
+			{
+				"w": 1920,
+				"src": "/images/covers/swiftly-push-1920.jpg"
+			},
+			{
+				"w": 2070,
+				"src": "/images/covers/swiftly-push-2070.jpg"
+			}
+		]
+	},
 	"/images/josh.jpg": {
 		"width": 3024,
 		"height": 4032,

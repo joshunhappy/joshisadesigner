@@ -50,6 +50,7 @@ joshisadesigner.com is Josh De La Cruz's portfolio. It exists to get him hired, 
   - Metis (2024);
   - Ministerios Ebenezer (2023);
   - Pronto Topup, web and app (2023).
+  - Swiftly Push (2025): web app; cover only for now, screens to come from its Figma file.
 - **Résumé/CV:** Josh will supply a PDF to link. Until it exists, don't link to a placeholder.
 - **Contact:** email joshisadesigner@me.com and LinkedIn.
 - **Absent:** no testimonials, client logos, awards, press, or metrics. Don't fabricate any.

@@ -97,7 +97,7 @@
 		</ul>
 	</div>
 {:else if block.type === 'callout'}
-	<aside class="mb-10 rounded-sm bg-cotton-light border border-rule px-5 py-5">
+	<aside class="mb-10 rounded-sm bg-surface border border-rule px-5 py-5">
 		<p class="text-sm font-semibold text-ink mb-2">
 			{block.title ?? calloutLabel[block.tone ?? 'note']}
 		</p>
