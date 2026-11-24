@@ -16,6 +16,8 @@ export interface WorkItem {
 	problem?: string[];
 	/** True while `problem` copy is an unreviewed draft. */
 	draft?: boolean;
+	/** Where the shipped work can be seen today. Only list work that carries this design. */
+	live?: { label: string; href: string }[];
 	/** Former slugs that redirect here (merged projects). */
 	aliases?: string[];
 	client?: string;

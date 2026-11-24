@@ -5,6 +5,7 @@
 	import { deviceOf, screenName } from '$lib/images';
 	import Img from './site/Img.svelte';
 	import FactsGrid from './site/FactsGrid.svelte';
+	import LiveLinks from './site/LiveLinks.svelte';
 
 	let { item, prev, next }: { item: WorkItem; prev: WorkItem; next: WorkItem } = $props();
 
@@ -45,6 +46,8 @@
 		<p class="type-lede mt-6 max-w-[40ch]">
 			{item.description}
 		</p>
+
+		<LiveLinks links={item.live} />
 
 		{#if item.problem?.length}
 			<div class="mt-8 max-w-[38rem] space-y-3 text-lg leading-relaxed font-light">

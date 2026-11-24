@@ -66,6 +66,7 @@ const workMeta: WorkMeta[] = [
 	},
 	{
 		slug: 'america-voice-reseller-portal',
+		live: [{ label: 'Visit portal.americavoice.com', href: 'https://portal.americavoice.com/' }],
 		title: 'AV Reseller Portal',
 		category: 'Web App Design',
 		year: 2024,
@@ -86,6 +87,7 @@ const workMeta: WorkMeta[] = [
 	},
 	{
 		slug: 'pronto-topup',
+		live: [{ label: 'Get the app on Google Play', href: 'https://play.google.com/store/apps/details?id=com.prontotopup&hl=en' }],
 		aliases: ['pronto-topup-app'],
 		dirs: ['pronto-topup', 'pronto-topup-app'],
 		title: 'Pronto Topup',
@@ -107,6 +109,7 @@ const workMeta: WorkMeta[] = [
 	},
 	{
 		slug: 'swiftly-push',
+		live: [{ label: 'Visit swiftlypush.secureip.io', href: 'https://swiftlypush.secureip.io/' }],
 		title: 'Swiftly Push',
 		category: 'Web App Design',
 		year: 2025,
@@ -126,6 +129,7 @@ const workMeta: WorkMeta[] = [
 	},
 	{
 		slug: 'america-voice-app',
+		live: [{ label: 'View on the App Store', href: 'https://apps.apple.com/us/app/america-voice/id1440824615' }],
 		title: 'America Voice App',
 		category: 'Mobile App Design',
 		year: 2024,
@@ -146,6 +150,7 @@ const workMeta: WorkMeta[] = [
 	},
 	{
 		slug: 'mercury',
+		live: [{ label: 'Visit mercuryintl.com', href: 'https://mercuryintl.com/' }],
 		title: 'Mercury',
 		category: 'Web Design',
 		year: 2024,
@@ -165,6 +170,7 @@ const workMeta: WorkMeta[] = [
 	},
 	{
 		slug: 'ministerios-ebenezer-mexico',
+		live: [{ label: 'Visit ministeriosebenezer.mx', href: 'https://ministeriosebenezer.mx/' }],
 		title: 'Ministerios Ebenezer',
 		category: 'Web Design',
 		year: 2023,

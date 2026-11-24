@@ -6,6 +6,7 @@
 	import Figure from './Figure.svelte';
 	import WorkPager from '$lib/components/site/WorkPager.svelte';
 	import FactsGrid from '$lib/components/site/FactsGrid.svelte';
+	import LiveLinks from '$lib/components/site/LiveLinks.svelte';
 
 	let {
 		item,
@@ -96,6 +97,8 @@
 					{study.lede ?? item.summary}
 				</p>
 			{/if}
+
+			<LiveLinks links={item.live} />
 
 			<FactsGrid facts={[{ label: 'Year', value: String(item.year) }, ...facts]} />
 
