@@ -210,8 +210,8 @@
 		]
 	},
 	"/images/covers/swiftly-push.jpg": {
-		"width": 2070,
-		"height": 1222,
+		"width": 2000,
+		"height": 1181,
 		"srcs": [
 			{
 				"w": 640,
@@ -226,8 +226,8 @@
 				"src": "/images/covers/swiftly-push-1920.jpg"
 			},
 			{
-				"w": 2070,
-				"src": "/images/covers/swiftly-push-2070.jpg"
+				"w": 2000,
+				"src": "/images/covers/swiftly-push-2000.jpg"
 			}
 		]
 	},
