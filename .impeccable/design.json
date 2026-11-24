@@ -1,0 +1,410 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-24T19:42:05+00:00",
+  "title": "Design System: Joshisadesigner",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "primary",
+        "displayName": "Ink Black",
+        "canonical": "#000000",
+        "tonalRamp": [
+          "#000000",
+          "#1a1a1a",
+          "#333333",
+          "#4d4d4d",
+          "#808080",
+          "#b3b3b3",
+          "#e5e5e5",
+          "#f0f0f0"
+        ]
+      },
+      "open": {
+        "role": "tertiary",
+        "displayName": "Open Green",
+        "canonical": "#03ae03",
+        "tonalRamp": [
+          "#013d01",
+          "#025f02",
+          "#028402",
+          "#03ae03",
+          "#3fc63f",
+          "#7fdb7f",
+          "#bdeebd",
+          "#e8f9e8"
+        ]
+      },
+      "track-shared": {
+        "role": "tertiary",
+        "displayName": "Shared Track",
+        "canonical": "#000000",
+        "tonalRamp": [
+          "#000000",
+          "#1a1a1a",
+          "#333333",
+          "#4d4d4d",
+          "#808080",
+          "#b3b3b3",
+          "#e5e5e5",
+          "#f0f0f0"
+        ]
+      },
+      "track-a": {
+        "role": "tertiary",
+        "displayName": "Vermilion Track",
+        "canonical": "#e2532c",
+        "tonalRamp": [
+          "#4a160a",
+          "#7a2611",
+          "#b03a1c",
+          "#e2532c",
+          "#ea7d5f",
+          "#f2a690",
+          "#f8cfc3",
+          "#fdeee9"
+        ]
+      },
+      "track-b": {
+        "role": "tertiary",
+        "displayName": "Indigo Track",
+        "canonical": "#4b5bd4",
+        "tonalRamp": [
+          "#141a45",
+          "#222c74",
+          "#3341a6",
+          "#4b5bd4",
+          "#7381e0",
+          "#9da7ea",
+          "#c7cdf3",
+          "#ebedfb"
+        ]
+      },
+      "canvas": {
+        "role": "neutral",
+        "displayName": "Gallery Off-White",
+        "canonical": "#f8f8f8",
+        "tonalRamp": [
+          "#1a1a1a",
+          "#333333",
+          "#4d4d4d",
+          "#808080",
+          "#b3b3b3",
+          "#e5e5e5",
+          "#f0f0f0",
+          "#f8f8f8"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Paper White",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#1a1a1a",
+          "#333333",
+          "#4d4d4d",
+          "#808080",
+          "#b3b3b3",
+          "#e5e5e5",
+          "#f0f0f0",
+          "#ffffff"
+        ]
+      },
+      "sunken": {
+        "role": "neutral",
+        "displayName": "Wash",
+        "canonical": "rgb(0 0 0 / 0.05)",
+        "tonalRamp": [
+          "#1a1a1a",
+          "#333333",
+          "#4d4d4d",
+          "#808080",
+          "#b3b3b3",
+          "#e5e5e5",
+          "#f0f0f0",
+          "#f8f8f8"
+        ]
+      },
+      "panel": {
+        "role": "neutral",
+        "displayName": "Closing Grey",
+        "canonical": "#e5e5e5",
+        "tonalRamp": [
+          "#1a1a1a",
+          "#333333",
+          "#4d4d4d",
+          "#808080",
+          "#b3b3b3",
+          "#e5e5e5",
+          "#f0f0f0",
+          "#f8f8f8"
+        ]
+      },
+      "ink-muted": {
+        "role": "neutral",
+        "displayName": "Muted Ink",
+        "canonical": "rgb(0 0 0 / 0.6)",
+        "tonalRamp": [
+          "#1a1a1a",
+          "#333333",
+          "#4d4d4d",
+          "#808080",
+          "#b3b3b3",
+          "#e5e5e5",
+          "#f0f0f0",
+          "#f8f8f8"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "rgb(0 0 0 / 0.2)",
+        "tonalRamp": [
+          "#1a1a1a",
+          "#333333",
+          "#4d4d4d",
+          "#808080",
+          "#b3b3b3",
+          "#e5e5e5",
+          "#f0f0f0",
+          "#f8f8f8"
+        ]
+      },
+      "bezel": {
+        "role": "neutral",
+        "displayName": "Bezel",
+        "canonical": "#111111",
+        "tonalRamp": [
+          "#111111",
+          "#1a1a1a",
+          "#333333",
+          "#4d4d4d",
+          "#808080",
+          "#b3b3b3",
+          "#e5e5e5",
+          "#f0f0f0"
+        ]
+      },
+      "chrome": {
+        "role": "neutral",
+        "displayName": "Window Chrome",
+        "canonical": "#e8e8e8",
+        "tonalRamp": [
+          "#1a1a1a",
+          "#333333",
+          "#4d4d4d",
+          "#808080",
+          "#b3b3b3",
+          "#e5e5e5",
+          "#f0f0f0",
+          "#f8f8f8"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The single title of a page: hero, project names on project pages, error titles."
+      },
+      "headline": {
+        "displayName": "Section",
+        "purpose": "Section headings: Work, About."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Project names in the work list, case-study section headings, gallery groups."
+      },
+      "lede": {
+        "displayName": "Lede",
+        "purpose": "Opening line under a display title."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Case-study reading paragraphs, muted, max 35rem."
+      },
+      "body-light": {
+        "displayName": "Body Light",
+        "purpose": "About copy and the contact list."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Heading over a block of reading in a case study."
+      },
+      "meta": {
+        "displayName": "Meta",
+        "purpose": "Category, year, role, captions, fact labels; muted."
+      },
+      "button": {
+        "displayName": "Button",
+        "purpose": "Pill buttons and nav links (Medium)."
+      }
+    },
+    "shadows": [
+      {
+        "name": "screen",
+        "value": "0 18px 40px -20px rgb(0 0 0 / 0.35)",
+        "purpose": "Device-framed project screens resting on the canvas. Nothing else casts a shadow."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out-soft",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Shared-title travel between work list and project page (420ms view-transition group)."
+      },
+      {
+        "name": "page-fade-out",
+        "value": "160ms ease-in",
+        "purpose": "Outgoing page in a view transition; kept under reduced motion."
+      },
+      {
+        "name": "page-fade-in",
+        "value": "240ms ease-out",
+        "purpose": "Incoming page in a view transition; kept under reduced motion."
+      },
+      {
+        "name": "pill-state",
+        "value": "150ms ease-out",
+        "purpose": "Pill background and colour change on hover."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "device-split",
+        "value": "1200px",
+        "purpose": "Image width under this is treated as a phone screen."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Pill",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Black-fill pill for Contact Me and primary actions.",
+      "html": "<a class=\"ds-pill ds-pill-primary\" href=\"#\">Contact Me</a>",
+      "css": ".ds-pill{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;padding:12px 16px;font-family:var(--font-sans,Geist,Arial,sans-serif);font-size:1.125rem;font-weight:500;line-height:1.25;text-decoration:none;transition:background-color 150ms ease-out,color 150ms ease-out}.ds-pill-primary{background:#000;color:#f8f8f8}.ds-pill-primary:hover{background:rgb(0 0 0 / .8)}.ds-pill:focus-visible{outline:2px solid #000;outline-offset:3px}"
+    },
+    {
+      "name": "Outline Pill",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "1px black outline pill that inverts on hover; carries the open-for-work dot.",
+      "html": "<a class=\"ds-pill ds-pill-outline\" href=\"#\"><svg width=\"12\" height=\"12\" viewBox=\"0 0 12 12\" aria-hidden=\"true\"><circle cx=\"6\" cy=\"6\" r=\"6\" fill=\"#03ae03\"/></svg>Open for work</a>",
+      "css": ".ds-pill{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;padding:10px 12px;font-family:var(--font-sans,Geist,Arial,sans-serif);font-size:1rem;font-weight:500;line-height:1;text-decoration:none;transition:background-color 150ms ease-out,color 150ms ease-out}.ds-pill-outline{border:1px solid #000;color:#000;background:transparent}.ds-pill-outline:hover{background:#000;color:#f8f8f8}.ds-pill:focus-visible{outline:2px solid #000;outline-offset:3px}"
+    },
+    {
+      "name": "Site Header",
+      "kind": "nav",
+      "refersTo": "brand-tile",
+      "description": "Black brand tile left; Medium links (underline on hover; current page marked by aria-current only) and the Contact Me pill right.",
+      "html": "<header class=\"ds-head\"><a class=\"ds-brand\" href=\"#\"><span>JOSH</span><span>DE LA CRUZ</span></a><nav><a class=\"ds-nav\" href=\"#\" aria-current=\"page\">Home</a><a class=\"ds-nav\" href=\"#\">Work</a><a class=\"ds-nav\" href=\"#\">About</a><a class=\"ds-cta\" href=\"#\">Contact Me</a></nav></header>",
+      "css": ".ds-head{display:flex;align-items:flex-start;justify-content:space-between;background:#f8f8f8;padding:0 32px;font-family:var(--font-sans,Geist,Arial,sans-serif)}.ds-head nav{display:flex;align-items:center;padding-top:16px}.ds-brand{display:flex;flex-direction:column;justify-content:center;width:72px;height:86px;padding:0 8px;box-sizing:border-box;background:#000;color:#f8f8f8;font-weight:700;font-size:18px;line-height:18px;text-decoration:none}.ds-nav{padding:12px 16px;color:#000;font-size:18px;font-weight:500;text-decoration:none}.ds-nav:hover{text-decoration:underline}.ds-cta{margin-left:4px;border-radius:999px;padding:12px 16px;background:#000;color:#f8f8f8;font-size:18px;font-weight:500;text-decoration:none}.ds-cta:hover{background:rgb(0 0 0 / .8)}.ds-nav:focus-visible,.ds-cta:focus-visible,.ds-brand:focus-visible{outline:2px solid #000;outline-offset:3px}"
+    },
+    {
+      "name": "Work Row",
+      "kind": "card",
+      "refersTo": "work-cover",
+      "description": "Ruled project row: Title link over meta, summary, role and View; 24px-radius cover; whole row is the link.",
+      "html": "<div class=\"ds-rule\"></div><article class=\"ds-row\"><div class=\"ds-info\"><h3 class=\"ds-title\"><a href=\"#\">America Voice</a></h3><p class=\"ds-meta\">UX/UI Design &middot; 2026</p><p class=\"ds-sum\">UX/UI redesign for a fintech top-up platform.</p><p class=\"ds-meta\">Lead UX/UI Designer</p><p class=\"ds-view\">View &rarr;</p></div><div class=\"ds-cover\"></div></article>",
+      "css": ".ds-rule{height:1px;max-width:640px;background:rgb(0 0 0 / .2);margin-bottom:40px}.ds-row{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:40px;align-items:start;font-family:var(--font-sans,Geist,Arial,sans-serif);color:#000}.ds-info{display:flex;flex-direction:column;gap:16px}.ds-title{margin:0;font-size:2rem;font-weight:700;line-height:1.2;letter-spacing:-.01em}.ds-title a{color:#000;text-decoration:none}.ds-title a::after{content:'';position:absolute;inset:0}.ds-row:hover .ds-title a{text-decoration:underline;text-decoration-thickness:3px}.ds-meta{margin:0;font-size:.875rem;line-height:1.2;color:rgb(0 0 0 / .6)}.ds-sum{margin:0;font-size:1.25rem;line-height:1.2}.ds-view{margin:0;font-size:.875rem;font-weight:300}.ds-cover{aspect-ratio:648/383;border-radius:24px;background:linear-gradient(135deg,#f2a490,#e2532c)}.ds-title a:focus-visible{outline:2px solid #000;outline-offset:8px}"
+    },
+    {
+      "name": "Phone Frame",
+      "kind": "custom",
+      "refersTo": "device-frame",
+      "description": "Phone bezel around a mobile screen, resting on the canvas with the screen shadow.",
+      "html": "<div class=\"ds-phone\"><div class=\"ds-screen\"></div></div>",
+      "css": ".ds-phone{width:160px;padding:6px;border-radius:2rem;background:#111;box-shadow:0 18px 40px -20px rgb(0 0 0 / .35)}.ds-screen{aspect-ratio:375/812;border-radius:1.6rem;background:#fff}"
+    },
+    {
+      "name": "Browser Window",
+      "kind": "custom",
+      "refersTo": "device-frame",
+      "description": "Browser chrome around a desktop screen at 16:10.",
+      "html": "<div class=\"ds-win\"><div class=\"ds-bar\"><span class=\"ds-dots\"><i></i><i></i><i></i></span><span class=\"ds-url\"></span></div><div class=\"ds-wscreen\"></div></div>",
+      "css": ".ds-win{width:320px;overflow:hidden;border-radius:8px;background:#fff;box-shadow:0 18px 40px -20px rgb(0 0 0 / .35)}.ds-bar{display:flex;align-items:center;gap:12px;height:26px;padding:0 10px;background:#e8e8e8}.ds-dots{display:flex;gap:5px}.ds-dots i{width:7px;height:7px;border-radius:50%;background:rgb(0 0 0 / .2)}.ds-url{flex:1;max-width:40%;height:12px;margin:0 auto;border-radius:6px;background:#fff}.ds-wscreen{aspect-ratio:16/10;background:#fff}"
+    },
+    {
+      "name": "Facts Grid",
+      "kind": "card",
+      "refersTo": "fact-cell",
+      "description": "Ruled grid of paper-white cells: muted label over value.",
+      "html": "<dl class=\"ds-facts\"><div><dt>Year</dt><dd>2026</dd></div><div><dt>Role</dt><dd>Lead UX/UI Designer</dd></div><div><dt>Tools</dt><dd>Figma</dd></div></dl>",
+      "css": ".ds-facts-wrap{overflow:hidden}.ds-facts{display:grid;grid-template-columns:repeat(3,1fr);margin:-1px 0 0 -1px;font-family:var(--font-sans,Geist,Arial,sans-serif)}.ds-facts div{padding:16px 20px;border-top:1px solid rgb(0 0 0 / .2);border-left:1px solid rgb(0 0 0 / .2)}.ds-facts div:nth-child(3n+1){padding-left:0}.ds-facts dt{margin-bottom:4px;font-size:.875rem;color:rgb(0 0 0 / .6)}.ds-facts dd{margin:0;font-size:1rem;line-height:1.375;color:#000}"
+    },
+    {
+      "name": "Contact Band",
+      "kind": "custom",
+      "refersTo": "contact-band",
+      "description": "Closing grey band: two-line Black question heading, pills, contact list.",
+      "html": "<footer class=\"ds-band\"><h2>Hiring a designer<br>who builds? Let's talk.</h2><a class=\"ds-bp\" href=\"#\">Contact Me</a><p>Email: <a href=\"#\">hello@example.com</a></p></footer>",
+      "css": ".ds-band{display:flex;flex-direction:column;align-items:flex-start;gap:32px;padding:96px 32px;background:#e5e5e5;color:#000;font-family:var(--font-sans,Geist,Arial,sans-serif)}.ds-band h2{margin:0;font-size:2.5rem;font-weight:900;line-height:1.2;letter-spacing:-.02em}.ds-bp{border-radius:999px;padding:12px 16px;background:#000;color:#f8f8f8;font-size:1.125rem;font-weight:500;text-decoration:none}.ds-bp:hover{background:rgb(0 0 0 / .8)}.ds-band p{margin:0;font-weight:300;line-height:1.6}.ds-band p a{color:#000;text-decoration:none}.ds-band p a:hover{text-decoration:underline}.ds-bp:focus-visible,.ds-band p a:focus-visible{outline:2px solid #000;outline-offset:3px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Quiet Contact Sheet",
+    "overview": "A monochrome, type-led page where Josh's projects supply every bit of colour. Black Geist sits on an off-white canvas; the structure is set by type weight, hairline rules, and generous vertical space rather than by decoration, tinted surfaces, or ornament. The work list reads like a contact sheet: a ruled column of project names on the left, each with its full-colour cover on the right.\n\nThe weight ladder carries the hierarchy. Black (900) is for the one page title, Bold (700) for section and project headings, Light (300) for the opening line and long reading. Secondary text is the same black at 60%, and every divider is the same black at 20%. Surfaces are flat; the only lifted objects are device-framed screens, which rest on the canvas with one soft shadow.\n\nThe system is a user-pinned design (Figma portfolio.v2, landing frame) and replaces the earlier Backstrap Loom world entirely. Case-study pages keep their established layout (facts grid, section rail, reading column) and are restyled into this vocabulary.",
+    "keyCharacteristics": [
+      "Off-white canvas, pure black ink, no brand hue.",
+      "Colour comes only from project imagery, the green open-for-work dot, and data tracks in case-study flows.",
+      "Geist throughout, separated by weight (900 / 700 / 500 / 300) rather than by a second family.",
+      "Hairline rules at 20% black; 640px-wide rules between work rows.",
+      "Pill buttons in two states only: black fill, or 1px black outline.",
+      "24px-radius covers and portrait; everything else nearly square."
+    ],
+    "rules": [
+      {
+        "name": "The Work Is the Colour Rule",
+        "body": "No interface element carries hue except the open-for-work dot and the data tracks inside case-study flows. A new surface that needs emphasis gets it from weight, size, or a black fill, never from a new colour.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Black Rule",
+        "body": "Secondary and tertiary greys are the same black at reduced opacity (60% text, 20% rules, 5% wash), so they stay in key on both canvas and paper white. Do not introduce opaque mid-greys for text or lines.",
+        "section": "colors"
+      },
+      {
+        "name": "The Weight Ladder Rule",
+        "body": "Hierarchy is carried by Geist at 900, 700, 600, 500, and 300. Black is for the single title of a page and the closing contact heading; nothing else uses it.",
+        "section": "typography"
+      },
+      {
+        "name": "The Sentence-Case Rule",
+        "body": "Headings are sentence or title case. The hero title is the sole uppercase setting; no tracked-out uppercase labels sit above headings.",
+        "section": "typography"
+      },
+      {
+        "name": "The Only Prints Cast Shadows Rule",
+        "body": "Shadows belong to device frames holding the work. Cards, buttons, headers, and panels stay flat and use hairlines or tone instead.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** keep the canvas at Gallery Off-White and every rule at 20% black; dividers between work rows stop at 640px.",
+      "**Do** carry hierarchy with Geist weight: 900 for the page title, 700 for headings, 300 for ledes and long reading.",
+      "**Do** use the two pills (black fill, 1px outline) for every button.",
+      "**Do** give project imagery the 24px radius and present screens in their device frame with the single screen-rest shadow.",
+      "**Do** keep focus visible as a 2px black outline offset 3px (8px around whole-row links).",
+      "**Do** honour reduced motion: page cross-fades remain, the shared-title travel between list and page is dropped."
+    ],
+    "donts": [
+      "**Don't** add a brand hue; colour is the work's, the open-for-work dot's, and the flow tracks' alone.",
+      "**Don't** add shadows to cards, buttons, or the header.",
+      "**Don't** set small uppercase tracked labels above headings, or use a second display family.",
+      "**Don't** bring back anything from the retired Backstrap Loom world (indigo ground, woven thread textures, Bricolage Grotesque).",
+      "**Don't** draw rules full-bleed across the work list."
+    ]
+  }
+}

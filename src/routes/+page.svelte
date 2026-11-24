@@ -1,73 +1,82 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import { gsap } from '$lib/animations/gsap';
+	import { work } from '$lib/data/work';
+	import { site, copy } from '$lib/site';
+	import Img from '$lib/components/site/Img.svelte';
+	import WorkRow from '$lib/components/site/WorkRow.svelte';
+	import AboutSection from '$lib/components/site/AboutSection.svelte';
 
-	let heroEl: HTMLElement;
-	let headingEl: HTMLElement;
-	let bodyEl: HTMLElement;
-
-	onMount(() => {
-		const tl = gsap.timeline();
-		tl.from(heroEl, { opacity: 0, y: 20, duration: 0.8, ease: 'power3.out' })
-		  .from(headingEl, { opacity: 0, y: 30, duration: 0.6, ease: 'power3.out' }, '-=0.4')
-		  .from(bodyEl, { opacity: 0, y: 20, duration: 0.5, ease: 'power3.out' }, '-=0.2');
-	});
+	const description =
+		'Josh De La Cruz is a UI/UX designer who designs interfaces and builds the front end that ships them: websites, mobile apps, and design systems.';
 </script>
 
 <svelte:head>
-	<title>Josh De La Cruz — UI/UX Designer</title>
-	<meta name="description" content="Josh De La Cruz is a UI/UX designer crafting clear, scalable digital products — websites, mobile apps, and design systems." />
+	<title>Josh De La Cruz · UI/UX Designer</title>
+	<meta name="description" content={description} />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://joshisadesigner.com/" />
-	<meta property="og:title" content="Josh De La Cruz — UI/UX Designer" />
-	<meta property="og:description" content="Josh De La Cruz is a UI/UX designer crafting clear, scalable digital products — websites, mobile apps, and design systems." />
-	<meta property="og:image" content="https://joshisadesigner.com/images/og-image.jpg" />
+	<meta property="og:url" content="{site.url}/" />
+	<meta property="og:title" content="Josh De La Cruz · UI/UX Designer" />
+	<meta property="og:description" content={description} />
+	<meta property="og:image" content="{site.url}/images/og-image.jpg" />
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="Josh De La Cruz — UI/UX Designer" />
-	<meta name="twitter:description" content="Josh De La Cruz is a UI/UX designer crafting clear, scalable digital products — websites, mobile apps, and design systems." />
-	<meta name="twitter:image" content="https://joshisadesigner.com/images/og-image.jpg" />
-	<link rel="canonical" href="https://joshisadesigner.com/" />
+	<meta name="twitter:title" content="Josh De La Cruz · UI/UX Designer" />
+	<meta name="twitter:description" content={description} />
+	<meta name="twitter:image" content="{site.url}/images/og-image.jpg" />
+	<link rel="canonical" href="{site.url}/" />
 	{@html `<script type="application/ld+json">${JSON.stringify({
-		"@context": "https://schema.org",
-		"@type": "Person",
-		"name": "Josh De La Cruz",
-		"jobTitle": "UI/UX Designer",
-		"url": "https://joshisadesigner.com",
-		"email": "joshisadesigner@me.com",
-		"telephone": "+502-5052-8589",
-		"image": "https://joshisadesigner.com/images/og-image.jpg",
-		"sameAs": ["https://linkedin.com/in/joshisadesigner"]
+		'@context': 'https://schema.org',
+		'@type': 'Person',
+		name: site.name,
+		jobTitle: 'UI/UX Designer',
+		url: site.url,
+		email: site.email,
+		telephone: site.phone.display,
+		image: `${site.url}/images/og-image.jpg`,
+		sameAs: [site.linkedin.href]
 	})}</script>`}
 </svelte:head>
 
-<section class="flex flex-col h-[100dvh] pt-20 md:flex-row md:pt-32 md:pb-12">
-	<!-- Image: top on mobile, right column on desktop -->
-	<div
-		bind:this={heroEl}
-		class="ml-6 min-h-0 flex-1 overflow-hidden rounded-tl-[24px] rounded-bl-[24px] md:order-2 md:ml-4"
-	>
-		<img
-			src="/images/josh.jpg"
-			alt="Josh De La Cruz"
-			class="w-full h-full object-cover object-top md:object-center"
-		/>
-	</div>
-
-	<!-- Content: below image on mobile, left column on desktop -->
-	<div class="shrink-0 md:order-1 md:flex md:flex-col md:justify-center md:w-[40%]">
-		<div bind:this={headingEl} class="px-6 mt-3 md:mt-0">
-			<h1 class="font-black leading-none text-[#111] uppercase" style="font-size: clamp(2.4rem, 11vw, 6rem);">
-				UI/UX<br />DESIGNER
+<!-- Hero -->
+<section class="mx-auto max-w-[1440px] px-4 pt-8 pb-16 sm:px-10 md:pt-12 md:pb-[72px] lg:pt-16" aria-labelledby="hero-title">
+	<div class="grid items-center gap-10 lg:grid-cols-[640px_648px] lg:justify-between lg:gap-[72px]">
+		<div class="flex flex-col items-start gap-6">
+			<h1 id="hero-title" class="type-display">
+				<span class="sr-only">{site.name}, </span>UI/UX<br />DESIGNER
 			</h1>
+			<p class="type-lede max-w-[30ch]">{copy.line}</p>
+			<a
+				href="mailto:{site.email}"
+				class="pill border border-ink px-3 py-2.5 text-base leading-4 text-ink hover:bg-ink hover:text-canvas"
+			>
+				<img src="/icons/dot-green.svg" alt="" width="12" height="12" />
+				{copy.availability}
+			</a>
 		</div>
-		<div bind:this={bodyEl} class="px-6 mt-3 pb-6 md:pb-0">
-			<p class="text-lg leading-snug text-[#111] max-w-xs mb-5">
-				Designing interfaces that ship, scale, and make sense.
-			</p>
-			<span class="inline-flex items-center gap-2 border border-[#111]/30 rounded-full px-4 py-2 text-xs tracking-widest uppercase text-[#111]">
-				<span class="w-2 h-2 rounded-full bg-green-500 shrink-0"></span>
-				Open for work
-			</span>
+
+		<!-- Crop matches the Figma frame: the photo at 128.5% of the frame width, left-aligned, raised 34.2%. -->
+		<div class="relative aspect-[648/790] w-full overflow-hidden rounded-[24px] lg:w-[648px]">
+			<Img
+				src="/images/josh.jpg"
+				alt="Portrait of Josh De La Cruz"
+				priority
+				sizes="(min-width: 1024px) 840px, 130vw"
+				class="absolute top-[-34.2%] left-0 h-auto w-[128.5%] max-w-none"
+			/>
 		</div>
 	</div>
 </section>
+
+<!-- Work -->
+<section id="work" class="mx-auto max-w-[1440px] scroll-mt-8 px-4 py-16 sm:px-10 md:py-[72px]" aria-labelledby="work-heading">
+	<h2 id="work-heading" class="type-section">Work</h2>
+	<ul class="mt-10 flex flex-col gap-10 md:mt-[72px] md:gap-[72px]">
+		{#each work as item, i (item.slug)}
+			<li class="flex flex-col gap-10 md:gap-[72px]">
+				<div class="h-px w-full max-w-[640px] bg-rule" aria-hidden="true"></div>
+				<WorkRow {item} eager={i === 0} />
+			</li>
+		{/each}
+		<li aria-hidden="true"><div class="h-px w-full max-w-[640px] bg-rule"></div></li>
+	</ul>
+</section>
+
+<AboutSection />
