@@ -21,7 +21,7 @@
 			<div class="mt-10 flex flex-wrap items-center gap-4">
 				<a
 					href="mailto:{site.email}"
-					class="inline-flex flex-col items-start gap-0.5 rounded-[2rem] bg-marigold px-7 py-4 text-lg font-bold text-ink no-underline hover:bg-on-indigo sm:flex-row sm:items-center sm:gap-3 sm:rounded-full"
+					class="inline-flex flex-col items-start gap-0.5 rounded-[2rem] bg-marigold px-7 py-4 text-lg font-semibold text-ink no-underline hover:bg-on-indigo sm:flex-row sm:items-center sm:gap-3 sm:rounded-full"
 				>
 					<span class="whitespace-nowrap">{copy.emailCta}</span>
 					<span class="text-base font-normal break-all sm:text-lg">{site.email}</span>
@@ -30,7 +30,7 @@
 					<a
 						href={site.resumeUrl}
 						download
-						class="inline-flex items-center rounded-full border-2 border-on-indigo px-7 py-[14px] text-lg font-bold no-underline hover:bg-on-indigo hover:text-ink"
+						class="inline-flex items-center rounded-full border-2 border-on-indigo px-7 py-[14px] text-lg font-semibold no-underline hover:bg-on-indigo hover:text-ink"
 					>
 						{copy.resumeCta}
 					</a>

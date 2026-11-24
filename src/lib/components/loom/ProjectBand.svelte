@@ -43,9 +43,9 @@
 		<div class="min-w-0">
 			<svelte:element
 				this={headingLevel === 2 ? 'h2' : 'h3'}
-				class="font-display font-extrabold leading-[0.95] tracking-[-0.025em] text-on-indigo {flagship
-					? 'text-5xl md:text-7xl'
-					: 'text-3xl md:text-4xl'}"
+				class="text-on-indigo {flagship
+					? 'font-display text-5xl font-extrabold leading-[0.95] tracking-[-0.03em] md:text-7xl'
+					: 'type-title'}"
 			>
 				<a
 					href="/work/{item.slug}"
@@ -65,7 +65,7 @@
 			</p>
 
 			{#if item.summary}
-				<p class="mt-4 max-w-[46ch] text-lg leading-snug text-on-indigo {flagship ? 'md:text-xl' : ''}">
+				<p class="mt-4 max-w-[46ch] text-lg leading-normal text-on-indigo {flagship ? 'md:text-xl' : ''}">
 					{item.summary}
 				</p>
 			{/if}

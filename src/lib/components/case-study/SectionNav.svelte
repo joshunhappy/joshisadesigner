@@ -61,7 +61,7 @@
 					<a
 						href="#{section.id}"
 						aria-current={activeId === section.id ? 'true' : undefined}
-						class="rail-link -ml-px block py-1.5 pl-4 text-[15px] no-underline transition-colors {activeId ===
+						class="rail-link -ml-px block py-1.5 pl-4 text-ui no-underline transition-colors {activeId ===
 						section.id
 							? 'is-active font-semibold text-ink'
 							: 'text-ink-muted hover:text-ink'}"

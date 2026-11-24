@@ -30,13 +30,12 @@
 
 		<h1
 			style:view-transition-name="title-{item.slug}"
-			class="mt-8 font-display font-extrabold leading-[0.9] tracking-[-0.035em]"
-			style="font-size: clamp(2.75rem, 8vw, 5.5rem);"
+			class="type-display mt-8"
 		>
 			{item.title}
 		</h1>
 
-		<p class="mt-6 max-w-[48ch] font-display text-xl font-medium leading-snug md:text-2xl">
+		<p class="type-lede mt-6 max-w-[40ch]">
 			{item.description}
 		</p>
 

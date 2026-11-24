@@ -70,7 +70,7 @@
 				<WovenWord lines={['Josh', 'De la Cruz']} colors={nameColors} class="max-w-[640px]" />
 			</h1>
 
-			<p class="mt-7 max-w-[30ch] font-display text-2xl leading-tight font-semibold md:text-3xl">
+			<p class="type-lede mt-7 max-w-[30ch]">
 				{copy.line}
 			</p>
 			<p class="mt-4 max-w-[44ch] text-lg text-on-indigo-muted">

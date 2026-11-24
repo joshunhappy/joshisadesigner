@@ -86,14 +86,13 @@
 
 			<h1
 			style:view-transition-name="title-{item.slug}"
-				class="mt-8 font-display font-extrabold leading-[0.9] tracking-[-0.035em] text-on-indigo"
-				style="font-size: clamp(3rem, 9vw, 6rem);"
+				class="type-display mt-8 text-on-indigo"
 			>
 				{item.title}
 			</h1>
 
 			{#if study.lede ?? item.summary}
-				<p class="mt-6 max-w-[40ch] font-display text-xl font-medium leading-snug text-on-indigo md:text-3xl">
+				<p class="type-lede mt-6 max-w-[40ch] text-on-indigo">
 					{study.lede ?? item.summary}
 				</p>
 			{/if}
@@ -131,7 +130,7 @@
 					{#each study.sections as section, sectionIndex (section.id)}
 						<section id={section.id} class="mb-20 scroll-mt-20 md:mb-28 md:scroll-mt-10">
 							<h2
-								class="mb-8 border-b border-rule pb-5 font-display text-3xl font-extrabold leading-tight tracking-[-0.02em] text-ink md:text-4xl"
+								class="type-title mb-8 border-b border-rule pb-5 text-ink"
 							>
 								{section.title ?? section.label}
 							</h2>

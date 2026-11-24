@@ -19,14 +19,14 @@
 {#if block.type === 'prose'}
 	<div class="mb-10">
 		{#if block.heading}
-			<h3 class="text-sm font-semibold text-ink mb-4">{block.heading}</h3>
+			<h3 class="type-label mb-4">{block.heading}</h3>
 		{/if}
 		<div class={block.lead ? 'space-y-5' : 'space-y-4'}>
 			{#each block.body as paragraph, i (i)}
 				<p
 					class={block.lead
-						? 'max-w-[40ch] font-display text-xl md:text-2xl font-medium text-ink leading-snug'
-						: 'max-w-[35rem] text-[17px] text-ink-muted leading-relaxed'}
+						? 'type-lede max-w-[40ch] text-ink'
+						: 'max-w-[35rem] text-read text-ink-muted'}
 				>
 					{paragraph}
 				</p>
@@ -38,7 +38,7 @@
 {:else if block.type === 'gallery'}
 	<div class="mb-10">
 		{#if block.heading}
-			<h3 class="text-sm font-semibold text-ink mb-4">{block.heading}</h3>
+			<h3 class="type-label mb-4">{block.heading}</h3>
 		{/if}
 		{#if block.layout === 'row'}
 			<div
@@ -79,7 +79,7 @@
 {:else if block.type === 'list'}
 	<div class="mb-10">
 		{#if block.heading}
-			<h3 class="text-sm font-semibold text-ink mb-4">{block.heading}</h3>
+			<h3 class="type-label mb-4">{block.heading}</h3>
 		{/if}
 		<ul class="space-y-3">
 			{#each block.items as item, i (i)}
@@ -91,7 +91,7 @@
 					{:else}
 						<span class="mt-[9px] w-1.5 h-1.5 rounded-full bg-ink shrink-0"></span>
 					{/if}
-					<span class="max-w-[35rem] text-[17px] text-ink-muted leading-relaxed">{item}</span>
+					<span class="max-w-[35rem] text-read text-ink-muted">{item}</span>
 				</li>
 			{/each}
 		</ul>
@@ -101,11 +101,11 @@
 		<p class="text-sm font-semibold text-ink mb-2">
 			{block.title ?? calloutLabel[block.tone ?? 'note']}
 		</p>
-		<p class="max-w-[35rem] text-[15px] text-ink-muted leading-relaxed">{block.body}</p>
+		<p class="max-w-[31rem] text-ui leading-relaxed text-ink-muted">{block.body}</p>
 	</aside>
 {:else if block.type === 'quote'}
 	<blockquote class="mb-10 border-l-2 border-ink pl-6">
-		<p class="font-display text-2xl font-medium text-ink leading-snug">{block.text}</p>
+		<p class="font-display text-[1.75rem] font-semibold leading-tight text-ink">{block.text}</p>
 		{#if block.attribution}
 			<footer class="text-sm font-semibold text-ink mt-3">{block.attribution}</footer>
 		{/if}

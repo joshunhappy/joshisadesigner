@@ -42,7 +42,7 @@
 		display: inline-flex;
 		align-items: center;
 		gap: 0.5rem;
-		font-size: 0.9375rem;
+		font-size: var(--text-ui);
 	}
 	.title {
 		font-family: var(--font-display);

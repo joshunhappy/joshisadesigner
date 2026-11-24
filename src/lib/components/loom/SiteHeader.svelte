@@ -12,7 +12,7 @@
 </script>
 
 <header class="header relative z-50 bg-indigo-950 text-on-indigo">
-	<div class="flex items-center justify-between gap-2 px-4 py-4 sm:px-5 md:px-10 md:py-5">
+	<div class="flex flex-wrap items-center justify-between gap-x-2 gap-y-2 px-4 py-4 sm:px-5 md:px-10 md:py-5">
 		<a
 			href="/"
 			class="font-display text-base font-extrabold sm:text-lg tracking-[-0.02em] no-underline hover:text-marigold"
@@ -22,7 +22,7 @@
 		</a>
 
 		<nav aria-label="Main">
-			<ul class="flex items-center gap-0 text-[15px] sm:gap-2 sm:text-base">
+			<ul class="flex items-center gap-0 text-ui whitespace-nowrap sm:gap-2 sm:text-base">
 				{#each links as link (link.href)}
 					<li>
 						<a

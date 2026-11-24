@@ -28,7 +28,7 @@
 <div class="warp">
 	<div class="mx-auto max-w-[1440px] px-5 md:px-10">
 		<header class="pt-12 pb-10 md:pt-20 md:pb-14">
-			<h1 class="font-display text-6xl font-extrabold leading-[0.9] tracking-[-0.035em] md:text-8xl">
+			<h1 class="type-display">
 				Work
 			</h1>
 			<p class="mt-5 max-w-[52ch] text-lg text-on-indigo-muted">
@@ -56,7 +56,7 @@
 			<section aria-labelledby="screens-heading" class="mt-14 md:mt-20">
 				<h2
 					id="screens-heading"
-					class="pl-5 font-display text-3xl font-extrabold tracking-[-0.02em] md:pl-10 md:text-4xl"
+					class="type-title pl-5 md:pl-10"
 				>
 					Screens
 				</h2>

@@ -27,10 +27,10 @@
 <div class="warp">
 	<div class="mx-auto grid max-w-[1440px] gap-10 px-5 pt-12 pb-16 md:grid-cols-12 md:px-10 md:pt-20 md:pb-24">
 		<header class="md:col-span-7">
-			<h1 class="font-display text-6xl font-extrabold leading-[0.9] tracking-[-0.035em] md:text-8xl">
+			<h1 class="type-display">
 				About
 			</h1>
-			<p class="mt-8 max-w-[24ch] font-display text-2xl font-semibold leading-tight md:text-4xl">
+			<p class="type-lede mt-8 max-w-[26ch]">
 				I design digital products that feel clear, useful, and ready for real people.
 			</p>
 		</header>
@@ -48,7 +48,7 @@
 
 		<!-- Undyed cotton: the reading surface. -->
 		<section class="cotton bg-cotton text-ink md:col-span-7 px-6 py-8 md:px-12 md:py-12" aria-label="Background">
-			<div class="max-w-[64ch] space-y-5 text-lg leading-relaxed text-ink-muted">
+			<div class="max-w-[38rem] space-y-5 text-lg leading-relaxed text-ink-muted">
 				<p>
 					My work sits between UX/UI design and front-end development, which means I care about more than how an interface looks. I care about how it works, how it scales, and how easily a team can keep improving it after launch.
 				</p>

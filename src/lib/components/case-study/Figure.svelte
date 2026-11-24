@@ -56,10 +56,10 @@
 				</span>
 			{/if}
 			{#if caption}
-				<p class="max-w-[35rem] text-sm text-ink-muted leading-relaxed">{caption}</p>
+				<p class="max-w-[30rem] text-sm text-ink-muted leading-relaxed">{caption}</p>
 			{/if}
 			{#if annotation && !compact}
-				<p class="mt-3 max-w-[35rem] bg-cotton-deep px-4 py-3 text-sm text-ink-muted leading-relaxed">
+				<p class="mt-3 max-w-[30rem] bg-cotton-deep px-4 py-3 text-sm text-ink-muted leading-relaxed">
 					{annotation}
 				</p>
 			{/if}

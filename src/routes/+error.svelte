@@ -28,7 +28,7 @@
 			<li>
 				<a
 					href="/work/{flagship.slug}"
-					class="inline-flex rounded-full bg-marigold px-6 py-3 text-lg font-bold text-ink no-underline hover:bg-on-indigo"
+					class="inline-flex rounded-full bg-marigold px-6 py-3 text-lg font-semibold text-ink no-underline hover:bg-on-indigo"
 				>
 					Read the case study
 				</a>
@@ -36,7 +36,7 @@
 			<li>
 				<a
 					href="/work"
-					class="inline-flex rounded-full border-2 border-on-indigo px-6 py-[10px] text-lg font-bold no-underline hover:bg-on-indigo hover:text-ink"
+					class="inline-flex rounded-full border-2 border-on-indigo px-6 py-[10px] text-lg font-semibold no-underline hover:bg-on-indigo hover:text-ink"
 				>
 					All work
 				</a>

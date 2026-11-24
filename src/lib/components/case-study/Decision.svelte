@@ -6,7 +6,7 @@
 
 <article class="mb-8 rounded-sm border border-rule bg-cotton-light overflow-hidden">
 	<header class="px-5 pt-5 pb-4 md:px-7 md:pt-7">
-				<h3 class="text-xl font-bold text-ink leading-snug">{block.title}</h3>
+				<h3 class="font-display text-xl font-extrabold leading-snug text-ink">{block.title}</h3>
 	</header>
 
 	<div class="px-5 pb-6 md:px-7 md:pb-7 space-y-6">
