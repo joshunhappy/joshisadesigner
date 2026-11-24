@@ -32,7 +32,7 @@ joshisadesigner.com is Josh De La Cruz's portfolio. It exists to get him hired, 
 - **Content model:** project data lives in `src/lib/data/work.ts`. Long-form case studies use the `case-study/*` component system (Decision, Compare, Figure, Flow, Metrics, SectionNav). Other projects render as screenshot galleries.
 - **Open decisions:**
   - Spanish version of the site: English ships first, and copy is structured so a `/es` route can be added later;
-  - whether the phone number stays public.
+  - Phone (+502) 5052 8589 stays public as a `tel:` link in the contact close.
 
 ## Brand Commitments
 

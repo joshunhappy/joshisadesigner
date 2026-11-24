@@ -4,6 +4,7 @@
 	import SectionNav from './SectionNav.svelte';
 	import Block from './Block.svelte';
 	import Figure from './Figure.svelte';
+	import WorkPager from '$lib/components/loom/WorkPager.svelte';
 
 	let {
 		item,
@@ -27,6 +28,7 @@
 	const activeId = $derived(observedId || study.sections[0]?.id || '');
 	let progress = $state(0);
 	let articleEl: HTMLElement;
+	let bodyEl: HTMLElement;
 
 	onMount(() => {
 		const observer = new IntersectionObserver(
@@ -35,15 +37,20 @@
 					if (entry.isIntersecting) observedId = entry.target.id;
 				}
 			},
-			{ rootMargin: '-140px 0px -60% 0px', threshold: 0 }
+			{ rootMargin: '-80px 0px -60% 0px', threshold: 0 }
 		);
 
-		for (const el of articleEl.querySelectorAll('section[id]')) observer.observe(el);
+		for (const el of bodyEl.querySelectorAll('section[id]')) observer.observe(el);
 
 		const onScroll = () => {
 			const { top, height } = articleEl.getBoundingClientRect();
 			const scrollable = height - window.innerHeight;
 			progress = scrollable <= 0 ? 1 : Math.min(1, Math.max(0, -top / scrollable));
+			// The last section is often too short to cross the spy line; claim it at the end.
+			const bodyBottom = bodyEl.getBoundingClientRect().bottom;
+			if (bodyBottom <= window.innerHeight + 8) {
+				observedId = study.sections[study.sections.length - 1]?.id ?? observedId;
+			}
 		};
 
 		onScroll();
@@ -58,121 +65,102 @@
 	});
 </script>
 
-<!--
-	Header band: the logo and menu button are fixed with no backdrop of their own,
-	so page content scrolls visibly under them. Height matches the section nav's
-	`top-[84px]` so the two meet without overlapping.
--->
-<div class="fixed inset-x-0 top-0 h-[84px] bg-[#f5f5f5] z-[90]" aria-hidden="true"></div>
-
-<!-- Reading progress -->
+<!-- Reading progress: a single weft pick drawn across the top as you read. -->
 <div
-	class="fixed top-0 left-0 h-[2px] bg-[#111] z-[150] origin-left transition-[width] duration-100"
-	style:width="{progress * 100}%"
+	class="fixed top-0 left-0 z-[150] h-[3px] w-full origin-left bg-marigold"
+	style:transform="scaleX({progress})"
 	aria-hidden="true"
 ></div>
 
-<article bind:this={articleEl} class="pt-24 pb-16">
-	<div class="mx-auto w-full max-w-[1200px] px-6">
+<article bind:this={articleEl}>
+	<!-- Header on the indigo warp -->
+	<header class="warp">
+		<div class="mx-auto max-w-[1200px] px-5 pt-10 pb-12 md:px-10 md:pt-16 md:pb-16">
+			<a
+				href="/work"
+				class="inline-flex items-center gap-2 text-base text-on-indigo-muted no-underline hover:text-on-indigo"
+			>
+				<svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 10H4M9 5l-5 5 5 5" /></svg>
+				All work
+			</a>
 
-		<SectionNav sections={study.sections} {activeId} variant="bar" />
+			<h1
+				class="mt-8 font-display font-extrabold leading-[0.9] tracking-[-0.035em] text-on-indigo"
+				style="font-size: clamp(3rem, 9vw, 6rem);"
+			>
+				{item.title}
+			</h1>
 
-		<div class="md:grid md:grid-cols-[180px_1fr] md:gap-16 lg:gap-24">
-			<div class="hidden md:block">
-				<SectionNav sections={study.sections} {activeId} variant="rail" />
-			</div>
+			{#if study.lede ?? item.summary}
+				<p class="mt-6 max-w-[40ch] font-display text-xl font-medium leading-snug text-on-indigo md:text-3xl">
+					{study.lede ?? item.summary}
+				</p>
+			{/if}
 
-			<div class="min-w-0 pt-10 md:pt-0">
-        <!-- Hero -->
-        <header class="mb-12 md:mb-20">
-          <a
-            href="/work"
-            class="text-xs text-[#888] hover:text-[#111] transition-colors tracking-widest uppercase mb-8 inline-block"
-          >
-            ← All Work
-          </a>
+			{#if facts.length}
+				<dl class="facts mt-10 grid sm:grid-cols-2 lg:grid-cols-3">
+					{#each [{ label: 'Year', value: String(item.year) }, ...facts] as fact (fact.label)}
+						<div class="fact bg-indigo-950 px-5 py-4">
+							<dt class="mb-1 text-sm text-on-indigo-muted">{fact.label}</dt>
+							<dd class="text-base leading-snug text-on-indigo">{fact.value}</dd>
+						</div>
+					{/each}
+				</dl>
+			{/if}
 
-          <p class="text-xs tracking-widest uppercase text-[#aaa] mb-4">
-            {item.category} · {item.year}
-          </p>
+			{#if study.hero}
+				<div class="mt-10">
+					<Figure {...study.hero} eager plain />
+				</div>
+			{/if}
+		</div>
+	</header>
 
-          <h1
-            class="font-black leading-none text-[#111] uppercase mb-6"
-            style="font-size: clamp(2.5rem, 9vw, 5.5rem);"
-          >
-            {item.title}
-          </h1>
+	<!-- Body on undyed cotton, the reading surface -->
+	<div class="cotton bg-cotton text-ink">
+		<div class="mx-auto w-full max-w-[1200px] px-5 md:px-10">
+			<SectionNav sections={study.sections} {activeId} variant="bar" />
 
-          {#if study.lede ?? item.summary}
-            <p class="text-xl md:text-2xl font-light text-[#111] leading-snug mb-10">
-              {study.lede ?? item.summary}
-            </p>
-          {/if}
+			<div class="md:grid md:grid-cols-[180px_minmax(0,1fr)] md:gap-14 lg:gap-20">
+				<div class="hidden pt-16 md:block">
+					<SectionNav sections={study.sections} {activeId} variant="rail" />
+				</div>
 
-          {#if facts.length}
-            <dl class="grid gap-px bg-[#e0e0e0] rounded-[18px] overflow-hidden sm:grid-cols-2 lg:grid-cols-3">
-              {#each facts as fact (fact.label)}
-                <div class="bg-gray-100 px-5 py-4">
-                  <dt class="text-[10px] tracking-widest uppercase text-[#aaa] mb-1.5">{fact.label}</dt>
-                  <dd class="text-sm text-[#111] leading-snug">{fact.value}</dd>
-                </div>
-              {/each}
-            </dl>
-          {/if}
-
-          {#if study.hero}
-            <div class="mt-10">
-              <Figure {...study.hero} eager plain />
-            </div>
-          {/if}
-        </header>
-
-				{#each study.sections as section, sectionIndex (section.id)}
-					<section id={section.id} class="scroll-mt-32 mb-20 md:mb-28">
-						<header class="mb-8 pb-5 border-b border-[#e0e0e0]">
-							<p class="text-[10px] font-mono text-[#bbb] mb-2">
-								{String(sectionIndex + 1).padStart(2, '0')}
-							</p>
-							<h2 class="text-2xl md:text-3xl font-bold text-[#111] leading-tight">
+				<div bind:this={bodyEl} class="min-w-0 pt-10 md:pt-16">
+					{#each study.sections as section, sectionIndex (section.id)}
+						<section id={section.id} class="mb-20 scroll-mt-20 md:mb-28 md:scroll-mt-10">
+							<h2
+								class="mb-8 border-b border-rule pb-5 font-display text-3xl font-extrabold leading-tight tracking-[-0.02em] text-ink md:text-4xl"
+							>
 								{section.title ?? section.label}
 							</h2>
-						</header>
 
-						{#each section.blocks as block, blockIndex (blockIndex)}
-							<Block {block} eager={sectionIndex === 0 && blockIndex <= 1} />
-						{/each}
-					</section>
-				{/each}
+							{#each section.blocks as block, blockIndex (blockIndex)}
+								<Block {block} eager={sectionIndex === 0 && blockIndex <= 1} />
+							{/each}
+						</section>
+					{/each}
 
-				<!-- Prev / next -->
-				<nav
-					aria-label="Project navigation"
-					class="pt-8 border-t border-[#e0e0e0] flex items-center justify-between gap-4"
-				>
-					<a
-						href="/work"
-						class="text-xs text-[#888] hover:text-[#111] transition-colors tracking-widest uppercase"
-					>
-						← All Work
-					</a>
-					<div class="flex items-center gap-2">
-						<a
-							href="/work/{prev.slug}"
-							class="w-10 h-10 rounded-full bg-[#111] text-white flex items-center justify-center text-xl hover:opacity-80 transition-opacity"
-							aria-label="Previous project: {prev.title}"
-						>
-							‹
-						</a>
-						<a
-							href="/work/{next.slug}"
-							class="w-10 h-10 rounded-full bg-[#111] text-white flex items-center justify-center text-xl hover:opacity-80 transition-opacity"
-							aria-label="Next project: {next.title}"
-						>
-							›
-						</a>
-					</div>
-				</nav>
+					<WorkPager {prev} {next} tone="cotton" />
+				</div>
 			</div>
 		</div>
 	</div>
 </article>
+
+<style>
+	.facts {
+		/* Any cell the grid leaves empty shows bare warp, not a hole. */
+		background-image: repeating-linear-gradient(
+			90deg,
+			transparent 0 9px,
+			color-mix(in oklab, var(--color-on-indigo) 30%, transparent) 9px 10px
+		);
+		border-top: 1px solid var(--color-indigo-700);
+		border-left: 1px solid var(--color-indigo-700);
+	}
+	.fact {
+		border-right: 1px solid var(--color-indigo-700);
+		border-bottom: 1px solid var(--color-indigo-700);
+	}
+</style>

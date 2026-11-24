@@ -1,39 +1,192 @@
 @import "tailwindcss";
 
-@theme {
-	--color-bg: #f5f5f5;
-	--color-fg: #111111;
-	--color-muted: #888888;
-	--color-surface: #ffffff;
-	--color-border: #e0e0e0;
-	--font-sans: 'Geist', system-ui, -apple-system, sans-serif;
-	--font-display: 'Geist', system-ui, -apple-system, sans-serif;
+/* Bricolage Grotesque, self-hosted variable font (one file per subset serves every weight). */
+@font-face {
+	font-family: 'Bricolage Grotesque';
+	font-style: normal;
+	font-weight: 200 800;
+	font-display: swap;
+	src: url('/fonts/bricolage-grotesque-latin.woff2') format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308,
+		U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+	font-family: 'Bricolage Grotesque';
+	font-style: normal;
+	font-weight: 200 800;
+	font-display: swap;
+	src: url('/fonts/bricolage-grotesque-latin-ext.woff2') format('woff2');
+	unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329,
+		U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F,
+		U+A720-A7FF;
 }
 
-html,
-body {
-	margin: 0;
-	padding: 0;
-	min-height: 100vh;
-	background-color: var(--color-bg);
-	color: var(--color-fg);
-	font-family: var(--font-sans);
+/*
+ * Backstrap Loom.
+ * Indigo warp is the ground; cochineal, marigold and jade are the weft.
+ * Undyed cotton is the reading surface for long-form text only.
+ */
+@theme {
+	--color-indigo-950: #141c52;
+	--color-indigo-900: #1e2a78;
+	--color-indigo-800: #26338a;
+	--color-indigo-700: #2e3a8c;
+	--color-indigo-500: #4656b4;
+	--color-on-indigo: #ede6d6;
+	--color-on-indigo-muted: #a9b3e6;
+
+	--color-cotton: #ede6d6;
+	--color-cotton-deep: #e2d9c4;
+	--color-cotton-light: #f6f1e6;
+	--color-ink: #15183a;
+	--color-ink-muted: #4a4e6e;
+	--color-ink-faint: #5a5e7e;
+	--color-rule: #cfc5ae;
+
+	--color-cochineal: #b3122e;
+	--color-marigold: #f2a007;
+	--color-jade: #0b6b50;
+
+	--font-sans: 'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif;
+	--font-display: 'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif;
+
+	/* Pick density: one integer scale for rank and focus (0 = beaten tight, 3 = loose). */
+	--pick-0: 4px;
+	--pick-1: 6px;
+	--pick-2: 9px;
+	--pick-3: 22px;
+
+	--ease-beat: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 html {
-	cursor: none;
+	background-color: var(--color-indigo-950);
+	color: var(--color-on-indigo);
+	font-family: var(--font-sans);
+	font-optical-sizing: auto;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	scrollbar-color: var(--color-indigo-500) var(--color-indigo-950);
 	/* Clipped on <html> only. Setting it on <body> as well makes <body> its own
 	   scrollport, which silently breaks `position: sticky` for descendants. */
 	overflow-x: hidden;
 }
 
-@media (pointer: coarse) {
-	html {
-		cursor: auto;
-	}
+body {
+	margin: 0;
+	min-height: 100vh;
 }
 
 ::selection {
-	background-color: var(--color-fg);
-	color: var(--color-bg);
+	background-color: var(--color-marigold);
+	color: var(--color-ink);
+}
+
+:focus-visible {
+	outline: 3px solid var(--color-marigold);
+	outline-offset: 3px;
+	border-radius: 2px;
+}
+
+a {
+	text-underline-offset: 0.22em;
+	text-decoration-thickness: 1px;
+}
+
+h1,
+h2,
+h3 {
+	text-wrap: balance;
+}
+
+p {
+	text-wrap: pretty;
+}
+
+/* The warp: vertical threads over the indigo ground. Cells re-count, never stretch. */
+.warp {
+	background-color: var(--color-indigo-900);
+	background-image: repeating-linear-gradient(
+		90deg,
+		transparent 0 5px,
+		color-mix(in oklab, var(--color-indigo-700) 70%, transparent) 5px 6px
+	);
+}
+
+.warp-deep {
+	background-color: var(--color-indigo-950);
+	background-image: repeating-linear-gradient(
+		90deg,
+		transparent 0 5px,
+		color-mix(in oklab, var(--color-indigo-900) 80%, transparent) 5px 6px
+	);
+}
+
+/* Undyed cotton: the reading surface, with a faint weave so it reads as cloth, not paper. */
+.cotton {
+	background-color: var(--color-cotton);
+	background-image:
+		repeating-linear-gradient(90deg, rgb(21 24 58 / 0.025) 0 1px, transparent 1px 4px),
+		repeating-linear-gradient(0deg, rgb(21 24 58 / 0.02) 0 1px, transparent 1px 4px);
+}
+
+/* Bare warp: loose threads with nothing woven through them yet. */
+.bare-warp {
+	background-image: repeating-linear-gradient(
+		90deg,
+		transparent 0 9px,
+		color-mix(in oklab, var(--color-on-indigo) 38%, transparent) 9px 10px
+	);
+}
+
+/* Weft picks: horizontal bands whose spacing is the density scale. */
+.picks {
+	--pick: var(--pick-1);
+	--weft: var(--color-marigold);
+	background-image: repeating-linear-gradient(
+		180deg,
+		var(--weft) 0 calc(var(--pick) * 0.55),
+		transparent calc(var(--pick) * 0.55) var(--pick)
+	);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.picks {
+		transition: --pick 0.9s var(--ease-beat);
+	}
+	html {
+		scroll-behavior: smooth;
+	}
+}
+
+@property --pick {
+	syntax: '<length>';
+	inherits: true;
+	initial-value: 6px;
+}
+
+.skip-link {
+	position: absolute;
+	left: 1rem;
+	top: -4rem;
+	z-index: 300;
+	padding: 0.75rem 1rem;
+	background: var(--color-marigold);
+	color: var(--color-ink);
+	font-weight: 700;
+}
+.skip-link:focus {
+	top: 1rem;
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
 }

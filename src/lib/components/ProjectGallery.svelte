@@ -1,130 +1,116 @@
 <script lang="ts">
 	import type { WorkItem } from '$lib/types';
+	import Figure from './case-study/Figure.svelte';
+	import WorkPager from './loom/WorkPager.svelte';
 
 	let { item, prev, next }: { item: WorkItem; prev: WorkItem; next: WorkItem } = $props();
 
-	let scrollEl: HTMLElement;
-	let activeIndex = $state(0);
+	const screens = $derived(item.images.slice(1));
 
-	function onScroll() {
-		if (!scrollEl) return;
-		const { scrollLeft, clientWidth } = scrollEl;
-		activeIndex = Math.round(scrollLeft / clientWidth);
-	}
-
-	function scrollTo(index: number) {
-		scrollEl?.scrollTo({ left: index * scrollEl.clientWidth, behavior: 'smooth' });
-	}
+	const facts = $derived(
+		[
+			{ label: 'Year', value: String(item.year) },
+			item.role && { label: 'Role', value: item.role },
+			item.client && { label: 'Client', value: item.client },
+			item.responsibilities?.length && { label: 'Responsibilities', value: item.responsibilities.join(', ') },
+			item.tools?.length && { label: 'Tools', value: item.tools.join(', ') }
+		].filter(Boolean) as { label: string; value: string }[]
+	);
 </script>
 
-<div class="pt-24 pb-16">
-	<!-- Header -->
-	<div class="px-6 mb-6">
+<div class="warp" style:--weft={item.bgColor}>
+	<div class="mx-auto max-w-[1200px] px-5 pt-10 pb-4 md:px-10 md:pt-16">
 		<a
 			href="/work"
-			class="text-xs text-[#888] hover:text-[#111] transition-colors tracking-widest uppercase mb-6 inline-block"
+			class="inline-flex items-center gap-2 text-base text-on-indigo-muted no-underline hover:text-on-indigo"
 		>
-			← All Work
+			<svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 10H4M9 5l-5 5 5 5" /></svg>
+			All work
 		</a>
-		<h1 class="text-3xl font-black text-[#111] uppercase leading-tight mb-3">{item.title}</h1>
-		<p class="text-lg leading-relaxed text-[#555] max-w-sm mb-2">{item.description}</p>
-		{#if item.role || item.timeline}
-			<p class="text-xs text-[#888] mt-3">
-				{#if item.role}{item.role}{/if}{#if item.role && item.timeline} · {/if}{#if item.timeline}{item.timeline}{/if}
+
+		<h1
+			class="mt-8 font-display font-extrabold leading-[0.9] tracking-[-0.035em]"
+			style="font-size: clamp(2.75rem, 8vw, 5.5rem);"
+		>
+			{item.title}
+		</h1>
+
+		<p class="mt-6 max-w-[48ch] font-display text-xl font-medium leading-snug md:text-2xl">
+			{item.description}
+		</p>
+
+		<!-- Bare warp: honest about there being screens and no write-up yet. -->
+		<div class="mt-8 flex items-center gap-4">
+			<span class="strip h-4 w-24 shrink-0" aria-hidden="true"></span>
+			<p class="text-base text-on-indigo-muted">
+				Screens only. A written case study for this project isn’t up yet.
 			</p>
+		</div>
+
+		{#if facts.length}
+			<dl class="facts mt-10 grid sm:grid-cols-2 lg:grid-cols-3">
+				{#each facts as fact (fact.label)}
+					<div class="fact bg-indigo-950 px-5 py-4">
+						<dt class="mb-1 text-sm text-on-indigo-muted">{fact.label}</dt>
+						<dd class="text-base leading-snug">{fact.value}</dd>
+					</div>
+				{/each}
+			</dl>
 		{/if}
 	</div>
 
-	<!-- Horizontal scroll gallery -->
-	<div
-		bind:this={scrollEl}
-		onscroll={onScroll}
-		class="flex overflow-x-auto snap-x snap-mandatory gap-3 pl-6 pb-4"
-		style="scroll-padding-left: 1.5rem; -webkit-overflow-scrolling: touch; scrollbar-width: none;"
-	>
-		{#each item.images.slice(1) as image, i (image)}
-			<div
-				class="snap-start shrink-0 overflow-hidden rounded-[16px] bg-[#e8e8e8]"
-				style="height: 72vh; width: auto;"
-			>
-				<img
-					src={image}
-					alt="{item.title}, screen {i + 1}"
-					class="h-full w-auto object-contain"
-					loading={i === 0 ? 'eager' : 'lazy'}
-				/>
-			</div>
-		{/each}
-		<!-- trailing space so last image isn't flush to edge -->
-		<div class="shrink-0 w-6"></div>
-	</div>
-
-	<!-- Dot indicators -->
-	<div class="flex items-center gap-2 px-6 mt-4">
-		{#each item.images.slice(1) as _, i (i)}
-			<button
-				onclick={() => scrollTo(i)}
-				class="h-1.5 rounded-full transition-all duration-300 {i === activeIndex
-					? 'w-4 bg-[#111]'
-					: 'w-1.5 bg-[#ccc]'}"
-				aria-label="Image {i + 1}"
-			></button>
-		{/each}
-		<span class="ml-auto text-xs text-[#aaa]">{activeIndex + 1} / {item.images.length - 1}</span>
-	</div>
-
-	<!-- Summary + metadata -->
-	{#if item.summary || item.role || item.responsibilities || item.tools}
-		<div class="px-6 mt-10 md:grid md:grid-cols-2 md:gap-16">
-			{#if item.summary}
-				<p class="text-2xl font-light text-[#111] leading-snug mb-10 md:mb-0">{item.summary}</p>
-			{/if}
-			<div>
-				{#if item.role}
-					<div class="grid grid-cols-[1fr_2fr] gap-6 py-5">
-						<span class="text-xs tracking-widest uppercase text-[#aaa] pt-0.5">Role</span>
-						<span class="text-sm text-[#111]">{item.role}</span>
-					</div>
-				{/if}
-				{#if item.responsibilities?.length}
-					<div class="grid grid-cols-[1fr_2fr] gap-6 py-5 border-t border-[#e0e0e0]">
-						<span class="text-xs tracking-widest uppercase text-[#aaa] pt-0.5">Responsibilities</span>
-						<span class="text-sm text-[#111]">{item.responsibilities.join(', ')}</span>
-					</div>
-				{/if}
-				{#if item.tools?.length}
-					<div class="grid grid-cols-[1fr_2fr] gap-6 py-5 border-t border-[#e0e0e0]">
-						<span class="text-xs tracking-widest uppercase text-[#aaa] pt-0.5">Tools</span>
-						<span class="text-sm text-[#111]">{item.tools.join(', ')}</span>
-					</div>
-				{/if}
-			</div>
+	<section aria-label="Screens" class="mx-auto max-w-[1200px] px-5 pt-10 pb-6 md:px-10 md:pt-14">
+		<p class="mb-6 text-base text-on-indigo-muted">
+			{screens.length} screens. Select one to see it full size.
+		</p>
+		<!-- Bare warp drawn on its own layer behind the columns, so leftover column space reads as unwoven warp. -->
+		<div class="relative">
+			<div class="bare-warp absolute inset-0 -z-0 opacity-60" aria-hidden="true"></div>
+		<div class="relative columns-1 gap-6 md:columns-2">
+			{#each screens as src, i (src)}
+				<div class="mb-6 break-inside-avoid">
+					<Figure {src} alt="{item.title}, screen {i + 1}" eager={i < 2} plain />
+				</div>
+			{/each}
 		</div>
-	{/if}
-
-	<!-- Back + prev/next -->
-	<div class="px-6 mt-10 pt-8 border-t border-[#e0e0e0] flex items-center justify-between">
-		<a
-			href="/work"
-			class="text-xs text-[#888] hover:text-[#111] transition-colors tracking-widest uppercase"
-		>
-			← All Work
-		</a>
-		<div class="flex items-center gap-2">
-			<a
-				href="/work/{prev.slug}"
-				class="w-10 h-10 rounded-full bg-[#111] text-white flex items-center justify-center text-xl hover:opacity-80 transition-opacity"
-				aria-label="Previous project: {prev.title}"
-			>
-				‹
-			</a>
-			<a
-				href="/work/{next.slug}"
-				class="w-10 h-10 rounded-full bg-[#111] text-white flex items-center justify-center text-xl hover:opacity-80 transition-opacity"
-				aria-label="Next project: {next.title}"
-			>
-				›
-			</a>
 		</div>
+	</section>
+
+	<div class="mx-auto max-w-[1200px] px-5 pt-6 md:px-10">
+		<WorkPager {prev} {next} />
 	</div>
 </div>
+
+<style>
+	.facts {
+		/* Any cell the grid leaves empty shows bare warp, not a hole. */
+		background-image: repeating-linear-gradient(
+			90deg,
+			transparent 0 9px,
+			color-mix(in oklab, var(--color-on-indigo) 30%, transparent) 9px 10px
+		);
+		border-top: 1px solid var(--color-indigo-700);
+		border-left: 1px solid var(--color-indigo-700);
+	}
+	.fact {
+		border-right: 1px solid var(--color-indigo-700);
+		border-bottom: 1px solid var(--color-indigo-700);
+	}
+	.strip {
+		--weft-lit: oklch(from var(--weft) max(l, 0.72) max(c, 0.08) h);
+		background-image:
+			linear-gradient(var(--weft-lit), var(--weft-lit)),
+			repeating-linear-gradient(
+				90deg,
+				transparent 0 9px,
+				color-mix(in oklab, var(--color-on-indigo) 45%, transparent) 9px 10px
+			);
+		background-size:
+			30% 4px,
+			auto;
+		background-repeat: no-repeat, repeat;
+		background-position:
+			0 50%,
+			0 0;
+	}
+</style>

@@ -7,9 +7,8 @@
 		variant = 'rail'
 	}: { sections: CaseStudySection[]; activeId: string; variant?: 'rail' | 'bar' } = $props();
 
-	const PAGE_BG = '#f5f5f5';
-	const fadeRight = `background: linear-gradient(to left, ${PAGE_BG} 40%, rgba(245, 245, 245, 0) 100%);`;
-	const fadeLeft = `background: linear-gradient(to right, ${PAGE_BG} 40%, rgba(245, 245, 245, 0) 100%);`;
+	const fadeRight = `background: linear-gradient(to left, var(--color-cotton) 40%, transparent 100%);`;
+	const fadeLeft = `background: linear-gradient(to right, var(--color-cotton) 40%, transparent 100%);`;
 
 	let listEl: HTMLUListElement | undefined = $state();
 	let canScrollLeft = $state(false);
@@ -46,28 +45,28 @@
 		if (!item) return;
 
 		const target = item.offsetLeft - (listEl.clientWidth - item.offsetWidth) / 2;
-		listEl.scrollTo({ left: Math.max(0, target), behavior: 'smooth' });
+		listEl.scrollTo({
+			left: Math.max(0, target),
+			behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
+		});
 	});
 </script>
 
 {#if variant === 'rail'}
-	<nav aria-label="Case study sections" class="sticky top-32 self-start">
-		<p class="text-[10px] tracking-widest uppercase text-[#bbb] mb-4">Contents</p>
-		<ul class="space-y-1">
-			{#each sections as section, i (section.id)}
+	<nav aria-label="Case study sections" class="sticky top-10 self-start">
+		<p class="mb-4 text-sm font-semibold text-ink">Contents</p>
+		<ul class="space-y-0.5 border-l border-rule">
+			{#each sections as section (section.id)}
 				<li>
 					<a
 						href="#{section.id}"
 						aria-current={activeId === section.id ? 'true' : undefined}
-						class="flex items-baseline gap-3 py-1.5 text-sm transition-colors {activeId ===
+						class="rail-link -ml-px block py-1.5 pl-4 text-[15px] no-underline transition-colors {activeId ===
 						section.id
-							? 'text-[#111]'
-							: 'text-[#aaa] hover:text-[#555]'}"
+							? 'is-active font-semibold text-ink'
+							: 'text-ink-muted hover:text-ink'}"
 					>
-						<span class="text-[10px] font-mono {activeId === section.id ? 'text-[#111]' : 'text-[#ccc]'}">
-							{String(i + 1).padStart(2, '0')}
-						</span>
-						<span class={activeId === section.id ? 'font-semibold' : ''}>{section.label}</span>
+						{section.label}
 					</a>
 				</li>
 			{/each}
@@ -76,13 +75,13 @@
 {:else}
 	<nav
 		aria-label="Case study sections"
-		class="sticky top-[84px] z-40 -mx-6 bg-[#f5f5f5] md:hidden"
+		class="sticky top-0 z-40 -mx-5 border-b border-rule bg-cotton md:hidden"
 	>
 		<div class="relative">
 			<ul
 				bind:this={listEl}
 				onscroll={updateEdges}
-				class="flex overflow-x-auto px-6 py-3"
+				class="flex overflow-x-auto px-3 py-2"
 				style="scrollbar-width: none; -webkit-overflow-scrolling: touch;"
 			>
 				{#each sections as section (section.id)}
@@ -90,10 +89,10 @@
 						<a
 							href="#{section.id}"
 							aria-current={activeId === section.id ? 'true' : undefined}
-							class="block border-b px-3 py-1.5 text-xs whitespace-nowrap transition-colors {activeId ===
+							class="bar-link block px-3 py-2.5 text-sm whitespace-nowrap no-underline transition-colors {activeId ===
 							section.id
-								? 'text-[#111]'
-								: 'text-[#aaa] '}"
+								? 'is-active font-semibold text-ink'
+								: 'text-ink-muted'}"
 						>
 							{section.label}
 						</a>
@@ -115,9 +114,33 @@
 					style={fadeRight}
 					aria-hidden="true"
 				>
-					<span class="text-base leading-none text-[#888]">›</span>
+					<svg viewBox="0 0 20 20" class="h-4 w-4 text-ink-muted" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 5l5 5-5 5" /></svg>
 				</div>
 			{/if}
 		</div>
 	</nav>
 {/if}
+
+<style>
+	/* Woven tabs: the active section is a short band of tightly beaten cochineal picks. */
+	.rail-link.is-active {
+		background-image: repeating-linear-gradient(
+			180deg,
+			var(--color-cochineal) 0 2px,
+			transparent 2px 4px
+		);
+		background-repeat: no-repeat;
+		background-size: 6px 100%;
+		background-position: 0 0;
+	}
+	.bar-link.is-active {
+		background-image: repeating-linear-gradient(
+			180deg,
+			var(--color-cochineal) 0 2px,
+			transparent 2px 4px
+		);
+		background-repeat: no-repeat;
+		background-size: calc(100% - 1.5rem) 8px;
+		background-position: 50% 100%;
+	}
+</style>

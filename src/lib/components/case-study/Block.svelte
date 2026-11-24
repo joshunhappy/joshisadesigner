@@ -19,14 +19,14 @@
 {#if block.type === 'prose'}
 	<div class="mb-10">
 		{#if block.heading}
-			<h3 class="text-xs tracking-widest uppercase text-[#aaa] mb-4">{block.heading}</h3>
+			<h3 class="text-sm font-semibold text-ink mb-4">{block.heading}</h3>
 		{/if}
 		<div class={block.lead ? 'space-y-5' : 'space-y-4'}>
 			{#each block.body as paragraph, i (i)}
 				<p
 					class={block.lead
-						? 'text-xl md:text-2xl font-light text-[#111] leading-snug'
-						: 'text-base text-[#555] leading-relaxed'}
+						? 'max-w-[40ch] font-display text-xl md:text-2xl font-medium text-ink leading-snug'
+						: 'max-w-[35rem] text-[17px] text-ink-muted leading-relaxed'}
 				>
 					{paragraph}
 				</p>
@@ -38,7 +38,7 @@
 {:else if block.type === 'gallery'}
 	<div class="mb-10">
 		{#if block.heading}
-			<h3 class="text-xs tracking-widest uppercase text-[#aaa] mb-4">{block.heading}</h3>
+			<h3 class="text-sm font-semibold text-ink mb-4">{block.heading}</h3>
 		{/if}
 		{#if block.layout === 'row'}
 			<div
@@ -65,7 +65,7 @@
 			</div>
 		{/if}
 		{#if block.caption}
-			<p class="text-sm text-[#777] leading-relaxed mt-2">{block.caption}</p>
+			<p class="text-sm text-ink-muted leading-relaxed mt-2">{block.caption}</p>
 		{/if}
 	</div>
 {:else if block.type === 'compare'}
@@ -79,35 +79,35 @@
 {:else if block.type === 'list'}
 	<div class="mb-10">
 		{#if block.heading}
-			<h3 class="text-xs tracking-widest uppercase text-[#aaa] mb-4">{block.heading}</h3>
+			<h3 class="text-sm font-semibold text-ink mb-4">{block.heading}</h3>
 		{/if}
 		<ul class="space-y-3">
 			{#each block.items as item, i (i)}
 				<li class="flex gap-4 items-start">
 					{#if block.style === 'number'}
-						<span class="text-[11px] font-mono text-[#bbb] pt-[5px] shrink-0 w-5">
+						<span class="text-xs tabular-nums text-ink-faint pt-[5px] shrink-0 w-5">
 							{String(i + 1).padStart(2, '0')}
 						</span>
 					{:else}
-						<span class="mt-[9px] w-1.5 h-1.5 rounded-full bg-[#111] shrink-0"></span>
+						<span class="mt-[9px] w-1.5 h-1.5 rounded-full bg-ink shrink-0"></span>
 					{/if}
-					<span class="text-base text-[#555] leading-relaxed">{item}</span>
+					<span class="max-w-[35rem] text-[17px] text-ink-muted leading-relaxed">{item}</span>
 				</li>
 			{/each}
 		</ul>
 	</div>
 {:else if block.type === 'callout'}
-	<aside class="mb-10 rounded-[14px] bg-white border border-[#e0e0e0] px-5 py-5">
-		<p class="text-[10px] tracking-widest uppercase text-[#aaa] mb-2">
+	<aside class="mb-10 rounded-sm bg-cotton-light border border-rule px-5 py-5">
+		<p class="text-sm font-semibold text-ink mb-2">
 			{block.title ?? calloutLabel[block.tone ?? 'note']}
 		</p>
-		<p class="text-sm text-[#555] leading-relaxed">{block.body}</p>
+		<p class="max-w-[35rem] text-[15px] text-ink-muted leading-relaxed">{block.body}</p>
 	</aside>
 {:else if block.type === 'quote'}
-	<blockquote class="mb-10 border-l-2 border-[#111] pl-6">
-		<p class="text-xl font-light text-[#111] leading-snug">{block.text}</p>
+	<blockquote class="mb-10 border-l-2 border-ink pl-6">
+		<p class="font-display text-2xl font-medium text-ink leading-snug">{block.text}</p>
 		{#if block.attribution}
-			<footer class="text-xs tracking-widest uppercase text-[#aaa] mt-3">{block.attribution}</footer>
+			<footer class="text-sm font-semibold text-ink mt-3">{block.attribution}</footer>
 		{/if}
 	</blockquote>
 {/if}
