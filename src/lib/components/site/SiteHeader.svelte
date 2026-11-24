@@ -56,7 +56,7 @@
 		padding: 0 8px;
 		background: var(--color-ink);
 		color: var(--color-canvas);
-		font-weight: 700;
+		font-weight: 900;
 		font-size: 18px;
 		line-height: 18px;
 	}

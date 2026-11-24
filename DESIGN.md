@@ -220,7 +220,7 @@ Two pills, nothing else.
 - **Transition:** background and colour, 150ms ease-out.
 
 ### Navigation
-- **Header:** brand tile left, links and the Contact Me pill right, inside the 1440px shell. The tile is a 72 by 86px black block holding JOSH / DE LA CRUZ in white 18px Bold on 18px leading; it overhangs the header's vertical padding to sit flush at the top.
+- **Header:** brand tile left, links and the Contact Me pill right, inside the 1440px shell. The tile is a 72 by 86px black block holding JOSH / DE LA CRUZ in white 18px Black (900) on 18px leading; it overhangs the header's vertical padding to sit flush at the top. The same tile, centred on a transparent square, is the favicon (static/favicon.ico: 16, 32, 48, 64, 128 and 256px, exported from Figma node 264:716).
 - **Links:** 16px (18px from 640px) Medium, black, underlined on hover only. The current page carries no visible mark; it is announced with `aria-current` alone, as in the frame. Home is hidden on phones.
 - **Case-study rail:** "Contents" label, then links in muted 15px over a hairline left border; the active link turns black Semibold with a 2px inset black mark on the left. The mobile bar uses the same mark beneath the label.
 - **Pager:** two cells divided by hairlines; muted direction line with an arrow, 28px Bold project name that underlines on hover.
