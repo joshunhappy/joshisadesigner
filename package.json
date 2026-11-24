@@ -8,13 +8,15 @@
 		"build": "vite build",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"images": "node scripts/optimize-images.mjs"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-cloudflare": "latest",
 		"@sveltejs/kit": "latest",
 		"@sveltejs/vite-plugin-svelte": "latest",
 		"@tailwindcss/vite": "latest",
+		"sharp": "^0.35.5",
 		"svelte": "latest",
 		"svelte-check": "latest",
 		"tailwindcss": "latest",
@@ -22,7 +24,6 @@
 		"vite": "latest"
 	},
 	"dependencies": {
-		"@microsoft/clarity": "^1.0.2",
-		"gsap": "latest"
+		"@microsoft/clarity": "^1.0.2"
 	}
 }
