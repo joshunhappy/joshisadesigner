@@ -47,7 +47,11 @@
 					? 'text-5xl md:text-7xl'
 					: 'text-3xl md:text-4xl'}"
 			>
-				<a href="/work/{item.slug}" class="band-link no-underline">
+				<a
+					href="/work/{item.slug}"
+					class="band-link no-underline"
+					style:view-transition-name="title-{item.slug}"
+				>
 					{item.title}
 				</a>
 			</svelte:element>
@@ -72,7 +76,7 @@
 
 			<p class="cta mt-6 inline-flex items-center gap-2 text-base font-semibold text-marigold" aria-hidden="true">
 				{hasStudy ? 'Read the case study' : 'See the screens'}
-				<svg viewBox="0 0 20 20" class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5" /></svg>
+				<svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5" /></svg>
 			</p>
 		</div>
 
@@ -84,7 +88,7 @@
 						alt={mediaAlt(i)}
 						priority={priority && i === 0}
 						eager={flagship && i === 0}
-						class="h-full w-full {flagship ? 'object-contain' : 'object-cover object-top'} transition-transform duration-700 group-hover:scale-[1.02]"
+						class="h-full w-full {flagship ? 'object-contain' : 'object-cover object-top'}"
 					/>
 				</div>
 			{/each}
@@ -153,11 +157,25 @@
 			0 0;
 	}
 
+	/* Hover and focus beat the weft: picks pack to the tightest density. Under
+	   reduced motion the density still changes, it just doesn't travel. */
+	.band:hover .strip.picks,
+	.band:has(.band-link:focus-visible) .strip.picks {
+		--pick: var(--pick-0);
+	}
+	.flagship:hover .strip.picks,
+	.flagship:has(.band-link:focus-visible) .strip.picks {
+		--pick: 3px;
+	}
+
 	.band:global([data-loose]) .strip.picks {
 		--pick: var(--pick-3);
 	}
-	.band:global([data-loose]) .weft-line {
-		transform: scaleX(0);
+	/* Bare warp beats too: its one started pick sits high and is beaten down into place. */
+	.band:global([data-loose]) .strip.bare-warp {
+		background-position:
+			0 0%,
+			0 0;
 	}
 
 	.kind.study {
@@ -192,9 +210,31 @@
 		text-decoration-thickness: 3px;
 	}
 
+	/*
+	 * Timing. Hover/focus feedback: fast (180ms in, 120ms out). The beat-in
+	 * release: slow (0.9s), only while data-beating is set. Vertical only.
+	 */
 	@media (prefers-reduced-motion: no-preference) {
-		.weft-line {
-			transition: transform 0.9s var(--ease-beat);
+		.strip {
+			transition:
+				--pick 120ms ease-out,
+				background-position 120ms ease-out;
+		}
+		/* Going loose happens off-screen on load: no transition, nothing to watch. */
+		.band:global([data-loose]) .strip {
+			transition: none;
+		}
+		.band:global([data-beating]) .strip {
+			transition:
+				--pick 0.9s var(--ease-beat),
+				background-position 0.9s var(--ease-beat);
+		}
+		/* Declared last so hover keeps its fast timing even during a beat-in. */
+		.band:hover .strip,
+		.band:has(.band-link:focus-visible) .strip {
+			transition:
+				--pick 180ms var(--ease-beat),
+				background-position 180ms var(--ease-beat);
 		}
 	}
 </style>

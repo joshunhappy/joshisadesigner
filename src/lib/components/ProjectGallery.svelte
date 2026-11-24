@@ -29,6 +29,7 @@
 		</a>
 
 		<h1
+			style:view-transition-name="title-{item.slug}"
 			class="mt-8 font-display font-extrabold leading-[0.9] tracking-[-0.035em]"
 			style="font-size: clamp(2.75rem, 8vw, 5.5rem);"
 		>

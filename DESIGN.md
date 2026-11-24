@@ -121,7 +121,7 @@ Warp is the design, weft is the build, and the cloth exists only where both cros
 
 The system is dense and saturated on indigo, quiet and generous on cotton. One display family (Bricolage Grotesque) does all the talking, heavy and tightly tracked for headings and plain for reading. The name on the home page is not set in a font at all: it is woven as 5x7 brocade lettering, with the warp passing over every float. A single 2px marigold thread runs the length of the home page, from the portrait through every band to a knot in the contact close.
 
-Absence is drawn on purpose. A project with screens and no write-up shows bare warp, loose threads with one started pick, and says "Screens only". An empty grid cell shows warp instead of a hole. Motion is vertical packing only: picks slide down and pack tight as a band enters view. With reduced motion, everything renders already beaten.
+Absence is drawn on purpose. A project with screens and no write-up shows bare warp, loose threads with one started pick, and says "Screens only". An empty grid cell shows warp instead of a hole. Motion is vertical packing: picks slide down and pack tight as a band enters view, and hover or focus beats a band tighter. The one exception is continuity between pages, where a project's title travels from its band into the project header. With reduced motion, everything renders already beaten and pages simply cross-fade.
 
 **Key Characteristics:**
 - Indigo warp field owns the ground; undyed cotton appears only under long-form reading.
@@ -129,7 +129,7 @@ Absence is drawn on purpose. A project with screens and no write-up shows bare w
 - One integer density scale (pick-0 to pick-3) drives rank, the active state, and the beat-in.
 - One continuous marigold weft thread ties the home page together.
 - Missing content is drawn as bare warp, never left blank and never faked.
-- Motion packs vertically and nothing else moves.
+- Motion packs vertically and nothing else moves, except the title's travel between pages.
 
 ## Colors
 
@@ -235,7 +235,7 @@ One project as a brocade band. A full-width strip sits on top: weft picks in the
 Projects with screens and no write-up draw their strip as loose vertical threads (10px pitch, cotton at 38%) with one started pick in the client colour across the first fifth. The same bare warp backs the fact grid (so any cell the grid leaves empty is drawn, not a hole) and the 404's head. Behind gallery screens it is its own absolutely positioned layer at 60% opacity under the multi-column container; never put it on the columns element itself, which hides the screenshots.
 
 ### Beat-in (motion)
-Bands below the fold start loose at pick-3 with their weft line retracted, then pack to their resting density over 0.9s on `cubic-bezier(0.16, 1, 0.3, 1)` as they enter view. The woven name packs row by row on load (1.1s, 18ms stagger per row). Bands already in view, and every visitor with reduced motion, render packed. One orchestration per band; vertical only.
+Bands below the fold start loose at pick-3, then pack to their resting density over 0.9s on `cubic-bezier(0.16, 1, 0.3, 1)` as they enter view; a bare-warp band's one started pick sits high and is beaten down into place on the same timing. Hover and focus beat a band to pick-0 (3px on the flagship) in 180ms and release in 120ms. Page navigation uses a View Transition: the root cross-fades (160ms out, 240ms in) and the project title, sharing a `view-transition-name`, travels from band to header over 420ms; under reduced motion only the cross-fade remains. The woven name packs row by row on load (1.1s, 18ms stagger per row). Bands already in view, and every visitor with reduced motion, render packed. One orchestration per band; vertical only.
 
 ### Fact Grid
 Indigo-950 cells divided by 1px indigo-700 lines; sentence-case pale-indigo label over a cotton value. Empty trailing cells show bare warp.
@@ -265,7 +265,7 @@ Every route ends on deep-indigo warp. The running thread comes down into the clo
 
 ### Don't:
 - **Don't** use the monochrome name-plus-photo-plus-card-grid portfolio layout; projects are bands, not cards.
-- **Don't** move anything on any axis but vertical packing; no slides, fades-in from the side, parallax, or scale-ins beyond the 2% screenshot hover.
+- **Don't** move anything on any axis but vertical packing, other than the title's page-to-page travel; no slides, fades-in from the side, parallax, scale-ins or hover nudges.
 - **Don't** add a second running thread or break the one that exists.
 - **Don't** use brocade lettering for anything but the name.
 - **Don't** copy community textile motifs; the world borrows loom structure only.

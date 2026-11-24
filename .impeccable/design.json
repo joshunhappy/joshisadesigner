@@ -310,7 +310,7 @@
       },
       {
         "name": "beat-band",
-        "value": "--pick 0.9s ease-beat; weft line scaleX 0.9s",
+        "value": "beat-in: --pick and started-pick position 0.9s ease-beat; hover 180ms in / 120ms out; page View Transition: root cross-fade 160/240ms, title travel 420ms",
         "purpose": "Band beat-in from pick-3 to resting density on entering view."
       },
       {

@@ -15,7 +15,11 @@ export function beat(node: HTMLElement) {
 		(entries) => {
 			for (const entry of entries) {
 				if (entry.isIntersecting) {
+					// data-beating carries the slow release timing only while it runs,
+					// so hover feedback keeps its own fast timing afterwards.
+					node.dataset.beating = '';
 					delete node.dataset.loose;
+					window.setTimeout(() => delete node.dataset.beating, 1000);
 					observer.disconnect();
 				}
 			}

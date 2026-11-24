@@ -85,6 +85,7 @@
 			</a>
 
 			<h1
+			style:view-transition-name="title-{item.slug}"
 				class="mt-8 font-display font-extrabold leading-[0.9] tracking-[-0.035em] text-on-indigo"
 				style="font-size: clamp(3rem, 9vw, 6rem);"
 			>

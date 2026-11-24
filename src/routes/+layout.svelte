@@ -2,10 +2,22 @@
 	import '../app.css';
 	import { onMount } from 'svelte';
 	import { env } from '$env/dynamic/public';
+	import { onNavigate } from '$app/navigation';
 	import SiteHeader from '$lib/components/loom/SiteHeader.svelte';
 	import ContactClose from '$lib/components/loom/ContactClose.svelte';
 
 	let { children } = $props();
+
+	// Continuity: a project's title carries from its band into the project header.
+	onNavigate((navigation) => {
+		if (!document.startViewTransition) return;
+		return new Promise((resolve) => {
+			document.startViewTransition(async () => {
+				resolve();
+				await navigation.complete;
+			});
+		});
+	});
 
 	onMount(() => {
 		const id = env.PUBLIC_CLARITY_ID;

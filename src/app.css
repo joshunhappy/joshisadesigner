@@ -152,9 +152,6 @@ p {
 }
 
 @media (prefers-reduced-motion: no-preference) {
-	.picks {
-		transition: --pick 0.9s var(--ease-beat);
-	}
 	html {
 		scroll-behavior: smooth;
 	}
@@ -164,6 +161,44 @@ p {
 	syntax: '<length>';
 	inherits: true;
 	initial-value: 6px;
+}
+
+/* View transitions: the page cross-fades; a project title travels from band to header. */
+::view-transition-old(root) {
+	animation: 160ms ease-in both vt-fade-out;
+}
+::view-transition-new(root) {
+	animation: 240ms ease-out both vt-fade-in;
+}
+::view-transition-group(*) {
+	animation-duration: 420ms;
+	animation-timing-function: var(--ease-beat);
+}
+@keyframes vt-fade-out {
+	to {
+		opacity: 0;
+	}
+}
+@keyframes vt-fade-in {
+	from {
+		opacity: 0;
+	}
+}
+@media (prefers-reduced-motion: reduce) {
+	/* Keep the cross-fade (state change), drop the travel. */
+	::view-transition-group(*) {
+		animation: none;
+	}
+	::view-transition-old(*),
+	::view-transition-new(*) {
+		animation: none;
+	}
+	::view-transition-old(root) {
+		animation: 160ms ease-in both vt-fade-out;
+	}
+	::view-transition-new(root) {
+		animation: 240ms ease-out both vt-fade-in;
+	}
 }
 
 .skip-link {
