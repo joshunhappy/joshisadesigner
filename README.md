@@ -1,15 +1,15 @@
 # joshisadesigner
 
-UI/UX portfolio — SvelteKit, deployed to [joshisadesigner.com](https://joshisadesigner.com) via Cloudflare Pages.
+UI/UX portfolio built with SvelteKit, deployed to [joshisadesigner.com](https://joshisadesigner.com) via Cloudflare Pages.
 
 ## Stack
 
 - [SvelteKit](https://kit.svelte.dev/) + Svelte 5
 - [TypeScript](https://www.typescriptlang.org/)
 - [Tailwind CSS v4](https://tailwindcss.com/)
-- [GSAP](https://gsap.com/) — page transitions, ScrollTrigger, SplitText, custom cursor
-- [Bun](https://bun.sh/) — package manager & runtime
-- [Cloudflare Pages](https://pages.cloudflare.com/) — via `@sveltejs/adapter-cloudflare`
+- [GSAP](https://gsap.com/): page transitions, ScrollTrigger, SplitText, custom cursor
+- [Bun](https://bun.sh/): package manager & runtime
+- [Cloudflare Pages](https://pages.cloudflare.com/): via `@sveltejs/adapter-cloudflare`
 
 ## Development
 
@@ -20,7 +20,7 @@ bun run dev
 
 ## Deploy
 
-Push to `main` — Cloudflare Pages builds automatically.
+Push to `main`. Cloudflare Pages builds automatically.
 
 **Cloudflare Pages settings:**
 - Build command: `bun run build`

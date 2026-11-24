@@ -1,6 +1,12 @@
-import type { WorkItem } from '$lib/types';
+import type { CaseStudy, WorkItem } from '$lib/types';
+import { americaVoiceCaseStudy } from './case-studies/america-voice';
 
 const imageFiles = import.meta.glob('/static/images/work/**/*.{jpg,jpeg,png}');
+
+/** Projects listed here render the long-form case study template. */
+const caseStudies: Record<string, CaseStudy> = {
+	'america-voice': americaVoiceCaseStudy
+};
 
 function getImages(slug: string): string[] {
 	return Object.keys(imageFiles)
@@ -9,21 +15,21 @@ function getImages(slug: string): string[] {
 		.map(path => path.replace('/static/images', '/images'));
 }
 
-type WorkMeta = Omit<WorkItem, 'images' | 'cover'>;
+type WorkMeta = Omit<WorkItem, 'images' | 'cover' | 'caseStudy'>;
 
 const workMeta: WorkMeta[] = [
 	{
 		slug: 'america-voice',
 		title: 'America Voice',
 		category: 'UX/UI Design',
-		year: 2024,
+		year: 2026,
 		bgColor: '#F97316',
 		description:
 			'I was a key contributor to the redesign and improvement of America Voice\'s digital experience by shaping UX flows, creating UI concepts, and translating business needs into clear design and development tasks.',
 		tags: ['Lead UX/UI Designer', 'Prototyping', 'CSS', 'Bootstrap', 'React Components'],
 		client: 'America Voice',
 		role: 'Lead UX/UI Designer',
-		timeline: '2023–2024',
+		timeline: 'Jan – Apr 2026',
 		summary: 'UX/UI redesign for a fintech/top-up platform serving Latino users in the U.S. and Latin America.',
 		responsibilities: ['End-to-End UX & UI Design Process', 'Design System', 'HTML', 'Bootstrap'],
 		tools: ['Figma', 'Photoshop', 'WebStorm']
@@ -35,7 +41,7 @@ const workMeta: WorkMeta[] = [
 		year: 2024,
 		bgColor: '#EA580C',
 		description:
-			'I designed the mobile experience for the America Voice app, leading the UX and UI for the gift card purchasing flow, onboarding, and checkout — focusing on speed and clarity for everyday users.',
+			'I designed the mobile experience for the America Voice app, leading the UX and UI for the gift card purchasing flow, onboarding, and checkout, focusing on speed and clarity for everyday users.',
 		tags: ['Mobile Design', 'UX Flows', 'Prototyping'],
 		client: 'America Voice',
 		role: 'UX/UI Designer',
@@ -82,11 +88,11 @@ const workMeta: WorkMeta[] = [
 		year: 2024,
 		bgColor: '#6D28D9',
 		description:
-			'I led the UX and UI design for Metis, a fintech app built for the Mexican market — designing the onboarding flow, SAT integration screens, and account setup with a strong focus on clarity and trust.',
+			'I led the UX and UI design for Metis, a fintech app built for the Mexican market, designing the onboarding flow, SAT integration screens, and account setup with a strong focus on clarity and trust.',
 		tags: ['Mobile Design', 'Fintech', 'UX Flows', 'Onboarding'],
 		role: 'Lead UX/UI Designer',
 		timeline: '2024',
-		summary: 'Fintech mobile app for the Mexican market — onboarding and SAT integration designed for clarity and trust.',
+		summary: 'Fintech mobile app for the Mexican market: onboarding and SAT integration designed for clarity and trust.',
 		responsibilities: ['End-to-End UX & UI', 'Onboarding Flow', 'SAT Integration UX', 'Design System'],
 		tools: ['Figma', 'Photoshop']
 	},
@@ -102,7 +108,7 @@ const workMeta: WorkMeta[] = [
 		client: 'Ministerios Ebenezer México',
 		role: 'UI/UX Designer',
 		timeline: '2023',
-		summary: 'Website redesign for a large congregation — events, directory, and editorial content structured for scale.',
+		summary: 'Website redesign for a large congregation: events, directory, and editorial content structured for scale.',
 		responsibilities: ['Web Design', 'Editorial Layout', 'CMS Structure', 'Navigation UX'],
 		tools: ['Figma', 'WordPress', 'Illustrator']
 	},
@@ -117,7 +123,7 @@ const workMeta: WorkMeta[] = [
 		tags: ['Web App', 'UX Design', 'Fintech', 'Top-up'],
 		role: 'UX/UI Designer',
 		timeline: '2023',
-		summary: 'Web app for fast mobile recharges — streamlined carrier selection, product browsing, and checkout.',
+		summary: 'Web app for fast mobile recharges: streamlined carrier selection, product browsing, and checkout.',
 		responsibilities: ['UX Flows', 'UI Design', 'Prototyping', 'Dev Handoff'],
 		tools: ['Figma', 'Photoshop']
 	},
@@ -132,7 +138,7 @@ const workMeta: WorkMeta[] = [
 		tags: ['Mobile Design', 'UX Design', 'Fintech'],
 		role: 'UX/UI Designer',
 		timeline: '2023',
-		summary: 'Mobile app design for quick top-up transactions — home dashboard and product catalog optimized for speed.',
+		summary: 'Mobile app design for quick top-up transactions: home dashboard and product catalog optimized for speed.',
 		responsibilities: ['UX Flows', 'UI Design', 'Prototyping'],
 		tools: ['Figma', 'Photoshop']
 	}
@@ -140,5 +146,5 @@ const workMeta: WorkMeta[] = [
 
 export const work: WorkItem[] = workMeta.map(item => {
 	const images = getImages(item.slug);
-	return { ...item, images, cover: images[0] };
+	return { ...item, images, cover: images[0], caseStudy: caseStudies[item.slug] };
 });

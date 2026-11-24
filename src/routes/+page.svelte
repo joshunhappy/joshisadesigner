@@ -15,16 +15,16 @@
 </script>
 
 <svelte:head>
-	<title>Josh De La Cruz — UI/UX Designer</title>
-	<meta name="description" content="Josh De La Cruz is a UI/UX designer crafting clear, scalable digital products — websites, mobile apps, and design systems." />
+	<title>Josh De La Cruz · UI/UX Designer</title>
+	<meta name="description" content="Josh De La Cruz is a UI/UX designer crafting clear, scalable digital products: websites, mobile apps, and design systems." />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://joshisadesigner.com/" />
-	<meta property="og:title" content="Josh De La Cruz — UI/UX Designer" />
-	<meta property="og:description" content="Josh De La Cruz is a UI/UX designer crafting clear, scalable digital products — websites, mobile apps, and design systems." />
+	<meta property="og:title" content="Josh De La Cruz · UI/UX Designer" />
+	<meta property="og:description" content="Josh De La Cruz is a UI/UX designer crafting clear, scalable digital products: websites, mobile apps, and design systems." />
 	<meta property="og:image" content="https://joshisadesigner.com/images/og-image.jpg" />
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="Josh De La Cruz — UI/UX Designer" />
-	<meta name="twitter:description" content="Josh De La Cruz is a UI/UX designer crafting clear, scalable digital products — websites, mobile apps, and design systems." />
+	<meta name="twitter:title" content="Josh De La Cruz · UI/UX Designer" />
+	<meta name="twitter:description" content="Josh De La Cruz is a UI/UX designer crafting clear, scalable digital products: websites, mobile apps, and design systems." />
 	<meta name="twitter:image" content="https://joshisadesigner.com/images/og-image.jpg" />
 	<link rel="canonical" href="https://joshisadesigner.com/" />
 	{@html `<script type="application/ld+json">${JSON.stringify({

@@ -14,16 +14,16 @@
 </script>
 
 <svelte:head>
-	<title>Work — Josh De La Cruz</title>
-	<meta name="description" content="Selected UI/UX design projects by Josh De La Cruz — mobile apps, web platforms, and design systems across fintech, telecom, and consumer services." />
+	<title>Work · Josh De La Cruz</title>
+	<meta name="description" content="Selected UI/UX design projects by Josh De La Cruz: mobile apps, web platforms, and design systems across fintech, telecom, and consumer services." />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://joshisadesigner.com/work" />
-	<meta property="og:title" content="Work — Josh De La Cruz" />
-	<meta property="og:description" content="Selected UI/UX design projects by Josh De La Cruz — mobile apps, web platforms, and design systems across fintech, telecom, and consumer services." />
+	<meta property="og:title" content="Work · Josh De La Cruz" />
+	<meta property="og:description" content="Selected UI/UX design projects by Josh De La Cruz: mobile apps, web platforms, and design systems across fintech, telecom, and consumer services." />
 	<meta property="og:image" content="https://joshisadesigner.com/images/og-image.jpg" />
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="Work — Josh De La Cruz" />
-	<meta name="twitter:description" content="Selected UI/UX design projects by Josh De La Cruz — mobile apps, web platforms, and design systems across fintech, telecom, and consumer services." />
+	<meta name="twitter:title" content="Work · Josh De La Cruz" />
+	<meta name="twitter:description" content="Selected UI/UX design projects by Josh De La Cruz: mobile apps, web platforms, and design systems across fintech, telecom, and consumer services." />
 	<meta name="twitter:image" content="https://joshisadesigner.com/images/og-image.jpg" />
 	<link rel="canonical" href="https://joshisadesigner.com/work" />
 </svelte:head>
@@ -42,7 +42,7 @@
 			View <span>›</span>
 		</a>
 
-		<!-- Prev / Next — mobile only, in content flow -->
+		<!-- Prev / Next (mobile only), in content flow -->
 		<div class="flex items-center gap-2 md:hidden">
 			<button
 				onclick={prevProject}
@@ -62,7 +62,7 @@
 	</div>
 
 	<!-- Preview image: top on mobile, right column on desktop -->
-	<!-- clip-path clips top/bottom at element edge, extends right infinitely — allows image to bleed right -->
+	<!-- clip-path clips top/bottom at element edge, extends right infinitely, allowing the image to bleed right -->
 	<div
 		class="order-1 relative min-h-0 flex-1 md:order-2 md:ml-4 [clip-path:inset(0_-100vw_0_0)] md:[clip-path:inset(0_-100vw_0_0_round_28px_0_0_28px)]"
 		style:background-color={current.bgColor}
@@ -76,7 +76,7 @@
 		</div>
 	</div>
 
-	<!-- Prev / Next — desktop only, floating at image container bottom-right -->
+	<!-- Prev / Next (desktop only), floating at image container bottom-right -->
 	<div class="hidden md:flex absolute bottom-12 right-6 translate-y-1/2 items-center gap-2 z-10">
 		<button
 			onclick={prevProject}
@@ -94,7 +94,7 @@
 		</button>
 	</div>
 
-	<!-- Dots — bottom center of page -->
+	<!-- Dots, bottom center of page -->
 	<div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2">
 		{#each work as _, i (i)}
 			<button
