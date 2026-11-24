@@ -54,11 +54,11 @@
 			</div>
 		{/if}
 
-		<p class="mt-8 text-base text-ink-muted">
-			{groups.length
-				? 'Screens only. A written case study for this project isn’t up yet.'
-				: 'Screens and a written case study for this project are on their way.'}
-		</p>
+		{#if !groups.length}
+			<p class="mt-8 text-base text-ink-muted">
+				Screens and a written case study for this project are on their way.
+			</p>
+		{/if}
 
 		<FactsGrid {facts} />
 	</div>
