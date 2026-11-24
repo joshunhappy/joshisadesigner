@@ -21,7 +21,12 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://joshisadesigner.com/work/america-voice-app-and-portal</loc>
+    <loc>https://joshisadesigner.com/work/america-voice-app</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://joshisadesigner.com/work/america-voice-reseller-portal</loc>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>

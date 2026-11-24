@@ -43,25 +43,43 @@ const workMeta: WorkMeta[] = [
 		tools: ['Figma', 'Photoshop', 'WebStorm']
 	},
 	{
-		slug: 'america-voice-app-and-portal',
-		aliases: ['america-voice-app', 'america-voice-reseller-portal'],
-		dirs: ['america-voice-app', 'america-voice-reseller-portal'],
-		title: 'America Voice App & Reseller Portal',
-		category: 'Mobile App & Web App Design',
+		slug: 'america-voice-app',
+		title: 'America Voice App',
+		category: 'Mobile App Design',
 		year: 2024,
 		bgColor: '#EA580C',
 		description:
-			'I designed both sides of America Voice beyond the website: the mobile app people use to buy top-ups and gift cards, and the portal resellers use to open and run a store.',
+			'I designed the mobile experience for the America Voice app, leading the UX and UI for the gift card purchasing flow, onboarding, and checkout, focusing on speed and clarity for everyday users.',
 		problem: [
-			'Two audiences, one marketplace. App users are often sending credit to family abroad and need to finish a purchase in a few taps.',
-			'Resellers have the opposite job: set up an account, pass verification, and upload store documents before they can sell. The screens cover both paths.'
+			'App users are often sending credit to family abroad, usually from a phone and often in a hurry.',
+			'The purchase has to finish in a few taps; the screens follow it from onboarding through choosing a gift card or top-up, the order summary, and payment.'
 		],
 		draft: true,
 		client: 'America Voice',
 		role: 'UX/UI Designer',
 		timeline: '2024',
-		summary: 'The consumer app and the B2B reseller portal for a top-up and gift card platform.',
-		responsibilities: ['UX Flows', 'UI Design', 'Onboarding', 'KYC Flow', 'Dashboard Design', 'Prototyping', 'Handoff'],
+		summary: 'Mobile app design for a top-up and gift card platform targeting the Latino diaspora.',
+		responsibilities: ['UX Flows', 'UI Design', 'Prototyping', 'Handoff'],
+		tools: ['Figma', 'Photoshop']
+	},
+	{
+		slug: 'america-voice-reseller-portal',
+		title: 'AV Reseller Portal',
+		category: 'Web App Design',
+		year: 2024,
+		bgColor: '#C2410C',
+		description:
+			'I designed the B2B onboarding experience for America Voice resellers, creating the account setup flow, KYC verification process, and store management dashboard from the ground up.',
+		problem: [
+			'Before a reseller can sell, they have to set up an account, pass verification, and upload store documents.',
+			'The screens follow that path, from account setup and verification to pending review and document upload, plus the reseller page on mobile.'
+		],
+		draft: true,
+		client: 'America Voice',
+		role: 'UX/UI Designer',
+		timeline: '2024',
+		summary: 'B2B onboarding and verification portal for America Voice resellers across the U.S.',
+		responsibilities: ['UX Flows', 'Dashboard Design', 'Onboarding', 'KYC Flow'],
 		tools: ['Figma', 'Photoshop']
 	},
 	{
