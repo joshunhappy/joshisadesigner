@@ -1,10 +1,12 @@
 import type { CaseStudy, WorkItem } from '$lib/types';
 import { americaVoiceCaseStudy } from './case-studies/america-voice';
+import { tigoDesignSystemCaseStudy } from './case-studies/tigo-design-system';
 import { imagePaths } from '$lib/images';
 
 /** Projects listed here render the long-form case study template. */
 const caseStudies: Record<string, CaseStudy> = {
-	'america-voice': americaVoiceCaseStudy
+	'america-voice': americaVoiceCaseStudy,
+	'tigo-design-system': tigoDesignSystemCaseStudy
 };
 
 /** Every image in one project folder, sorted by file name. */
@@ -44,6 +46,23 @@ const workMeta: WorkMeta[] = [
 		summary: 'UX/UI redesign for a fintech/top-up platform serving Latino users in the U.S. and Latin America.',
 		responsibilities: ['End-to-End UX & UI Design Process', 'Design System', 'HTML', 'Bootstrap'],
 		tools: ['Figma', 'Photoshop', 'WebStorm']
+	},
+	{
+		// DRAFT: case study copy awaits Josh's approval. Client is an agency partner, not Tigo's in-house team.
+		slug: 'tigo-design-system',
+		title: 'Tigo Design System',
+		category: 'Design System',
+		year: 2026,
+		bgColor: '#001EB4',
+		description:
+			'I built a token-driven Figma design system for Tigo’s regional websites and apps across ten Latin American markets, starting from an audit of the live site and fixing its contrast failures, with every page documented in English and Spanish.',
+		draft: true,
+		client: 'Agency partner for Tigo',
+		role: 'Design System Designer',
+		timeline: 'Jul 2026',
+		summary: 'Design system for Tigo’s regional web and apps: tokens, components, a WCAG audit and bilingual documentation.',
+		responsibilities: ['Token Architecture', 'Component Library', 'WCAG Audit', 'Bilingual Documentation'],
+		tools: ['Figma', 'Figma Variables', 'Claude Code', 'Figma MCP']
 	},
 	{
 		slug: 'metis',
@@ -191,6 +210,10 @@ const workMeta: WorkMeta[] = [
 	}
 ];
 
+/** The composed listing cover, when one exists in assets/images/covers/. */
+const listCoverOf = (slug: string) =>
+	imagePaths.includes(`/images/covers/${slug}.jpg`) ? `/images/covers/${slug}.jpg` : undefined;
+
 export const work: WorkItem[] = workMeta.map(({ dirs, ...item }) => {
 	const images = (dirs ?? [item.slug]).flatMap(folderImages);
 	const covers = images.filter(isCover);
@@ -198,8 +221,8 @@ export const work: WorkItem[] = workMeta.map(({ dirs, ...item }) => {
 	return {
 		...item,
 		images,
-		cover: covers[0] ?? images[0],
-		listCover: imagePaths.includes(`/images/covers/${item.slug}.jpg`) ? `/images/covers/${item.slug}.jpg` : undefined,
+		cover: covers[0] ?? images[0] ?? listCoverOf(item.slug) ?? '',
+		listCover: listCoverOf(item.slug),
 		screens,
 		caseStudy: caseStudies[item.slug]
 	};
