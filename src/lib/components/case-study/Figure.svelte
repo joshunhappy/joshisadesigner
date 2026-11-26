@@ -1,4 +1,5 @@
 <script lang="ts">
+	// Padded plates use #f5f5f5, the Figma canvas grey baked into frame exports, so image and plate read as one surface.
 	import type { ImageRef } from '$lib/types';
 	import { responsive, type DeviceKind } from '$lib/images';
 	import DeviceFrame from '$lib/components/site/DeviceFrame.svelte';
@@ -13,6 +14,7 @@
 		eager = false,
 		compact = false,
 		plain = false,
+		padded = false,
 		chrome
 	}: ImageRef & {
 		eager?: boolean;
@@ -49,7 +51,9 @@
 		<div
 			class="overflow-hidden rounded-sm transition-opacity hover:opacity-90 {plain
 				? ''
-				: 'bg-sunken border border-rule'}"
+				: padded
+					? 'border border-rule bg-[#f5f5f5] p-4'
+					: 'bg-sunken border border-rule'}"
 		>
 			<img
 				src={r.src}

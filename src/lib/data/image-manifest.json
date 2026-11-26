@@ -87,6 +87,244 @@
 			}
 		]
 	},
+	"/images/case-studies/tigo-design-system/01.plan-grid.png": {
+		"width": 2016,
+		"height": 1192,
+		"srcs": [
+			{
+				"w": 640,
+				"src": "/images/case-studies/tigo-design-system/01.plan-grid-640.jpg"
+			},
+			{
+				"w": 1280,
+				"src": "/images/case-studies/tigo-design-system/01.plan-grid-1280.jpg"
+			},
+			{
+				"w": 1920,
+				"src": "/images/case-studies/tigo-design-system/01.plan-grid-1920.jpg"
+			},
+			{
+				"w": 2016,
+				"src": "/images/case-studies/tigo-design-system/01.plan-grid-2016.jpg"
+			}
+		]
+	},
+	"/images/case-studies/tigo-design-system/02.plan-card.png": {
+		"width": 648,
+		"height": 1060,
+		"srcs": [
+			{
+				"w": 640,
+				"src": "/images/case-studies/tigo-design-system/02.plan-card-640.jpg"
+			},
+			{
+				"w": 648,
+				"src": "/images/case-studies/tigo-design-system/02.plan-card-648.jpg"
+			}
+		]
+	},
+	"/images/case-studies/tigo-design-system/03.wcag-compliance.png": {
+		"width": 1542,
+		"height": 2895,
+		"srcs": [
+			{
+				"w": 640,
+				"src": "/images/case-studies/tigo-design-system/03.wcag-compliance-640.jpg"
+			},
+			{
+				"w": 1280,
+				"src": "/images/case-studies/tigo-design-system/03.wcag-compliance-1280.jpg"
+			},
+			{
+				"w": 1542,
+				"src": "/images/case-studies/tigo-design-system/03.wcag-compliance-1542.jpg"
+			}
+		]
+	},
+	"/images/case-studies/tigo-design-system/04.buttons.png": {
+		"width": 1920,
+		"height": 930,
+		"srcs": [
+			{
+				"w": 640,
+				"src": "/images/case-studies/tigo-design-system/04.buttons-640.jpg"
+			},
+			{
+				"w": 1280,
+				"src": "/images/case-studies/tigo-design-system/04.buttons-1280.jpg"
+			},
+			{
+				"w": 1920,
+				"src": "/images/case-studies/tigo-design-system/04.buttons-1920.jpg"
+			}
+		]
+	},
+	"/images/case-studies/tigo-design-system/05.button-whatsapp.png": {
+		"width": 2070,
+		"height": 525,
+		"srcs": [
+			{
+				"w": 640,
+				"src": "/images/case-studies/tigo-design-system/05.button-whatsapp-640.jpg"
+			},
+			{
+				"w": 1280,
+				"src": "/images/case-studies/tigo-design-system/05.button-whatsapp-1280.jpg"
+			},
+			{
+				"w": 1920,
+				"src": "/images/case-studies/tigo-design-system/05.button-whatsapp-1920.jpg"
+			},
+			{
+				"w": 2070,
+				"src": "/images/case-studies/tigo-design-system/05.button-whatsapp-2070.jpg"
+			}
+		]
+	},
+	"/images/case-studies/tigo-design-system/06.text-field-grid.png": {
+		"width": 2240,
+		"height": 520,
+		"srcs": [
+			{
+				"w": 640,
+				"src": "/images/case-studies/tigo-design-system/06.text-field-grid-640.jpg"
+			},
+			{
+				"w": 1280,
+				"src": "/images/case-studies/tigo-design-system/06.text-field-grid-1280.jpg"
+			},
+			{
+				"w": 1920,
+				"src": "/images/case-studies/tigo-design-system/06.text-field-grid-1920.jpg"
+			},
+			{
+				"w": 2240,
+				"src": "/images/case-studies/tigo-design-system/06.text-field-grid-2240.jpg"
+			}
+		]
+	},
+	"/images/case-studies/tigo-design-system/07.carousel-addon.png": {
+		"width": 2328,
+		"height": 756,
+		"srcs": [
+			{
+				"w": 640,
+				"src": "/images/case-studies/tigo-design-system/07.carousel-addon-640.jpg"
+			},
+			{
+				"w": 1280,
+				"src": "/images/case-studies/tigo-design-system/07.carousel-addon-1280.jpg"
+			},
+			{
+				"w": 1920,
+				"src": "/images/case-studies/tigo-design-system/07.carousel-addon-1920.jpg"
+			},
+			{
+				"w": 2328,
+				"src": "/images/case-studies/tigo-design-system/07.carousel-addon-2328.jpg"
+			}
+		]
+	},
+	"/images/case-studies/tigo-design-system/08.addon-logos-dark.png": {
+		"width": 1328,
+		"height": 300,
+		"srcs": [
+			{
+				"w": 640,
+				"src": "/images/case-studies/tigo-design-system/08.addon-logos-dark-640.jpg"
+			},
+			{
+				"w": 1280,
+				"src": "/images/case-studies/tigo-design-system/08.addon-logos-dark-1280.jpg"
+			},
+			{
+				"w": 1328,
+				"src": "/images/case-studies/tigo-design-system/08.addon-logos-dark-1328.jpg"
+			}
+		]
+	},
+	"/images/case-studies/tigo-design-system/09.alerts.png": {
+		"width": 1120,
+		"height": 1040,
+		"srcs": [
+			{
+				"w": 640,
+				"src": "/images/case-studies/tigo-design-system/09.alerts-640.jpg"
+			},
+			{
+				"w": 1120,
+				"src": "/images/case-studies/tigo-design-system/09.alerts-1120.jpg"
+			}
+		]
+	},
+	"/images/case-studies/tigo-design-system/10.modal.png": {
+		"width": 1440,
+		"height": 930,
+		"srcs": [
+			{
+				"w": 640,
+				"src": "/images/case-studies/tigo-design-system/10.modal-640.jpg"
+			},
+			{
+				"w": 1280,
+				"src": "/images/case-studies/tigo-design-system/10.modal-1280.jpg"
+			},
+			{
+				"w": 1440,
+				"src": "/images/case-studies/tigo-design-system/10.modal-1440.jpg"
+			}
+		]
+	},
+	"/images/case-studies/tigo-design-system/11.getting-started-en.png": {
+		"width": 1332,
+		"height": 1593,
+		"srcs": [
+			{
+				"w": 640,
+				"src": "/images/case-studies/tigo-design-system/11.getting-started-en-640.jpg"
+			},
+			{
+				"w": 1280,
+				"src": "/images/case-studies/tigo-design-system/11.getting-started-en-1280.jpg"
+			},
+			{
+				"w": 1332,
+				"src": "/images/case-studies/tigo-design-system/11.getting-started-en-1332.jpg"
+			}
+		]
+	},
+	"/images/case-studies/tigo-design-system/12.getting-started-es.png": {
+		"width": 1332,
+		"height": 1626,
+		"srcs": [
+			{
+				"w": 640,
+				"src": "/images/case-studies/tigo-design-system/12.getting-started-es-640.jpg"
+			},
+			{
+				"w": 1280,
+				"src": "/images/case-studies/tigo-design-system/12.getting-started-es-1280.jpg"
+			},
+			{
+				"w": 1332,
+				"src": "/images/case-studies/tigo-design-system/12.getting-started-es-1332.jpg"
+			}
+		]
+	},
+	"/images/case-studies/tigo-design-system/13.content-cards.png": {
+		"width": 920,
+		"height": 776,
+		"srcs": [
+			{
+				"w": 640,
+				"src": "/images/case-studies/tigo-design-system/13.content-cards-640.jpg"
+			},
+			{
+				"w": 920,
+				"src": "/images/case-studies/tigo-design-system/13.content-cards-920.jpg"
+			}
+		]
+	},
 	"/images/covers/america-voice-app.jpg": {
 		"width": 1035,
 		"height": 611,
@@ -228,6 +466,28 @@
 			{
 				"w": 2000,
 				"src": "/images/covers/swiftly-push-2000.jpg"
+			}
+		]
+	},
+	"/images/covers/tigo-design-system.jpg": {
+		"width": 2000,
+		"height": 1181,
+		"srcs": [
+			{
+				"w": 640,
+				"src": "/images/covers/tigo-design-system-640.jpg"
+			},
+			{
+				"w": 1280,
+				"src": "/images/covers/tigo-design-system-1280.jpg"
+			},
+			{
+				"w": 1920,
+				"src": "/images/covers/tigo-design-system-1920.jpg"
+			},
+			{
+				"w": 2000,
+				"src": "/images/covers/tigo-design-system-2000.jpg"
 			}
 		]
 	},

@@ -96,6 +96,8 @@ export interface ImageRef {
 	frame?: string;
 	/** Drops the grey plate and border. Use for mockups with transparent edges. */
 	plain?: boolean;
+	/** Insets the image inside its plate (p-4). Use when the artwork runs to its own edges. */
+	padded?: boolean;
 }
 
 export interface FigureBlock extends ImageRef {
