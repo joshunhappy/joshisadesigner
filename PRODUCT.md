@@ -43,6 +43,7 @@ joshisadesigner.com is Josh De La Cruz's portfolio. It exists to get him hired, 
 ## Evidence on Hand
 
 - **Full case study:** America Voice, Version 2 (Jan–Apr 2026, Lead UX/UI Designer). Source: `src/lib/data/case-studies/america-voice.ts`; assets in `static/images/case-studies/america-voice/` and `static/images/work/america-voice/`. No quantitative metrics exist for this project, so none may be invented.
+- **Full case study:** Tigo Design System, Regional Web + Apps (Jul 2026, Design System Designer). Commissioned through a designer at an agency that works with Tigo; client is "Agency partner for Tigo", not Tigo's in-house team. Built with Claude Code + Figma MCP under Josh's direction. Delivered to the client in a shared Figma file; adoption unknown. Source: `src/lib/data/case-studies/tigo-design-system.ts`. Never link the Figma file; never call it a published or shared library; only the file's computed contrast ratios may be quoted. Copy approved by Josh on 2026-11-25.
 - **Galleries:** screenshots only, with no case-study write-up, in `static/images/work/<slug>/`:
   - America Voice App (2024);
   - AV Reseller Portal (2024);
