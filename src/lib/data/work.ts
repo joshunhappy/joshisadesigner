@@ -48,7 +48,7 @@ const workMeta: WorkMeta[] = [
 		tools: ['Figma', 'Photoshop', 'WebStorm']
 	},
 	{
-		// DRAFT: case study copy awaits Josh's approval. Client is an agency partner, not Tigo's in-house team.
+		// Client is an agency partner, not Tigo's in-house team. Copy approved by Josh 2026-11-25.
 		slug: 'tigo-design-system',
 		title: 'Tigo Design System',
 		category: 'Design System',
@@ -56,7 +56,6 @@ const workMeta: WorkMeta[] = [
 		bgColor: '#001EB4',
 		description:
 			'I built a token-driven Figma design system for Tigo’s regional websites and apps across ten Latin American markets, starting from an audit of the live site and fixing its contrast failures, with every page documented in English and Spanish.',
-		draft: true,
 		client: 'Agency partner for Tigo',
 		role: 'Design System Designer',
 		timeline: 'Jul 2026',
